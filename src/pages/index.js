@@ -8,11 +8,13 @@ import SEO from "../components/seo"
 import styles from "./index.module.scss"
 import Hero from "../components/hero"
 import Carousel from "../components/carousel"
+import AboutDiv from "../components/about-div"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
+    <AboutDiv />
     <Carousel />
   </Layout>
 )

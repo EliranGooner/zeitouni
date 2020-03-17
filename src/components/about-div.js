@@ -1,13 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useState} from "react"
-import styles from './contact.module.scss'
+import styles from './about-div.module.scss'
 import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 import { isWidthUp } from "@material-ui/core";
 
 
-const Contact = ({}) => {
-    return <div className={styles.contact}>
+const AboutDiv = ({}) => {
+    return <div className={styles.about}>
         <div>
             <p>Ut amet esse laborum commodo sit id duis enim occaecat deserunt nisi deserunt culpa dolore. Cupidatat cillum in elit do aliquip ullamco proident quis incididunt magna anim. Culpa incididunt aliqua velit aute officia eiusmod laborum.
 
@@ -22,4 +22,4 @@ Culpa enim culpa laboris do non laboris consequat nostrud nulla ea voluptate. do
     </div>
 };
 
-export default Contact
+export default AboutDiv

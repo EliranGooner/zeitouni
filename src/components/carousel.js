@@ -14,20 +14,7 @@ import 'react-awesome-slider/dist/styles.css';
 
 
 const Carousel = ({}) => {
-  return <div>
-    <AwesomeSlider
-    media={[
-      {
-        source: '/path/to/image-0.png',
-      },
-      {
-        source: '/path/to/image-1.png',
-      },
-      {
-        source: '/path/to/image-2.png',
-      },
-    ]}
-  />
+  return <div className={styles.pic_div}>
   </div>
 };
 
