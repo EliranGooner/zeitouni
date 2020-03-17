@@ -10,13 +10,10 @@ import Carousel from "../components/carousel"
 import AboutDiv from "../components/about-div"
 
 
-const IndexPage = () => (
+const Contact = () => (
   <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <AboutDiv />
-    <Carousel />
+    <h1>hi</h1>
   </Layout>
 )
 
-export default IndexPage
+export default Contact
