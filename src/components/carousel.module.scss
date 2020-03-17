@@ -1,30 +1,27 @@
-.aws-sld {
-  --cube-animation-duration: 675ms;
-  --cube-animation-perspective: 1800px;
-  --cube-animation-ease-in: cubic-bezier(0.8, 0, 1, 0.8);
-  --cube-animation-ease-out: cubic-bezier(0, 0.2, 0.2, 1);
-  --cube-translateZ-distance: -225px;
+.simple_trans_main > div {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  font-size: 25em;
+  will-change: transform, opacity;
+  text-shadow: 0px 2px 40px #00000020, 0px 2px 5px #00000030;
 }
 
-.aws-btn {
-
-  --slider-height-percentage: 60%;
-  --slider-transition-duration: 770ms;
-  --organic-arrow-thickness: 4px;
-  --organic-arrow-border-radius: 0px;
-  --organic-arrow-height: 40px;
-  --organic-arrow-color: #000000;
-  --control-button-width: 10%;
-  --control-button-height: 25%;
-  --control-button-background: transparent;
-  --control-bullet-color: #000000;
-  --control-bullet-active-color: #000000;
-  --loader-bar-color: #000000;
-  --loader-bar-height: 6px;
-  }
 
   .pic_div {
-    height: 400px;
+    height: 300px;
     width: 100%;
-    background: bronze;
+  }
+
+  .change_btn {
+    height: 50px;
+    width: 50px;
+    font-weight: 5;
+    font-size: 10px;
   }
