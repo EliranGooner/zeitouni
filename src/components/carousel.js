@@ -1,21 +1,36 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, {useState} from "react"
-import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
-import { isWidthUp } from "@material-ui/core";
-import Slider from 'react-animated-slider';
-import styles from './carousel.module.scss'
-import AwesomeSlider from 'react-awesome-slider';
-// import AwesomeSliderStyles from 'react-awesome-slider/src/styled/cube-animation.scss';
-
-// import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import Flickity from 'flickity';
+// import 'flickity/dist/flickity.min.css';
+import Flickity from 'react-flickity-component'
+import Image1 from '../images/gatsby-astronaut.png'
+import Image2 from '../images/gatsby-icon.png'
 
 
+const images=[
+  Image1,
+  Image2
+]
 
-const Carousel = ({}) => {
-  return <div className={styles.pic_div}>
-  </div>
-};
+const flickityOptions = {
+  initialIndex: 2
+}
+
+
+function Carousel() {
+  return (
+    <Flickity
+      className={'carousel'} // default ''
+      elementType={'div'} // default 'div'
+      options={flickityOptions} // takes flickity options {}
+      disableImagesLoaded={false} // default false
+      reloadOnUpdate // default false
+      static // default false
+    >
+      <img src={Image1}/>
+      <img src={Image2}/>
+    </Flickity>
+  )
+}
 
 export default Carousel
