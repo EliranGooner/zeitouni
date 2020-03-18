@@ -21,17 +21,31 @@ const Navbar = ({}) => {
         }
       })
     });
-    return <div className={scroll ? `${styles.navbar} ${styles.navbar_white}` : styles.navbar}>
+    
+    let currentPath
+
+    const getCurrentPath = () => {
+      const url = window.location.href
+      const parts = url.split('/');
+      const finalSegment = parts.pop() || parts.pop();  
+      const pathArr = ['projects', 'about', 'avi', 'articles', 'contact'];
+      let urlPath;
+      pathArr.forEach(path => {
+        if (finalSegment.indexOf(path) >= 0) {
+          urlPath = path;
+        };
+      });
+      if (urlPath === "#" || !pathArr.includes(urlPath)) {
+        currentPath = "item-home";
+      } else {
+        currentPath = `item-${urlPath}`;
+      }
+    };
+
+    getCurrentPath();
+
+    return <div className={scroll ? `${styles.navbar} navbar-black` : styles.navbar}>
       <Link to="/">Logo</Link>
-      <div className={clicked ? `${styles.menu} ${styles.active}` : styles.menu} onClick={toggleClass}>
-        <Link to="/"><button>Logo</button></Link>
-        <Link to="/projects/">פרויקטים</Link>
-        <Link to="/about/">עלינו</Link>
-        <Link to="/avi/">אבי זיתוני</Link>
-        <Link to="/articles/">כתבות</Link>
-        <Link to="/contact/">צרו קשר</Link>
-      </div>
-      <aside className={clicked ? `${styles.menu__toggler} ${styles.active}` : styles.menu__toggler} onClick={toggleClass}><span></span></aside>
     </div>
 };
 
