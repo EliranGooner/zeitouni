@@ -19,7 +19,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 998;
   height: 28px;
   width: 28px;
   outline: none;
@@ -75,7 +75,7 @@
 .menu {
   position: fixed;
   right: -30%;
-  z-index: 998;
+  z-index: 997;
   color: white;
   background: black;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
@@ -108,7 +108,7 @@
   }
 }
 
-.menu a.selected{
+.selected{
     padding: 5px;
     border: 2px solid #7e391b;
 }
