@@ -8,6 +8,7 @@ import Navbar from './navbar'
 
 const NavbarNew = ({}) => {
   const [scroll, setScroll] = useState(false);
+  let currentPath
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= window.innerHeight) {
@@ -16,29 +17,28 @@ const NavbarNew = ({}) => {
         setScroll(false)
       }
     })
+    
+    const getCurrentPath = () => {
+      const url = typeof window !== 'undefined' && window.location.href;
+      const parts = url.split('/');
+      const finalSegment = parts.pop() || parts.pop();  
+      const pathArr = ['projects', 'about', 'avi', 'articles', 'contact'];
+      let urlPath;
+      pathArr.forEach(path => {
+        if (finalSegment.indexOf(path) >= 0) {
+          urlPath = path;
+        };
+      });
+      if (urlPath === "#" || !pathArr.includes(urlPath)) {
+        currentPath = "item-home";
+      } else {
+        currentPath = `item-${urlPath}`;
+      }
+    };
+    getCurrentPath();
   });
   
-  let currentPath
 
-  const getCurrentPath = () => {
-    const url = window.location.href
-    const parts = url.split('/');
-    const finalSegment = parts.pop() || parts.pop();  
-    const pathArr = ['projects', 'about', 'avi', 'articles', 'contact'];
-    let urlPath;
-    pathArr.forEach(path => {
-      if (finalSegment.indexOf(path) >= 0) {
-        urlPath = path;
-      };
-    });
-    if (urlPath === "#" || !pathArr.includes(urlPath)) {
-      currentPath = "item-home";
-    } else {
-      currentPath = `item-${urlPath}`;
-    }
-  };
-
-  getCurrentPath();
 
   const showSettings = (event) => {
     event.preventDefault();
