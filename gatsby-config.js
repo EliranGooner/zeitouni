@@ -33,13 +33,10 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            variants: [`400`, `700`, `300`, `500`],
-          },
-          {
-            family: `Roboto`,
-            subsets: [`latin`],
-          },
+            family: `Heebo`,
+            variants: [`400`, `500`, `900`],
+            subsets: [`latin`, `hebrew`]
+          }
         ],
       },
     }

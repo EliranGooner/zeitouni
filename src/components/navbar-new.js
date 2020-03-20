@@ -7,17 +7,8 @@ import { stack as Menu } from 'react-burger-menu'
 import Navbar from './navbar'
 
 const NavbarNew = ({}) => {
-  const [scroll, setScroll] = useState(false);
   let currentPath
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= window.innerHeight) {
-        setScroll(true)
-      } else {
-        setScroll(false)
-      }
-    })
-    
     const getCurrentPath = () => {
       const url = typeof window !== 'undefined' && window.location.href;
       const parts = url.split('/');
