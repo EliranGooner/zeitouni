@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./navbar"
 import NavbarNew from "./navbar-new"
-import Contact from "./contact"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -29,7 +28,6 @@ const Layout = ({ children }) => {
     <>
       <NavbarNew />
         <main>{children}</main>
-        <Contact />
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

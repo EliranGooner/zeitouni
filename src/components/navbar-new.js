@@ -7,7 +7,7 @@ import { stack as Menu } from 'react-burger-menu'
 import Navbar from './navbar'
 
 const NavbarNew = ({}) => {
-  let currentPath
+  const[path, setPath] = useState(null);
   useEffect(() => {
     const getCurrentPath = () => {
       const url = typeof window !== 'undefined' && window.location.href;
@@ -15,15 +15,15 @@ const NavbarNew = ({}) => {
       const finalSegment = parts.pop() || parts.pop();  
       const pathArr = ['projects', 'about', 'avi', 'articles', 'contact'];
       let urlPath;
-      pathArr.forEach(path => {
-        if (finalSegment.indexOf(path) >= 0) {
-          urlPath = path;
+      pathArr.forEach(pathElement => {
+        if (finalSegment.indexOf(pathElement) >= 0) {
+          urlPath = pathElement;
         };
       });
       if (urlPath === "#" || !pathArr.includes(urlPath)) {
-        currentPath = "item-home";
+        setPath("item-home");
       } else {
-        currentPath = `item-${urlPath}`;
+        setPath(`item-${urlPath}`);
       }
     };
     getCurrentPath();
@@ -34,16 +34,16 @@ const NavbarNew = ({}) => {
   const showSettings = (event) => {
     event.preventDefault();
   }
-
+  console.log(path)
   return <div id="outer-container">
     <Navbar />
     <Menu right disableAutoFocus pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
-      <Link to="/" className={'item-home' === currentPath ? 'current-path' : null}>בית</Link>
-      <Link to="/projects/" className={'item-projects' === currentPath ? 'current-path' : null}>פרויקטים</Link>
-      <Link to="/about/" className={'item-about' === currentPath ? 'current-path' : null}>עלינו</Link>
-      <Link to="/avi/" className={'item-avi' === currentPath ? 'current-path' : null}>אבי זיתוני</Link>
-      <Link to="/articles/" className={'item-articles' === currentPath ? 'current-path' : null}>כתבות</Link>
-      <Link to="/contact/" className={'item-contact' === currentPath ? 'current-path' : null}>צרו קשר</Link>
+      <Link to="/" className={'item-home' === path ? 'current-path' : null}>בית</Link>
+      <Link to="/projects/" className={'item-projects' === path ? 'current-path' : null}>פרויקטים</Link>
+      <Link to="/about/" className={'item-about' === path ? 'current-path' : null}>עלינו</Link>
+      <Link to="/avi/" className={'item-avi' === path ? 'current-path' : null}>אבי זיתוני</Link>
+      <Link to="/articles/" className={'item-articles' === path ? 'current-path' : null}>כתבות</Link>
+      <Link to="/contact/" className={'item-contact' === path ? 'current-path' : null}>צרו קשר</Link>
       <a onClick={ showSettings } className="menu-item--small" href=""></a>
     </Menu>
     <main id="page-wrap">
