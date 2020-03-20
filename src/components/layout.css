@@ -200,7 +200,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Heebo';
+  font-family: 'Heebo' !important;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -619,4 +619,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.hebrew {
+  direction: rtl;
 }

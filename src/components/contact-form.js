@@ -1,37 +1,32 @@
 import React from 'react'
+import styles from './contact-form.module.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form, Col, Row } from 'react-bootstrap';
 
-class ContactForm extends React.Component {
+const ContactForm = ({action}) => {
+  return <div className={styles.form}>
+    <form action={action} method="post">
+      <Form>
+        <Row>
+          <Col>
+            <Form.Control placeholder="שם מלא" bsPrefix={'form-control hebrew'} />
+          </Col>
+          <Col>
+            <Form.Control placeholder="טלפון" />
+          </Col>
+          <Col>
+            <Form.Control placeholder="דוא״ל" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form.Control as="textarea" rows="3" placeholder="תוכן הפנייה" />
+          </Col>
+        </Row>
+      </Form>
+    </form>
 
-  render() {
-    const formStyle = {
-      textAlign: 'left'
-    }
-    const buttonsStyle = {
-      margin: '1rem',
-      textAlign: 'center',
-    }
-    return (
-      <form style={formStyle} className="form" action={this.props.action} method="post">
-        <div>
-          <label>Full name</label>
-          <input type="text" name="fullname"/>
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" name="email"/>
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea name="message" rows="5"></textarea>
-        </div>
-        <ul className="actions" style={buttonsStyle}>
-            <li>
-              <button type="submit"  className="button special">Send</button>
-            </li>
-        </ul>
-      </form>
-    );
-  }
+  </div>
 }
 
 export default ContactForm

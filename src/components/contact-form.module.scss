@@ -1,0 +1,33 @@
+.form {
+  
+}
+
+.form_container {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(12, 1fr);// rows then columns
+  // overflow: hidden;
+}
+
+.form_container .name {
+  grid-column: 9 / 13; 
+  grid-row: 1 / 1;
+  direction: rtl;
+}
+
+.form_container .phone {
+  float: right !important;
+  grid-column: 5 / 9; 
+  grid-row: 1 / 1;
+  direction: rtl;
+}
+
+.form_container .email {
+  // grid-column: 1 / 5; 
+  // grid-row: 1 / 1;
+  direction: rtl;
+}
+
+.form_container .message {
+  grid-column: 1 / 12; 
+  grid-row: 2 / 2;
+}

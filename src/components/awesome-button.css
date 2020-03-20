@@ -7,10 +7,10 @@
   --button-raise-level: 5px;
   --button-hover-pressure: 2;
   --transform-speed: 0.185s;
-  --button-primary-color: #a34d28;
+  --button-primary-color:  linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
   --button-primary-color-dark: #5e2d17;
   --button-primary-color-light: #2f160b;
-  --button-primary-color-hover: #b65529;
+  --button-primary-color-hover:  linear-gradient(90deg, rgba(103,37,7,1) 2%, rgba(168,96,61,1) 35%, rgba(179,144,123,1) 50%, rgba(168,96,61,1) 65%, rgba(103,37,7,1) 98%);
   --button-primary-border: 0px solid #FFFFFF;
   --button-secondary-color: #fffc6c;
   --button-secondary-color-dark: #b9b500;
@@ -23,3 +23,5 @@
   --button-anchor-color-hover: #f1bfa0;
   --button-anchor-border: 1px solid #8c633c;
   }
+
+  
