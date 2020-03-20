@@ -6,12 +6,7 @@ import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 
 
 const Navbar = ({}) => {
-    const [clicked, setClicked] = useState(false);
     const [scroll, setScroll] = useState(false);
-    const toggleClass = () => {
-        const currentState = clicked;
-        setClicked(!currentState);
-    };
     useEffect(() => {
       window.addEventListener("scroll", () => {
         if (window.scrollY >= window.innerHeight) {
@@ -21,9 +16,6 @@ const Navbar = ({}) => {
         }
       })
     });
-    
-    let currentPath
-
     
 
     return <div className={scroll ? `${styles.navbar} navbar-black` : styles.navbar}>
