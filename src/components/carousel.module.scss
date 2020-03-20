@@ -1,4 +1,20 @@
 .carousel {
   position: relative;
   z-index: 1; 
+  background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+  height: 50px;
+  border-bottom: 2px solid black;
+  p {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    // filter: drop-shadow(0px 0px 5px magenta);
+  }
 }
