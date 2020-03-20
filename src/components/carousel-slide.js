@@ -11,10 +11,6 @@ import './awesome-button.css'
 
 
 const CarouselSlide = ({header, image, path}) => {
-  const imageStyle = {
-    backgroundImage: 'url(' + image + ')',
-  };
-  
   return (
     <div className={styles.CarouselSlide}>
       <img src={image} className={styles.img}></img>
