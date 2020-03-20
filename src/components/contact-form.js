@@ -5,8 +5,8 @@ import { Form, Col, Row, Button } from 'react-bootstrap';
 
 const ContactForm = ({action}) => {
   return <div className={styles.form}>
-    <form action={action} method="post">
-      <Form>
+    
+      <Form action={action} method="post">
         <Row>
           <Col>
             <Form.Control placeholder="שם מלא" bsPrefix={'form-control hebrew'} />
@@ -28,7 +28,7 @@ const ContactForm = ({action}) => {
         </Button>
       </Form>
      
-    </form>
+    
 
   </div>
 }
