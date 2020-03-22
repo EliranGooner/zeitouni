@@ -4,6 +4,7 @@ import React, {useState, useEffect} from "react"
 import styles from './navbar.module.scss'
 import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 import logo from '../images/pt-logo.jpg'
+import zeitouniLogo from '../images/logo 2.svg'
 
 
 const Navbar = ({}) => {
@@ -19,8 +20,13 @@ const Navbar = ({}) => {
     });
     
 
-    return <div className={scroll ? `${styles.navbar} navbar-black` : styles.navbar}>
-      <Link to="/"><img src={logo} className={styles.logo}></img></Link>
+    return <div>{ scroll ?
+      <div className={`${styles.navbar} navbar-black`}>
+          <Link to="/"><img src={zeitouniLogo} className={styles.logo}></img></Link>
+      </div> : 
+      <div className={styles.navbar}>
+      </div>
+      } 
     </div>
 };
 

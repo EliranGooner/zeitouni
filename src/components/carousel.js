@@ -1,15 +1,13 @@
 import React from 'react';
 import Flickity from 'react-flickity-component'
-import { Link } from "gatsby"
 import "./flickity.css";
 import CarouselSlide from './carousel-slide';
 import styles from './carousel.module.scss'
-import imageHerzliya from '../images/zeitouni-herzliya.jpg'
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css'
-
-
+import { Link } from 'gatsby'
+import Fade from 'react-reveal/Fade';
 
 const flickityOptions = {
   initialIndex: 3,
@@ -26,7 +24,9 @@ const Carousel = () => {
   return (
     <div>
       <div className={styles.header}>
+        <Fade>
           <p>פרויקטים</p>
+        </Fade>
       </div>
       <Flickity
         className={styles.carousel} // default ''
@@ -36,16 +36,17 @@ const Carousel = () => {
         reloadOnUpdate // default false
         static // default false
       >
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" image={imageHerzliya} path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" image={imageHerzliya} path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" image={imageHerzliya} path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" image={imageHerzliya} path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" image={imageHerzliya} path='/projects/'  />
+        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
+        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
+        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
+        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
+        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
       
         
       </Flickity>
-      <div className={styles.all_projects}>
-          <Link to='/projects'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
+      
+      <div className={styles.button_div}>
+        <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
       </div>
     </div>
   )

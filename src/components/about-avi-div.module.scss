@@ -1,6 +1,6 @@
 .about {
   background: black;
-  height: 500px;
+  height: 38rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,20 +8,19 @@
 
 .avi {
   height: 75%;
-  width: 75%;
-  // background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+  width: 85%;
   background: white;
   border-radius: 0.2em;
-  filter: drop-shadow(0px 0px 5px #dcc6b9);
+  filter: drop-shadow(0px 0px 0.5rem #dcc6b9);
   margin: 0;
   display: flex;
   align-items: center;
   overflow: hidden;
   img {
     height: 100%;
-    width: 400px;
+    width: 500rem;
     object-fit: cover;
-    margin: 0 10px 0 0;
+    margin: 0 5rem 0 0;
   }
 }
 
@@ -29,10 +28,13 @@
   text-align: center;
   p {
     color: black;
+    font-size: 1.2em;
     padding: 0 2rem 0 2rem;
+    margin: 3rem 0 3rem 0; 
   }
   h1 {
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 4em;
   }
 }
