@@ -1,10 +1,10 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 18px;
+  width: 44px;
+  height: 38px;
+  right: 28px;
+  top: 10px;
 }
 
 
@@ -84,10 +84,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .navbar {
   width: 100vw;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   background: transparent;
+  color: black;
   position: fixed;
   left: 0;
   top: 0;
@@ -95,7 +96,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .navbar-black {
-  background: black;
+  background: white;
   z-index: 3;
 }
 

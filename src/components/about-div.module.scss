@@ -1,19 +1,23 @@
 .about {
-  height: 560px;
+  height: 37rem;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 0.3rem;
   background: black;
   color: #DCC6B9;
   direction: rtl;
   text-align: center;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   p {
-    margin-top: 8px;
+    margin-top: 1rem;
+    font-size: 20px;
   }
 }
 
 .button_div {
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 .text_container {
@@ -23,6 +27,14 @@
 }
 
 .text {
-  width: 67%;
+  width: 75%;
   height: 67%;
+}
+
+.content {
+  width: 50rem;
+  border: 8px solid #7e391b;
+  h1 {
+    margin-top: 16px;
+  }
 }
