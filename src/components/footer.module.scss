@@ -1,0 +1,28 @@
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+  a {
+    color: black;
+    margin: 0 4px 0 4px;
+  }
+  a:hover {
+    color: black
+  }
+}
+
+.dev {
+  display: flex;
+  align-items: center;
+  a {
+    color: black;
+  }
+  a:hover {
+    color: black
+  }
+  p {
+    margin: 0 2.5px 0 0;
+  }
+}

@@ -1,7 +1,28 @@
 .about {
-  height: 300px;
+  height: 560px;
   width: 100%;
-  padding: 20px;
+  padding-top: 10px;
   background: black;
   color: #DCC6B9;
+  direction: rtl;
+  text-align: center;
+  overflow: hidden;
+  p {
+    margin-top: 8px;
+  }
+}
+
+.button_div {
+  margin-bottom: 6px;
+}
+
+.text_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  width: 67%;
+  height: 67%;
 }

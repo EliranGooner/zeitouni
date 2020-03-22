@@ -7,14 +7,20 @@
   top: 18px;
 }
 
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
- box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 }
 
 
@@ -66,6 +72,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-align: center;
   margin-bottom: 0.8em;
   font-size: 36px;
+}
+.bm-item:hover {
+  color: #813E21;
 }
 
 /* Styling of overlay */

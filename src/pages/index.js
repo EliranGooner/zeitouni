@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Carousel from "../components/carousel"
 import AboutDiv from "../components/about-div"
+import AboutAviDiv from "../components/about-avi-div"
+
 
 
 const IndexPage = () => (
@@ -16,6 +18,7 @@ const IndexPage = () => (
     <Hero />
     <AboutDiv />
     <Carousel />
+    <AboutAviDiv />
   </Layout>
 )
 

@@ -1,11 +1,7 @@
 import React from 'react';
 import styles from './carousel-slide.module.scss'
 import { Link } from "gatsby"
-import {
-  AwesomeButton,
-  AwesomeButtonProgress,
-  AwesomeButtonSocial,
-} from 'react-awesome-button';
+import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css'
 
