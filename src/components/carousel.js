@@ -25,7 +25,7 @@ const Carousel = () => {
     <div>
       <div className={styles.header}>
         <Fade>
-          <p>פרויקטים</p>
+          <h1>פרויקטים</h1>
         </Fade>
       </div>
       <Flickity

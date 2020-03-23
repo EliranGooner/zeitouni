@@ -7,7 +7,7 @@ import './awesome-button.css'
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Image from './image'
-
+import Fade from 'react-reveal/Fade';
 
 const CarouselSlide = ({header, src, path}) => {
   
@@ -17,7 +17,9 @@ const CarouselSlide = ({header, src, path}) => {
       <div className={styles.text_container}>
         <div className={styles.inner}>
           <div className={styles.header_shadow}>
-            <h1>{header}</h1>
+            <Fade duration={3000}>
+              <h1>{header}</h1>
+            </Fade>
           </div>
           <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link>
         </div>

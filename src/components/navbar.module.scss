@@ -1,8 +1,9 @@
 .navbar {
     width: 100vw;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
+    height: 4.5rem;
+    // display: flex;
+    // justify-content: space-between;
+    z-index: 3;
     background: transparent;
     position: fixed;
     left: 0;
@@ -14,107 +15,28 @@
   background: white;
 }
 
-
-.menu__toggler {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 998;
-  height: 28px;
-  width: 28px;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  span,
-  span::before,
-  span::after {
-    position: absolute;
-    content: '';
-    width: 28px;
-    height: 2.5px;
-    background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
-    border-radius: 20px;
-    transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  }
-
-  span::before {
-    top: -8px;
-    right: 1%;
-  }
-
-  span::after {
-    top: 8px;
-    right: 1%;
-  }
-
-  &.active > span  {
-    background: transparent;
-  }
-
-  &.active > span::before,
-  &.active > span::after {
-    background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
-    top: 0px;
-  }
-
-  &.active > span::before  {
-    transform: rotate(-225deg);
-  }
-
-  &.active > span::after  {
-    transform: rotate(225deg);
-  }
-
-}
-
-/*
- * SLIDING MENU PANEL
- */
-.menu {
-  position: fixed;
-  right: -30%;
-  z-index: 997;
-  color: white;
-  background: black;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
-  width: 30%;
-  height: 100%;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: 300ms right cubic-bezier(0.77, 0, 0.175, 1);
-  @media only screen and (max-width: 600px) {
-    width: 250px;
-    right: -250px;
-    padding: 50px;
-  }
-  &.active {
-    right: 0;
-  }
-  a {
-    text-decoration: none;
-    text-align: center;
-    color: #DCC6B9 !important;
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
-    margin-left: 2rem;
-  }
-  a:hover {
-    color: #7e391b !important;
-    transition: 400ms cubic-bezier(0.77, 0, 0.175, 1);
-  }
-}
-
 .selected{
     padding: 5px;
     border: 2px solid #7e391b;
 }
 
 .logo {
-  height: 3rem;
-  width: 7rem;
+  width: 9rem;
   margin: 0;
+}
+
+.logos {
+  width: 57%;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  font-family: 'Heebo';
+  color: black;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.1rem 0.2rem 0.2rem;
 }

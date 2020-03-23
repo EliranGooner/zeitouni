@@ -3,9 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+  background: gray;
   a {
     color: black;
+    text-decoration: underline;
     margin: 0 4px 0 4px;
   }
   a:hover {
@@ -18,11 +19,25 @@
   align-items: center;
   a {
     color: black;
+    text-decoration: none;
   }
   a:hover {
     color: black
   }
   p {
     margin: 0 2.5px 0 0;
+  }
+}
+
+.slogan {
+  height: 13rem;
+  width: 100%;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h5 {
+    color: white;
   }
 }
