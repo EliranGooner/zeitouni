@@ -1,16 +1,16 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 44px;
-  height: 38px;
-  right: 28px;
-  top: 10px;
+  width: 2.8rem;
+  height: 2.3rem;
+  right: 1.5rem;
+  top: 1.3rem;
 }
 
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: linear-gradient(90deg, rgba(126,57,27,1) 2%, rgba(181,134,111,1) 35%, rgba(220,198,185,1) 50%, rgba(181,134,111,1) 65%, rgba(126,57,27,1) 98%);
+  background: black;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
        -moz-user-select: none; /* Firefox */
@@ -66,7 +66,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Individual item */
 .bm-item {
-  color: #DCC6B9;
+  color: white;
   text-decoration: none !important;
   display: inline-block;
   text-align: center;
@@ -74,25 +74,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: 36px;
 }
 .bm-item:hover {
-  color: #813E21;
+  color: grey;
 }
 
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-}
-
-.navbar {
-  width: 100vw;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  background: transparent;
-  color: black;
-  position: fixed;
-  left: 0;
-  top: 0;
-  transition: 0.5s background-color ease;
 }
 
 .navbar-black {
@@ -102,5 +89,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .current-path {
   padding: 8px !important;
-  border: 2px solid #7e391b !important;
+  border: 2px solid grey !important;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
