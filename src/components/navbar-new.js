@@ -1,12 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
-import './navbar-new.css'
-import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+import './navbar-new.scss'
 import { stack as Menu } from 'react-burger-menu'
 import Navbar from './navbar'
+import NavbarSmall from './navbar-small'
+import sizeMe from 'react-sizeme';
 
-const NavbarNew = ({}) => {
+
+const NavbarNew = (props) => {
   const[path, setPath] = useState(null);
   useEffect(() => {
     const getCurrentPath = () => {
@@ -28,15 +30,18 @@ const NavbarNew = ({}) => {
     };
     getCurrentPath();
   });
-  
+  const { width, height } = props.size;
+
+  const ToRenderChildNavbar = width > 900
+  ? Navbar
+  : NavbarSmall;
 
 
   const showSettings = (event) => {
     event.preventDefault();
   }
-  console.log(path)
   return <div id="outer-container">
-    <Navbar />
+    <ToRenderChildNavbar />
     <Menu right disableAutoFocus pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
       <Link to="/" className={'item-home' === path ? 'current-path' : null}>בית</Link>
       <Link to="/projects/" className={'item-projects' === path ? 'current-path' : null}>פרויקטים</Link>
@@ -51,5 +56,4 @@ const NavbarNew = ({}) => {
   </div>
 };
 
-export default NavbarNew
-
+export default sizeMe({ monitorWidth: true })(NavbarNew)

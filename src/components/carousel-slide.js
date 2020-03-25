@@ -8,19 +8,28 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Image from './image'
 import Fade from 'react-reveal/Fade';
+import { SizeMe } from 'react-sizeme'
 
 const CarouselSlide = ({header, src, path}) => {
-  
+
   return (
     <div className={styles.CarouselSlide}>
     <Image imgName={src} className={styles.img} />
       <div className={styles.text_container}>
         <div className={styles.inner}>
+        <SizeMe>{({ size }) => size.width > 150 ?
           <div className={styles.header_shadow}>
+          <Fade duration={3000}>
+            <h1>{header}</h1>
+          </Fade>
+        </div>
+        :
+        <div className={styles.header_shadow_small}>
             <Fade duration={3000}>
               <h1>{header}</h1>
             </Fade>
           </div>
+      }</SizeMe>
           <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link>
         </div>
       </div>

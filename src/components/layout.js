@@ -10,9 +10,12 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from './footer'
+import FooterSmall from './footer-small'
 import Navbar from './navbar'
 import NavbarNew from "./navbar-new"
 import "./layout.css"
+import { SizeMe } from 'react-sizeme'
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +32,11 @@ const Layout = ({ children }) => {
     <>
       <NavbarNew />
         <main>{children}</main>
-      <Footer />
+        <SizeMe>{({ size }) => size.width > 380 ?
+          <Footer />
+        :
+          <FooterSmall />
+      }</SizeMe>
     </>
   )
 }

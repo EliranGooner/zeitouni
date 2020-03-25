@@ -8,6 +8,8 @@ import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css'
 import { Link } from 'gatsby'
 import Fade from 'react-reveal/Fade';
+import divider from '../images/title-divider.png';
+
 
 const flickityOptions = {
   initialIndex: 3,
@@ -26,6 +28,7 @@ const Carousel = () => {
       <div className={styles.header}>
         <Fade>
           <h1>פרויקטים</h1>
+          <img src={divider}></img>
         </Fade>
       </div>
       <Flickity

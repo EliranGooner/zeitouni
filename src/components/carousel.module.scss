@@ -8,12 +8,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background: white;
-  height: 50px;
+  height: 83px;
   padding-top: 10px;
   h1 {
     color: black;
-    font-size: 40px;
+    font-size: 50px;
+    margin: 0;
+  }
+  img {
+    object-fit: contain;
+    height: 2rem;
+    width: 20rem;
     margin: 0;
   }
 }
