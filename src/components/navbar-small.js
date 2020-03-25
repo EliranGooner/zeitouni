@@ -1,14 +1,14 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, {useState, useEffect} from "react";
-import styles from './navbar.module.scss';
+import styles from './navbar-small.module.scss';
 import zeitouniLogo from '../images/logo zeituni_b.png';
 import { Icon, InlineIcon } from '@iconify/react';
 import instagramIcon from '@iconify/icons-cib/instagram';
 import facebookIcon from '@iconify/icons-cib/facebook';
 
 
-const Navbar = ({}) => {
+const NavbarSmall = ({}) => {
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
       window.addEventListener("scroll", () => {
@@ -45,4 +45,4 @@ const Navbar = ({}) => {
     </div>
 };
 
-export default Navbar
+export default NavbarSmall

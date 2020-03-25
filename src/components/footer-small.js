@@ -1,18 +1,16 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, {useState} from "react";
-import styles from './footer.module.scss';
-import {AwesomeButtonSocial} from 'react-awesome-button';
+import styles from './footer-small.module.scss';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css';
 import zeitouniLogo from '../images/logo zeituni_b.png'
+import devLogo from '../images/EZDev-Logo.png'
 import Fade from 'react-reveal/Fade';
-import Image from './image';
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
- 
 
-const Footer = ({}) => {
+
+const FooterSmall = ({}) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "EZDev-Logo.png" }) {
@@ -25,9 +23,9 @@ const Footer = ({}) => {
     }
   `)
   const imgStyle = {
-    height: '90px',
-    width: '580%',
-    margin: '0 18px 1px 0',
+    height: '45px',
+    width: '700%',
+    margin: '0 1px 1px 0',
     objectFit: 'cover'
   }
     return <div>
@@ -37,14 +35,11 @@ const Footer = ({}) => {
         </Fade>
       </div>
       <div className={styles.footer}>
-      <Link to='/sitemap'>מפת אתר</Link>
-        <div className={styles.dev}>
-          <p>Designed & developed by</p>
-          <Link to='/'><Img fluid={data.placeholderImage.childImageSharp.fluid} style={imgStyle}/></Link>
-        </div>
         <Link to='/accessibility'>הצהרת נגישות</Link>
+        <Link to='/sitemap'>מפת אתר</Link>
+          <Link to='/'><img src={devLogo} height={50} width={150} /></Link>
       </div>
     </div>
 };
 
-export default Footer
+export default FooterSmall

@@ -38,6 +38,17 @@
   margin: 16px;
 }
 
+.header_shadow_small {
+  background: rgba(0, 0, 0, 0.5);
+  height: 10rem;
+  width: 10rem;
+  padding-bottom: 5px;
+  margin: 16px;
+  h1 {
+    font-size: 2em;
+  }
+}
+
 h1 {
   font-family: 'Heebo';
   color: white;

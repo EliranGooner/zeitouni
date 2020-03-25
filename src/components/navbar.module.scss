@@ -1,9 +1,9 @@
 .navbar {
     width: 100vw;
     height: 4.5rem;
-    // display: flex;
-    // justify-content: space-between;
-    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    z-index: 15;
     background: transparent;
     position: fixed;
     left: 0;
@@ -21,12 +21,12 @@
 }
 
 .logo {
-  width: 9rem;
+  width: 16rem;
   margin: 0;
 }
 
 .logos {
-  width: 57%;
+  width: 60%;
   height: 4.5rem;
   display: flex;
   align-items: center;
@@ -39,4 +39,19 @@
   height: 2rem;
   width: 2rem;
   margin: 0 0.1rem 0.2rem 0.2rem;
+}
+
+.social_white {
+  font-family: 'Heebo';
+  color: black;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.1rem 0.2rem 0.2rem;
+  color: white !important;
+}
+
+.menu_white {
+  background: white;
+  height: 4.5rem;
+  width: 8%;
 }

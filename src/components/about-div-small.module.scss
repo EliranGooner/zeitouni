@@ -1,5 +1,5 @@
 .about {
-  height: 39rem;
+  height: 37rem;
   width: 100%;
   padding-top: 0.3rem;
   background: black;
@@ -27,13 +27,12 @@
 }
 
 .text {
-  width: 75%;
+  width: 85%;
   height: 67%;
 }
 
 .content {
   width: 50rem;
-  border: 8px solid white;
   h1 {
     margin-top: 16px;
     font-size: 50px;
@@ -41,7 +40,7 @@
   img {
     object-fit: contain;
     height: 2rem;
-    width: 20rem;
+    width: 15rem;
     margin: 0;
   }
 }

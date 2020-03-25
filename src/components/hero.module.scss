@@ -16,11 +16,12 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, .3);
+  img {
+    object-fit: cover !important;
+  }
 }
 
-.scroll {
- 
-}
 
 .scroll a {
   padding-top: 80px;
@@ -146,3 +147,18 @@
   width: 100%;
 }
 
+.logo_image {
+  height: 40rem;
+}
+.logo_image_small {
+  height: 28rem;
+}
+
+.image_small {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  img {
+    object-fit: cover !important;
+  }
+}

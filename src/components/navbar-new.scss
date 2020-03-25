@@ -4,7 +4,7 @@
   width: 2.8rem;
   height: 2.3rem;
   right: 1.5rem;
-  top: 1.3rem;
+  top: 1.2rem;
 }
 
 
@@ -16,6 +16,10 @@
        -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
+}
+
+.bm-burger-bars-white {
+  background: white !important;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -83,7 +87,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .navbar-black {
-  background: white;
+  background: white !important;
   z-index: 3;
 }
 
