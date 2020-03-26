@@ -17,7 +17,7 @@ const CarouselSlide = ({header, src, path}) => {
     <Image imgName={src} className={styles.img} />
       <div className={styles.text_container}>
         <div className={styles.inner}>
-        <SizeMe>{({ size }) => size.width > 150 ?
+        <SizeMe>{({ size }) => size.width > 200 ?
           <div className={styles.header_shadow}>
           <Fade duration={3000}>
             <h1>{header}</h1>

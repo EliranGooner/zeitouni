@@ -31,7 +31,7 @@
 .scroll a span {
   color: white !important;
   position: absolute;
-  top: 620px;
+  top: 630px;
   left: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -52,13 +52,54 @@
   z-index: 12;
 }
 .scroll a span:nth-of-type(2) {
-  top: 636px;
+  top: 646px;
   -webkit-animation-delay: .15s;
   animation-delay: .15s;
   z-index: 12;
 }
 .scroll a span:nth-of-type(3) {
-  top: 652px;
+  top: 662px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+  z-index: 12;
+}
+
+.scroll_medium a {
+  padding-top: 80px;
+  z-index: 12;
+
+}
+.scroll_medium a span {
+  color: white !important;
+  position: absolute;
+  top: 1050px;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin-left: -12px;
+  border-left: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+
+}
+.scroll_medium a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  z-index: 12;
+}
+.scroll_medium a span:nth-of-type(2) {
+  top: 1066px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+  z-index: 12;
+}
+.scroll_medium a span:nth-of-type(3) {
+  top: 1082px;
   -webkit-animation-delay: .3s;
   animation-delay: .3s;
   z-index: 12;
@@ -153,8 +194,20 @@
 .logo_image_small {
   height: 28rem;
 }
+.logo_image_medium {
+  height: 47rem;
+}
 
 .image_small {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  img {
+    object-fit: cover !important;
+  }
+}
+
+.image_medium {
   object-fit: cover;
   height: 100vh;
   width: 100%;
