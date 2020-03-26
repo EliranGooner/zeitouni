@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import PageHero from '../components/page-hero'
+import ProjectsContainer from '../components/projects-container'
 
 
 import Layout from "../components/layout"
@@ -7,7 +9,8 @@ import Layout from "../components/layout"
 
 const Projects = () => (
   <Layout>
-    <h1>hi</h1>
+    <PageHero header='פרויקטים' />
+    <ProjectsContainer />
   </Layout>
 )
 
