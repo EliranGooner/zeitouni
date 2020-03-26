@@ -27,7 +27,7 @@ const Hero = (props) => {
   const widthCheckLogo = (deviceWidth) => {
     if (deviceWidth > 1100) {
       return styles.logo_image
-    } else if (1100 > deviceWidth && deviceWidth > 400) {
+    } else if (1100 > deviceWidth && deviceWidth > 450) {
       return styles.logo_image_medium
     } else {
       return styles.logo_image_small
