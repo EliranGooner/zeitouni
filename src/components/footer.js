@@ -5,7 +5,7 @@ import styles from './footer.module.scss';
 import {AwesomeButtonSocial} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css';
-import zeitouniLogo from '../images/logo zeituni_b.png'
+import zeitouniLogo from '../images/zeitouni_slogan.png'
 import Fade from 'react-reveal/Fade';
 import Image from './image';
 import { graphql, useStaticQuery } from "gatsby"

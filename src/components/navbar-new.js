@@ -5,6 +5,7 @@ import './navbar-new.scss'
 import { stack as Menu } from 'react-burger-menu'
 import Navbar from './navbar'
 import NavbarSmall from './navbar-small'
+import NavbarMedium from './navbar-medium'
 import sizeMe from 'react-sizeme';
 
 
@@ -32,9 +33,14 @@ const NavbarNew = (props) => {
   });
   const { width, height } = props.size;
 
-  const ToRenderChildNavbar = width > 900
-  ? Navbar
-  : NavbarSmall;
+  let ToRenderChildNavbar 
+  if (width > 1100) {
+    ToRenderChildNavbar = Navbar
+  } else if (1100 > width && width > 420) {
+    ToRenderChildNavbar = NavbarMedium
+  } else {
+    ToRenderChildNavbar = NavbarSmall
+  }
 
 
   const showSettings = (event) => {

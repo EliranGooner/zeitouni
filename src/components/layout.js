@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
     <>
       <NavbarNew />
         <main>{children}</main>
-        <SizeMe>{({ size }) => size.width > 380 ?
+        <SizeMe>{({ size }) => size.width > 420 ?
           <Footer />
         :
           <FooterSmall />

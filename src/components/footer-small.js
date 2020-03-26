@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import styles from './footer-small.module.scss';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css';
-import zeitouniLogo from '../images/logo zeituni_b.png'
+import zeitouniLogo from '../images/zeitouni_slogan.png'
 import devLogo from '../images/EZDev-Logo.png'
 import Fade from 'react-reveal/Fade';
 import { graphql, useStaticQuery } from "gatsby"
@@ -31,7 +31,7 @@ const FooterSmall = ({}) => {
     return <div>
       <div className={styles.slogan}>
         <Fade duration={2500}>
-          <img src={zeitouniLogo} height={300} width={800}></img>
+          <img src={zeitouniLogo} height={400} width={800}></img>
         </Fade>
       </div>
       <div className={styles.footer}>
