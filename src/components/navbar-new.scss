@@ -5,6 +5,8 @@
   height: 2.3rem;
   right: 1.5rem;
   top: 1.2rem;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 
@@ -16,15 +18,15 @@
        -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
-.bm-burger-bars-white {
-  background: white !important;
-}
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
   box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -32,6 +34,8 @@
 .bm-cross-button {
   height: 24px;
   width: 24px;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 /* Color/shape of close button cross */
@@ -39,6 +43,8 @@
   width: 6px !important;
   height: 28px !important;
   background: #DCC6B9;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 /*
@@ -88,7 +94,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .navbar-black {
   background: white !important;
-  z-index: 3;
+  z-index: 13;
 }
 
 .current-path {
