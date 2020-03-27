@@ -12,6 +12,7 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ProjectCard from './project-card';
 
 const ProjectsContainerSmall = () => {
   
@@ -30,22 +31,22 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3}>
       <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
       </Grid>
     </Grid>
     </ExpansionPanelDetails>
@@ -61,28 +62,16 @@ const ProjectsContainerSmall = () => {
     </ExpansionPanelSummary>
     <ExpansionPanelDetails>
       <Grid container spacing={3}>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        </Grid>
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        </Grid>
       </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-    </Grid>
     </ExpansionPanelDetails>
   </ExpansionPanel>
-  <ExpansionPanel >
+  <ExpansionPanel disabled={false}>
     <ExpansionPanelSummary
       expandIcon={<ExpandMoreIcon />}
       aria-controls="panel3a-content"
@@ -92,34 +81,14 @@ const ProjectsContainerSmall = () => {
         <h1>פרויקטים עתידיים</h1>
     </ExpansionPanelSummary>
     <ExpansionPanelDetails>
-      <Grid container spacing={3}>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
+      <Grid container spacing={3} >
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        </Grid>
       </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Paper >xs=12 sm=6</Paper>
-      </Grid>
-    </Grid>
     </ExpansionPanelDetails>
   </ExpansionPanel>
   </div>
 };
 
 export default ProjectsContainerSmall
-
-
-     
- 
-
