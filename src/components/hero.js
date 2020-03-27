@@ -14,13 +14,16 @@ const fadeProperties = {
   arrows: false
 }
 
-
 const Hero = (props) => {
   const { width, height } = props.size;
+  let heroImageFirst
+  let heroImageSecond
+  420 > width ? heroImageFirst = 'zeitouni-home-1.jpg' : heroImageFirst = 'zeitouni-hero-1.jpg'
+  420 > width ? heroImageSecond = 'zeitouni-home-2.jpg' : heroImageSecond = 'zeitouni-hero-2.jpg'
   const widthCheckImage = (deviceWidth) => {
-    if (1100 > deviceWidth && deviceWidth > 400) {
+    if (1100 > deviceWidth && deviceWidth > 450) {
       return styles.image_medium
-    } else if (400 > deviceWidth) {
+    } else if (450 > deviceWidth) {
       return styles.image_small
     }
   }
@@ -30,6 +33,7 @@ const Hero = (props) => {
     } else if (1100 > deviceWidth && deviceWidth > 450) {
       return styles.logo_image_medium
     } else {
+
       return styles.logo_image_small
     }
   }
@@ -38,12 +42,12 @@ const Hero = (props) => {
       <Fade {...fadeProperties}>
         <div className={styles.each_fade}>
           <div className={styles.image_container}>
-            <Image imgName='zeitouni-hero-1.jpg' className={widthCheckImage(width)}  />
+            <Image imgName={heroImageFirst} className={widthCheckImage(width)}  />
           </div>
         </div>
         <div className={styles.each_fade}>
           <div className={styles.image_container}>
-            <Image imgName='zeitouni-hero-2.jpg'  className={widthCheckImage(width)} />
+            <Image imgName={heroImageSecond}  className={widthCheckImage(width)} />
           </div>
         </div>
       </Fade>

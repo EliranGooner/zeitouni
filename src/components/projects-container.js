@@ -11,17 +11,24 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ProjectCard from './project-card'
 
-const ProjectsContainer = () => {
+const ProjectsContainer = (props) => {
+  const { width, height } = props.size;
+
+  let mediumDevice = false
+  if (1100 > width) {
+    mediumDevice = true
+  } 
+
   
   return <div dir="rtl">
   <Tabs defaultIndex={1} >
     <TabList >
-      <Tab>פרויקטים מאוכלסים</Tab>
-      <Tab>פרויקטים בשיווק</Tab>
-      <Tab>פרויקטים עתידיים</Tab>
+      <Tab className={ mediumDevice ? 'react-tabs__tab_medium' : 'react-tabs__tab'}>פרויקטים מאוכלסים</Tab>
+      <Tab className={ mediumDevice ? 'react-tabs__tab_medium' : 'react-tabs__tab'}>פרויקטים בשיווק</Tab>
+      <Tab className={ mediumDevice ? 'react-tabs__tab_medium' : 'react-tabs__tab'}>פרויקטים עתידיים</Tab>
     </TabList>
     <TabPanel>
-      <Grid container >
+      <Grid container className={styles.bottom} >
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
           <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
         </Grid>
@@ -43,44 +50,28 @@ const ProjectsContainer = () => {
       </Grid>
     </TabPanel>
     <TabPanel>
-      <p>
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-      </p>
-      <p>
-        Source:{' '}
-        <a href="https://en.wikipedia.org/wiki/" target="_blank">
-          Wikipedia
-        </a>
-      </p>
+    <Grid container >
+      <Grid item className={styles.item} xs={12} sm={6} ml={6}>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+      </Grid>
+      <Grid item className={styles.item} xs={12} sm={6} ml={6}>
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/'  />
+      </Grid>
+    </Grid>
     </TabPanel>
     <TabPanel>
-      <p>
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-      </p>
-      <p>
-        Source:{' '}
-        <a href="https://en.wikipedia.org/wiki/" target="_blank">
-          Wikipedia
-        </a>
-      </p>
-    </TabPanel>
-    <TabPanel>
-      <h4>תת כותרת</h4>
-      <p>
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-      </p>
-      <p>
-        Source:{' '}
-        <a href="https://en.wikipedia.org/wiki/" target="_blank">
-          Wikipedia
-        </a>
-      </p>
+    <Grid container >
+      <Grid item className={styles.item} xs={12} sm={3} ml={6}>
+      </Grid>
+      <Grid item className={styles.item} xs={12} sm={6} ml={6}>
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+      </Grid>
+      <Grid item className={styles.item} xs={12} sm={3} ml={6}>
+      </Grid>
+    </Grid>
     </TabPanel>
   </Tabs>
 </div>
 };
 
-export default ProjectsContainer
+export default sizeMe({ monitorWidth: true })(ProjectsContainer)

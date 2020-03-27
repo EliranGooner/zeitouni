@@ -1,8 +1,18 @@
 .card {
   position: relative;
-  width: 67%;
+  width: 85%;
   height: 500px;
   margin: 20px;
+  border: 6px solid black;
+  filter: drop-shadow(0px 0px 5px #dcc6b9);
+  background: black;
+  overflow: hidden;
+}
+.card_small {
+  position: relative;
+  width: 85%;
+  height: 500px;
+  margin-left: 26px;
   border: 6px solid black;
   filter: drop-shadow(0px 0px 5px #dcc6b9);
   background: black;
@@ -32,6 +42,15 @@
   position: relative;
 }
 
+.inner_small {
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .header_shadow {
   background: rgba(0, 0, 0, 0.5);
