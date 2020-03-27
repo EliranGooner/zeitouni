@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  width: 50rem;
+  height: 100%;
+  text-align: right;
+  font-family: 'Heebo';
+  margin-bottom: 3rem;
+  p {
+    direction: rtl;
+    float: right;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    direction: rtl;
+    float: right;
+    color: black;
+  }
+}
+
+.contact {
+  width: 15rem;
+  height: 100%;
+}

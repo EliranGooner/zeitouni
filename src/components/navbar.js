@@ -12,7 +12,7 @@ const Navbar = ({}) => {
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
       window.addEventListener("scroll", () => {
-        if (window.scrollY >= window.innerHeight - 300) {
+        if (window.scrollY >= window.innerHeight - 370) {
           setScroll(true)
         } else {
           setScroll(false)
