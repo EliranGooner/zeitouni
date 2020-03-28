@@ -19,13 +19,12 @@ import MapMarker from './map-marker';
 const ProjectContent = ({project}) => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm()
-  const url = process.env.FLEXYFORM_KEY
+  const url = "https://getform.io/f/2df02ab9-1e41-4585-b57b-5c0015fc5f38"
   const onSubmit = () => {
     fetch(url, {
       method: 'POST',
       headers: {
-        "Content-type": url,
-        "Access-Control-Allow-Origin": 'https://zeitouni.herokuapp.com/herzliya/'
+        "Content-Type": "json",
       },
       body: 'foo=bar&lorem=ipsum'
     })
