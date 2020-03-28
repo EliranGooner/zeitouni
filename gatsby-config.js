@@ -34,7 +34,7 @@ module.exports = {
         fonts: [
           {
             family: `Heebo`,
-            variants: [`400`, `500`, `900`],
+            variants: [`400`, `700`, `800`, `900`],
             subsets: [`latin`, `hebrew`]
           }
         ],
