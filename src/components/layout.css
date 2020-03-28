@@ -624,3 +624,8 @@ pre tt:after {
 .hebrew {
   direction: rtl;
 }
+
+button {
+  padding: 0;
+  border-style: none;
+}
