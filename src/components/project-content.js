@@ -11,17 +11,23 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import { useForm } from 'react-hook-form'
+import GoogleMapReact from "google-map-react";
+import MapMarker from './map-marker';
 
 
 
 const ProjectContent = ({project}) => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm()
-  const url = "https://www.flexyform.com/f/6dd8a2a22e656549c9cdd8b85074db127e86f10f"
-  const onSubmit = (data) => {
+  const url = process.env.FLEXYFORM_KEY
+  const onSubmit = () => {
     fetch(url, {
-      method: 'post',
-      body: data
+      method: 'POST',
+      headers: {
+        "Content-type": url,
+        "Access-Control-Allow-Origin": 'https://zeitouni.herokuapp.com/herzliya/'
+      },
+      body: 'foo=bar&lorem=ipsum'
     })
   }
 
@@ -32,6 +38,11 @@ const ProjectContent = ({project}) => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const center = { 
+    lat: 32.177185,
+    lng: 34.832118
+  }
 
   let about
   let location
@@ -95,6 +106,19 @@ const ProjectContent = ({project}) => {
             </div>
           </div>
         </ElementFade>
+        <div className={styles.map}>
+          <GoogleMapReact
+          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_KEY }}
+          defaultCenter={center}
+          defaultZoom={17}
+          >
+            <MapMarker 
+            lat={center.lat}
+            lng={center.lng}
+            src={'logo zeituni_b.png'}
+            />
+          </GoogleMapReact>
+        </div>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
