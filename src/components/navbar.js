@@ -25,8 +25,8 @@ const Navbar = ({}) => {
       <div className={`${styles.navbar} navbar-black`}>
         <div className={styles.logos}>
             <div>
-              <Link to="https://www.instagram.com/zeitounigroupltd/"><Icon icon={instagramIcon} className={styles.social}/></Link>
-              <Link to="https://www.facebook.com/Zeitouni.Group.ltd.IL/"><Icon icon={facebookIcon} className={styles.social}/></Link>
+              <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social}/></a>
+              <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social}/></a>
             </div>
             <Link to="/"><img src={zeitouniLogo} className={styles.logo}></img></Link>
         </div>
@@ -35,8 +35,8 @@ const Navbar = ({}) => {
       <div className={styles.navbar}>
         <div className={styles.logos}>
           <div>
-            <Link to="https://www.instagram.com/zeitounigroupltd/"><Icon icon={instagramIcon} className={styles.social_white}/></Link>
-            <Link to="https://www.facebook.com/Zeitouni.Group.ltd.IL/"><Icon icon={facebookIcon} className={styles.social_white}/></Link>
+            <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social_white}/></a>
+            <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social_white}/></a>
           </div>
         </div>
         <div className={styles.menu_white}></div>

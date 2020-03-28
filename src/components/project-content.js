@@ -35,11 +35,12 @@ const ProjectContent = ({project}) => {
       form.reset();
     }
   };
-  const onSubmit = () => {
+  const onSubmit = (data) => {
+    console.log(data)
     axios({
       method: "post",
       url: "https://getform.io/f/2df02ab9-1e41-4585-b57b-5c0015fc5f38",
-      data: new FormData
+      data: data
     })
   };
 
@@ -104,7 +105,7 @@ const ProjectContent = ({project}) => {
                         </div>
                       </div>
                       <div className={styles.submit}>
-                        <button type="submit" onClick={!errors ? handleOpen : ''}><AwesomeButton type="primary" className='aws-btn-contact' >שלח</AwesomeButton></button>
+                        <button type="submit" ><AwesomeButton type="primary" className='aws-btn-contact' >שלח</AwesomeButton></button>
                       </div>
                      </div>
                   </form>
