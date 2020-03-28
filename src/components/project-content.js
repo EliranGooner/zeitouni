@@ -13,22 +13,35 @@ import Fade from '@material-ui/core/Fade';
 import { useForm } from 'react-hook-form'
 import GoogleMapReact from "google-map-react";
 import MapMarker from './map-marker';
+import axios from 'axios';
 
 
 
 const ProjectContent = ({project}) => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm()
-  const url = "https://getform.io/f/2df02ab9-1e41-4585-b57b-5c0015fc5f38"
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null
+  });
+
+
+  const handleServerResponse = (ok, msg, form) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg }
+    });
+    if (ok) {
+      form.reset();
+    }
+  };
   const onSubmit = () => {
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        "Content-Type": "json",
-      },
-      body: 'foo=bar&lorem=ipsum'
+    axios({
+      method: "post",
+      url: "https://getform.io/f/2df02ab9-1e41-4585-b57b-5c0015fc5f38",
+      data: new FormData
     })
-  }
+  };
 
   const handleOpen = () => {
     setOpen(true);
