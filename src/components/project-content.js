@@ -17,7 +17,13 @@ import { useForm } from 'react-hook-form'
 const ProjectContent = ({project}) => {
   const [open, setOpen] = useState(false);
   const { register, errors, handleSubmit } = useForm()
-  const onSubmit = data => console.log(data)
+  const url = "https://www.flexyform.com/f/6dd8a2a22e656549c9cdd8b85074db127e86f10f"
+  const onSubmit = (data) => {
+    fetch(url, {
+      method: 'post',
+      body: data
+    })
+  }
 
   const handleOpen = () => {
     setOpen(true);
@@ -54,7 +60,7 @@ const ProjectContent = ({project}) => {
                   <h1>יצירת קשר</h1>
                   </div>
                   <p>למען קבלת פרטים נוספים וקביעת פגישה נא השאירו פרטים</p>
-                  <form action="https://www.flexyform.com/f/6dd8a2a22e656549c9cdd8b85074db127e86f10f" method="post" onSubmit={handleSubmit(onSubmit)}>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={styles.form}>
                       <div className={styles.form_field}>
                         <input type="text" name="fullName" placeholder='שם מלא' className={styles.input_row_one} ref={register({ required: true, maxLength: 30, pattern: /^[\u0590-\u05FF]+$/ })}/>
