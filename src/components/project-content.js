@@ -44,6 +44,11 @@ const ProjectContent = ({project}) => {
     })
   };
 
+  console.log(process.env.GOOGLE_MAPS_KEY)
+  console.log(process.env.GETFORM_KEY)
+  console.log(`${process.env.GOOGLE_MAPS_KEY}`)
+  console.log(`${process.env.GETFORM_KEY}`)
+
   const handleOpen = () => {
     setOpen(true);
   };
