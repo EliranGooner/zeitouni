@@ -39,7 +39,7 @@ const ProjectContent = ({project}) => {
     console.log(data)
     axios({
       method: "post",
-      url: "https://getform.io/f/2df02ab9-1e41-4585-b57b-5c0015fc5f38",
+      url: `${process.env.GETFORM_KEY}`,
       data: data
     })
   };
@@ -121,7 +121,7 @@ const ProjectContent = ({project}) => {
         </ElementFade>
         <div className={styles.map}>
           <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_KEY }}
+          bootstrapURLKeys={{ key: `${process.env.GOOGLE_MAPS_KEY}` }}
           defaultCenter={center}
           defaultZoom={17}
           >
