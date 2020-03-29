@@ -2,6 +2,10 @@
   height: 31rem;
 }
 
+.gallery_medium {
+  height: 21rem;
+}
+
 .project_container {
   width: 100%;
   height: 30rem;
@@ -13,6 +17,10 @@
 
 .slide_container {
   width: 50rem;
+  height: 30rem;
+}
+.slide_container_medium {
+  width: 30.5rem;
   height: 30rem;
 }
 
@@ -61,6 +69,16 @@
 .gallery_side {
   width: 24rem;
   height: 28.15rem;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 5px 5px 0;
+}
+
+.gallery_side_medium {
+  width: 24rem;
+  height: 17.15rem;
   background: black;
   display: flex;
   justify-content: center;

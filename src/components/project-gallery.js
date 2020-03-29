@@ -6,7 +6,7 @@ import ElementFade from 'react-reveal/Fade';
 import zeitouniLogo from '../images/logo zeituni_w.png';
 import Image from "./image";
 import { Fade } from 'react-slideshow-image';
-import sizeMe from 'react-sizeme';
+import { SizeMe } from 'react-sizeme';
 
 
 const fadeProperties = {
@@ -15,34 +15,65 @@ const fadeProperties = {
 
 const ProjectGallery = ({image1, image2, image3, logo}) => {
   
-  return <div className={styles.gallery}>
-    <ElementFade right duration={3000}>
-      <div className={styles.project_container}>
-        <div className={styles.slide_container}>
-          <Fade {...fadeProperties}>
-            <div className={styles.each_fade}>
-              <div className={styles.image_container}>
-                <Image imgName={image1}   />
+  return <SizeMe>{({ size }) => size.width > 1200 ?
+    <div className={styles.gallery}>
+      <ElementFade right duration={3000}>
+        <div className={styles.project_container}>
+          <div className={styles.slide_container}>
+            <Fade {...fadeProperties}>
+              <div className={styles.each_fade}>
+                <div className={styles.image_container}>
+                  <Image imgName={image1}   />
+                </div>
               </div>
-            </div>
-            <div className={styles.each_fade}>
-              <div className={styles.image_container}>
-                <Image imgName={image2}   />
+              <div className={styles.each_fade}>
+                <div className={styles.image_container}>
+                  <Image imgName={image2}   />
+                </div>
               </div>
-            </div>
-            <div className={styles.each_fade}>
-              <div className={styles.image_container}>
-                <Image imgName={image3}   />
+              <div className={styles.each_fade}>
+                <div className={styles.image_container}>
+                  <Image imgName={image3}   />
+                </div>
               </div>
-            </div>
-          </Fade>
+            </Fade>
+          </div>
+          <div className={styles.gallery_side}>
+            <Image imgName={logo}   />
+          </div>
         </div>
-        <div className={styles.gallery_side}>
-          <Image imgName={logo}   />
+      </ElementFade>
+    </div>
+  :
+    <div className={styles.gallery_medium}>
+      <ElementFade right duration={3000}>
+        <div className={styles.project_container}>
+          <div className={styles.slide_container_medium}>
+            <Fade {...fadeProperties}>
+              <div className={styles.each_fade}>
+                <div className={styles.image_container}>
+                  <Image imgName={image1}   />
+                </div>
+              </div>
+              <div className={styles.each_fade}>
+                <div className={styles.image_container}>
+                  <Image imgName={image2}   />
+                </div>
+              </div>
+              <div className={styles.each_fade}>
+                <div className={styles.image_container}>
+                  <Image imgName={image3}   />
+                </div>
+              </div>
+            </Fade>
+          </div>
+          <div className={styles.gallery_side_medium}>
+            <Image imgName={logo}   />
+          </div>
         </div>
-      </div>
-    </ElementFade>
-  </div>
+      </ElementFade>
+    </div>
+}</SizeMe>
 };
 
 export default ProjectGallery

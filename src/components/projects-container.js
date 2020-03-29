@@ -30,32 +30,32 @@ const ProjectsContainer = (props) => {
     <TabPanel>
       <Grid container className={styles.bottom} >
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו נווה עוז פתח תקווה' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/'  />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו השכונה הירוקה כפר סבא'  />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הוד השרון' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו כפר גנים פתח תקווה' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='סיטי פארק נווה גן פתח תקווה' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='הוד על הפארק הוד השרון' />
         </Grid>
       </Grid>
     </TabPanel>
     <TabPanel>
     <Grid container >
       <Grid item className={styles.item} xs={12} sm={6} ml={6}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/givat-shmuel' />
       </Grid>
       <Grid item className={styles.item} xs={12} sm={6} ml={6}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/'  />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הרצליה' path='/herzliya'  />
       </Grid>
     </Grid>
     </TabPanel>
@@ -64,7 +64,7 @@ const ProjectsContainer = (props) => {
       <Grid item className={styles.item} xs={12} sm={3} ml={6}>
       </Grid>
       <Grid item className={styles.item} xs={12} sm={6} ml={6}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו בת ים' path='/bat-yam' />
       </Grid>
       <Grid item className={styles.item} xs={12} sm={3} ml={6}>
       </Grid>

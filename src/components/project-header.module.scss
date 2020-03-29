@@ -9,8 +9,12 @@ header {
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+  text-align: center;
   h1 {
     color: black;
     font-size: 3em;
+  }
+  img {
+    width: 15rem;
   }
 }

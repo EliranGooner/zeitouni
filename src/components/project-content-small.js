@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useState} from "react"
-import styles from './project-content.module.scss'
+import styles from './project-content-small.module.scss'
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css'
@@ -11,18 +11,14 @@ import { useForm } from 'react-hook-form'
 import GoogleMapReact from "google-map-react";
 import MapMarker from './map-marker';
 import axios from 'axios';
-import { SizeMe } from 'react-sizeme';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
 
 
-const ProjectContent = ({project}) => {
+const ProjectContentSmall = ({project}) => {
   const { register, errors, handleSubmit } = useForm()
  
   const onSubmit = (data) => {
@@ -159,9 +155,42 @@ const ProjectContent = ({project}) => {
     </div>
   }
 
+
     return <div className={styles.project}>
         <ElementFade duration={3000}>
           <div className={styles.content}>
+            <div className={styles.text}>
+              <h1>על הפרויקט</h1>
+              {about}
+              <h1>המיקום</h1>
+              {location}
+              <ExpansionPanel>
+                <ExpansionPanelSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  className={styles.summary}
+                >
+                  <h1>מפרט הבניין</h1>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails classes={styles.details}>
+                  {building}
+                </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                <ExpansionPanelSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                  className={styles.summary}
+                >
+                  <h1>מפרט הדירה</h1>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails classes={styles.details} >
+                  {flat}
+                </ExpansionPanelDetails>
+                </ExpansionPanel>
+            </div>
             <div className={styles.contact}>
               <div className={styles.box}>
                 <div className={styles.header}>
@@ -198,66 +227,6 @@ const ProjectContent = ({project}) => {
                     <p>:משרד מכירות</p>
                   </div>
             </div>
-            <SizeMe>{({ size }) => size.width > 610 ?
-              <div className={styles.text}>
-                <h1>על הפרויקט</h1>
-                {about}
-                <h1>המיקום</h1>
-                {location}
-                <Accordion>
-                <Card>
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                      מפרט הבניין
-                    </Accordion.Toggle>
-                  </Card.Header>
-                  <Accordion.Collapse eventKey="0">
-                    <Card.Body>{building}</Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-                <Card>
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                      מפרט הדירה
-                    </Accordion.Toggle>
-                  </Card.Header>
-                  <Accordion.Collapse eventKey="1">
-                    <Card.Body>{flat}</Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
-              </div>
-              :    
-              <div className={styles.text_medium}>
-                <h1>על הפרויקט</h1>
-                {about}
-                <h1>המיקום</h1>
-                {location}
-                <Accordion>
-                <Card>
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                      מפרט הבניין
-                    </Accordion.Toggle>
-                  </Card.Header>
-                  <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I'm the body</Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-                <Card>
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                      מפרט הדירה
-                    </Accordion.Toggle>
-                  </Card.Header>
-                  <Accordion.Collapse eventKey="1">
-                    <Card.Body>Hello! I'm another body</Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
-              </div>    
-            }</SizeMe>
-            
           </div>
           <div className={styles.all}>
             <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
@@ -279,5 +248,5 @@ const ProjectContent = ({project}) => {
     </div>
 };
 
-export default ProjectContent
+export default ProjectContentSmall
 

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import PageHero from '../components/page-hero'
 import ProjectHeader from '../components/project-header'
 import ProjectGallery from '../components/project-gallery'
@@ -20,17 +19,16 @@ const Herlizya = (props) => {
   let CurrentProjectContent 
   if (width > 420) {
     CurrentProjectGallery = <ProjectGallery image1='zeitouni-hero-1.jpg' image2='zeitouni-hero-2.jpg' image3='zeitouni-hero-1.jpg' logo='gvash-logo.jpg' />
-    CurrentProjectContent = <ProjectContent project='herzliya' />
+    CurrentProjectContent = <ProjectContent project='gvash' />
   } else {
     CurrentProjectGallery = <ProjectGallerySmall image1='zeitouni-hero-1.jpg' image2='zeitouni-hero-2.jpg' image3='zeitouni-hero-1.jpg' logo='gvash-logo.jpg' />
-    CurrentProjectContent = <ProjectContentSmall project='herzliya' />
-
+    CurrentProjectContent = <ProjectContentSmall project='gvash' />
   }
 
 
   return <Layout>
     <PageHero header='פרויקטים' />
-    <ProjectHeader header='אקו הרצליה' />
+    <ProjectHeader header='אקו רמת הדר החדשה גבעת שמואל' />
     {CurrentProjectGallery}
     {CurrentProjectContent}
   </Layout>
