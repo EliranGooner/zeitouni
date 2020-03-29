@@ -39,6 +39,12 @@ module.exports = {
           }
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["GOOGLE_MAPS_KEY", "GETFORM_KEY"]
+      },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
