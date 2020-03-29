@@ -23,7 +23,7 @@ const ProjectCard = ({header, src, path}) => {
             <h1>{header}</h1>
           </Fade>
         </div>
-        <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link>
+        {path ? <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link> : null}
         </div>
       </div>
     </div> 
@@ -37,7 +37,7 @@ const ProjectCard = ({header, src, path}) => {
               <h1>{header}</h1>
             </Fade>
           </div>
-          <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link>
+          {path ? <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link> : null}
           </div>
         </div>
       </div>

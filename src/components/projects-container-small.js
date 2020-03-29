@@ -31,22 +31,22 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3}>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו נווה עוז פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו השכונה הירוקה כפר סבא' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הוד השרון' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו כפר גנים פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='סיטי פארק נווה גן פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+        <ProjectCard src='zeitouni-herzliya.jpg' header='הוד על הפארק הוד השרון' />
       </Grid>
     </Grid>
     </ExpansionPanelDetails>
@@ -63,15 +63,15 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3}>
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/givat-shmuel' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/herzliya' />
         </Grid>
       </Grid>
     </ExpansionPanelDetails>
   </ExpansionPanel>
-  <ExpansionPanel disabled={false}>
+  <ExpansionPanel >
     <ExpansionPanelSummary
       expandIcon={<ExpandMoreIcon />}
       aria-controls="panel3a-content"
@@ -83,7 +83,7 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3} >
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/' />
+          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו בת ים' path='bat-yam/' />
         </Grid>
       </Grid>
     </ExpansionPanelDetails>
