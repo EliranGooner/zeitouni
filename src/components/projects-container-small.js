@@ -4,7 +4,6 @@ import React, {useState} from "react";
 import styles from './projects-container-small.module.scss';
 import Fade from 'react-reveal/Fade';
 import Image from "./image";
-import sizeMe from 'react-sizeme';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';

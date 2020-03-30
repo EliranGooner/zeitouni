@@ -9,7 +9,7 @@ import ContactForm from "./contact-form";
 
 const ContactDiv = ({}) => {
     return <div className={styles.contact}>
-        <ContactForm action='https://www.flexyform.com/f/a9e4bfa16bf4fb187682e5e55d64f4e370308e89'></ContactForm>
+        <ContactForm/>
     </div>
 };
 
