@@ -2,34 +2,58 @@ import React from 'react'
 import styles from './contact-form.module.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Col, Row } from 'react-bootstrap';
-import {
-  AwesomeButton,
-  AwesomeButtonProgress,
-  AwesomeButtonSocial,
-} from 'react-awesome-button';
+import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css'
+import { useForm } from 'react-hook-form'
+import axios from 'axios';
+import Grid from '@material-ui/core/Grid';
 
-const ContactForm = ({action}) => {
+
+
+const ContactForm = () => {
+  const { register, errors, handleSubmit } = useForm()
+ 
+  const onSubmit = (data) => {
+    console.log(data)
+    axios({
+      method: "post",
+      url: `${process.env.GETFORM_KEY}`,
+      data: data
+    })
+  };
+
+
   return <div className={styles.form}>
-    <form action={action} method="post">
-      <div className={styles.form_container}>
-        <div className={styles.name}>
-          <input type="text" name="fullname" placeholder='שם מלא' className={styles.input_row_one}/>
-        </div>
-        <div className={styles.phone}>
-          <input type="text" name="phone" placeholder="טלפון" className={styles.input_row_one}></input>
-        </div>
-        <div className={styles.email}>
-          <input type="email" name="email" placeholder='דוא״ל' className={styles.input_row_one}/>
-        </div>
-        <div className={styles.message}>
-          <textarea name="message" rows="5" placeholder='הודעה' className={styles.input_row_two}></textarea>
-        </div>
-        <div className={styles.submit}>
-          <button type="submit" className={styles.submit_background}><AwesomeButton type="primary" className='aws-btn-contact' size='large'>שלח</AwesomeButton></button>
-        </div>
-      </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <p>.אנא השאירו פרטים ונחזור אליכם בהקדם</p>
+      <Grid container spacing={3} >
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <input type="text" name="email" placeholder='דוא״ל' className={styles.input} ref={register({ required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}/>
+          <div className={styles.error}>
+            {errors.email && 'דוא״ל לא תקין'}
+          </div>
+        </Grid>
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <input type="text" name="phone" placeholder="טלפון" className={styles.input}  ref={register({ required: true, pattern: /^\d{10}$/ })}></input>
+          <div className={styles.error}>
+            {errors.phone && 'מספר טלפון לא תקין'}
+          </div>
+        </Grid>
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <input type="text" name="fullName" placeholder='שם מלא' className={styles.input} ref={register({ required: true, maxLength: 30, pattern: /^[\u0590-\u05FF ,.'-]+$/ })}/>
+          <div className={styles.error}>
+            {errors.fullName && 'שם לא תקין'}
+          </div>
+        </Grid>
+        <Grid item className={styles.item} xs={12} sm={4}>
+        </Grid>
+        <Grid item className={styles.item} xs={12} sm={4}>
+          <button type="submit" ><AwesomeButton type="primary" className='aws-btn-contact' size='large'>שלח</AwesomeButton></button>
+        </Grid>
+        <Grid item className={styles.item} xs={12} sm={4}>
+        </Grid>
+      </Grid>
     </form>
   </div>
 }
