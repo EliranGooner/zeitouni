@@ -70,6 +70,9 @@
   height: 23rem;
   background: gray;
   border: 3px solid black;
+  h1 {
+    color: white;
+  }
   p {
     text-align: center;
   }
@@ -136,6 +139,7 @@
   margin-top: 1.5rem;
   background: lightgray;
   text-align: right;
+  border: 3px solid black;
 }
 
 .list {

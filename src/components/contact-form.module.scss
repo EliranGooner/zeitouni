@@ -1,82 +1,13 @@
 
-.form_container {
-  display: grid;
-  // grid-template: repeat(2, 1fr) / repeat(12, 1fr);// rows then columns
-  // overflow: hidden;
-  grid-template-areas: 
-  "e e e p p p n n n"
-  ". . s s m m m m m";
-}
 
-@media (max-width: 700px) {
-  .form_container {
-    display: grid;
-    grid-template-areas:
-      'n'
-      'p'
-      'e'
-      'm'
-      's';
-  }
-}
-.form_container .name {
-  // grid-column: 9 / 13; 
-  // grid-row: 1 / 1;
-  grid-area: n;
-  direction: rtl;
-  text-align: center;
-}
-
-.form_container .phone {
-  // grid-column: 5 / 9; 
-  // grid-row: 1 / 1;
-  grid-area: p;
-  direction: rtl;
-  text-align: center;
-}
-
-.form_container .email {
-  // grid-column: 1 / 5; 
-  // grid-row: 1 / 1;
-  grid-area: e;
-  direction: rtl;
-  text-align: center;
-}
-
-.form_container .message {
-  // grid-column: 4 / 13; 
-  // grid-row: 2 / 2;
-  grid-area: m;
-  direction: rtl;
-  position: relative;
-}
-
-.form_container .submit {
-  // grid-column: 3 / 5;
-  // grid-row: 2 / 2;
-  grid-area: s;
-  position: relative; 
-}
-
-.input_row_one {
-  width: 75%;
-  height: 25%;
-  margin-top: 80px;
-}
-.input_row_two {
-  width: 75%;
-  height: 70px;
-  position: absolute;
-  right: 52px;
-  top: 38px;
-}
-
-.submit_background {
-  background: black;
+.submit {
+  background: white;
   border: none;
   height: 100px;
-  position: absolute;
   top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item {
@@ -90,7 +21,7 @@
 
 .input {
   width: 100%;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 .error {
@@ -99,9 +30,12 @@
 }
 
 .form {
-  border: 3px solid gray;
+  background: white;
+  border: 3px solid black;
   padding: 1rem;
+  margin-top: 3rem;
   color: black;
   text-align: center;
   font-family: 'Heebo';
+  font-weight: 900;
 }

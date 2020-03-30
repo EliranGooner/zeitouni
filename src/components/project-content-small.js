@@ -153,6 +153,13 @@ const ProjectContentSmall = ({project}) => {
     <p>הכנה למיזוג אוויר דירתי מיני מרכזי</p>
     <p>דוד חשמל לכל הדירות .</p>
     </div>
+  } else if (project === 'kfs') {
+    about = <div>
+    <p>אקו כפר סבא הינו מתחם מגורים יוקרתי בלב השכונה ירוקה, הראשונה מסוגה בישראל. הקונספט הוא יצירת סביבת מגורים נקייה המורכבת מרחובות ירוקים, ללא כבישים פנימיים, שיאפשרו לתושבים ולילדיהם להגיע בבטחה לגינות הציבוריות הרבות ולפארקים ויצמצמו פלאים את הרעשים הסביבתיים (הסדרת התנועה בשולי השכונה בלבד, עם מעברים ייחודים לחניות תת קרקעיות בבתים).</p>
+    <p>מתחם המגורים מבית זיתוני&גינדי כולל כ-500 יחידות דיוור בסטנדרט גבוה ובמפרט עשיר ויוקרתי, תוך השמת דגש רב על שימוש בחומרי בניה ידידותיים לסביבה, כאשר המתחם עצמו משתלב בצורה הומוגנית בשכונה הירוקה. </p>
+    <p>הפרויקט תוכנן ע"י כנען שנהב, משרד אדריכלים מוביל המתמחה בתכנון דירות יוקרה איכותיות, תוך הקפדה על מרפסות גדולות והקניית יעילות ושימושיות מרביים.</p>
+    </div>
+    location = <div><p>השכונה הירוקה בכפר סבא ממוקמת בלב השרון הירוק, בסמיכות לצומת רעננה צפון, מול אזור התעשייה ומתחם חברות ההיי-טק. מחלף שמינייה שהוקם במקום מאפשר התחברות ישירה מהשכונה לכביש 4. חווית המגורים מעניקה הרגשה של מושב ירוק באמצע העיר.</p></div>
   }
 
 
@@ -164,32 +171,38 @@ const ProjectContentSmall = ({project}) => {
               {about}
               <h1>המיקום</h1>
               {location}
+              {project === 'kfs' ? null 
+              :
+              <div>
               <ExpansionPanel>
-                <ExpansionPanelSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  className={styles.summary}
-                >
-                  <h1>מפרט הבניין</h1>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={styles.details}>
-                  {building}
-                </ExpansionPanelDetails>
-                </ExpansionPanel>
-                <ExpansionPanel>
-                <ExpansionPanelSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
-                  className={styles.summary}
-                >
-                  <h1>מפרט הדירה</h1>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={styles.details} >
-                  {flat}
-                </ExpansionPanelDetails>
-                </ExpansionPanel>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={styles.summary}
+              >
+                <h1>מפרט הבניין</h1>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails classes={styles.details}>
+                {building}
+              </ExpansionPanelDetails>
+              </ExpansionPanel>
+              <ExpansionPanel>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                className={styles.summary}
+              >
+                <h1>מפרט הדירה</h1>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails classes={styles.details} >
+                {flat}
+              </ExpansionPanelDetails>
+              </ExpansionPanel>
+              </div>
+            }
+             
             </div>
             <div className={styles.contact}>
               <div className={styles.box}>
@@ -223,9 +236,13 @@ const ProjectContentSmall = ({project}) => {
                      </div>
                   </form>
                   </div>
+                  {project === 'kfs' ? null 
+                  : 
                   <div className={styles.sales}>
-                    <p>:משרד מכירות</p>
+                  <p>:משרד מכירות</p>
                   </div>
+                  }
+                  
             </div>
           </div>
           <div className={styles.all}>

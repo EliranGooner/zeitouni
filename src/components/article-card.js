@@ -20,7 +20,7 @@ const ProjectCard = ({header, preview, src, path, idx}) => {
           bg='secondary'
           key={idx}
           text={'white'}
-          style={{ width: '18rem' }}
+          style={{ width: '18rem', height: '18rem' }}
         >
           <Card.Header>{src}</Card.Header>
           <Card.Body>

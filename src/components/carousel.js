@@ -12,7 +12,7 @@ import divider from '../images/title-divider.png';
 
 
 const flickityOptions = {
-  initialIndex: 3,
+  initialIndex: 1,
   wrapAround: true,
   autoPlay: 3000,
   selectedAttraction: 0.01,
@@ -39,17 +39,15 @@ const Carousel = () => {
         reloadOnUpdate // default false
         static // default false
       >
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
-        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-herzliya.jpg" path='/projects/'  />
-      
+        <CarouselSlide header="אקו השכונה הירוקה כפר סבא" src="eco_ks_2.jpg" path='/kfar-saba/'  />
+        <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-hero-2.jpg" path='/givat-shmuel/'  />
+        <CarouselSlide header="אקו הרצליה" src="zeitouni-hero-1.jpg" path='/herzliya/'  />
+        <CarouselSlide header="פארק הים בת-ים" src="bat-yam_logo.png" path='/projects/'  />      
         
       </Flickity>
       
       <div className={styles.button_div}>
-        <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
+        <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn' size='large'>לכל הפרויקטים</AwesomeButton></Link>
       </div>
     </div>
   )

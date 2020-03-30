@@ -17,7 +17,7 @@ const CarouselSlide = ({header, src, path}) => {
     <Image imgName={src} className={styles.img} />
       <div className={styles.text_container}>
         <div className={styles.inner}>
-        <SizeMe>{({ size }) => size.width > 200 ?
+        <SizeMe>{({ size }) => size.width > 100 ?
           <div className={styles.header_shadow}>
           <Fade duration={3000}>
             <h1>{header}</h1>
@@ -30,7 +30,7 @@ const CarouselSlide = ({header, src, path}) => {
             </Fade>
           </div>
       }</SizeMe>
-          <Link to={path}><AwesomeButton type="primary" className='aws-btn'>לצפייה בפרויקט</AwesomeButton></Link>
+          <Link to={path}><AwesomeButton type="primary" className='aws-btn' size='large'>לצפייה בפרויקט</AwesomeButton></Link>
         </div>
       </div>
     </div>

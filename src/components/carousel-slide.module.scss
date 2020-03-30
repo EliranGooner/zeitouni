@@ -34,8 +34,9 @@
 
 .header_shadow {
   background: rgba(0, 0, 0, 0.5);
-  padding-bottom: 5px;
+  padding: 8px;
   margin: 16px;
+  border-radius: 3px;
 }
 
 .header_shadow_small {
@@ -44,6 +45,7 @@
   width: 10rem;
   padding-bottom: 5px;
   margin: 16px;
+  border-radius: 3px;
   h1 {
     font-size: 2em;
   }

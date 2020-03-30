@@ -30,22 +30,22 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3}>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו נווה עוז פתח תקווה' />
+        <ProjectCard src='neve_oz_1.jpg' header='אקו נווה עוז פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו השכונה הירוקה כפר סבא' />
+        <ProjectCard src='eco_ks_2.jpg' header='אקו השכונה הירוקה כפר סבא' path='/kfar-saba/' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו הוד השרון' />
+        <ProjectCard src='hod_hasharon.jpg' header='אקו הוד השרון' />
       </Grid>
       <Grid item xs={12} sm={4}>
         <ProjectCard src='zeitouni-herzliya.jpg' header='אקו כפר גנים פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='סיטי פארק נווה גן פתח תקווה' />
+        <ProjectCard src='pt_city_park.jpg' header='סיטי פארק נווה גן פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='הוד על הפארק הוד השרון' />
+        <ProjectCard src='hod_al_hapark.jpg' header='הוד על הפארק הוד השרון' />
       </Grid>
     </Grid>
     </ExpansionPanelDetails>
@@ -62,10 +62,10 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3}>
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/givat-shmuel' />
+          <ProjectCard src='zeitouni-home-2.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/givat-shmuel' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/herzliya' />
+          <ProjectCard src='zeitouni-home-1.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/herzliya' />
         </Grid>
       </Grid>
     </ExpansionPanelDetails>
@@ -82,7 +82,7 @@ const ProjectsContainerSmall = () => {
     <ExpansionPanelDetails>
       <Grid container spacing={3} >
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו בת ים' path='bat-yam/' />
+          <ProjectCard src='bat-yam_logo.png' header='פארק ים בת-ים' path='bat-yam/' />
         </Grid>
       </Grid>
     </ExpansionPanelDetails>
