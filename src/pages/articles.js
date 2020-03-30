@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import PageHero from '../components/page-hero'
+import ArticlesContainer from '../components/articles-container'
 
 
 import Layout from "../components/layout"
@@ -8,7 +10,8 @@ import Layout from "../components/layout"
 
 const Articles = () => (
   <Layout>
-    <h1>hi</h1>
+    <PageHero header='מהתקשורת' />
+    <ArticlesContainer />
   </Layout>
 )
 
