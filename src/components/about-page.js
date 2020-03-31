@@ -5,13 +5,21 @@ import styles from './about-page.module.scss'
 import Fade from 'react-reveal/Fade';
 import divider from '../images/title-divider-white.png';
 import Image from './image'
+import sizeMe from 'react-sizeme';
 
 
-const AboutPage = ({}) => {
-    return <div className={styles.about}>
+const AboutPage = (props) => {
+  const { width, height } = props.size;
+
+  let deviceSmall = false
+  if (500 > width) {
+    deviceSmall = true
+  } 
+
+    return <div className={deviceSmall ? styles.about_small : styles.about}>
         <Fade left duration={3000}>
           <div className={styles.content}>
-            <Image imgName='office.jpg' className={styles.office} />
+            {deviceSmall ? null : <Image imgName='office.jpg' className={styles.office} />}
             <div className={styles.text_container}>
               <div className={styles.text}>
                 <h1>קבוצת זיתוני</h1>
@@ -33,4 +41,4 @@ const AboutPage = ({}) => {
     </div>
 };
 
-export default AboutPage
+export default sizeMe({ monitorWidth: true })(AboutPage)
