@@ -201,7 +201,7 @@ const ProjectContent = ({project}) => {
                      </div>
                   </form>
                   </div>
-                  {project === 'kfs' ? null : <div className={styles.sales}>
+                  {project === 'kfs' || 'herzliya' ? null : <div className={styles.sales}>
                   <p>:משרד מכירות</p>
                 </div>}
                   
