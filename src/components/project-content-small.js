@@ -15,10 +15,15 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 
 
 
 const ProjectContentSmall = ({project}) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const { register, errors, handleSubmit } = useForm()
  
   const onSubmit = (data) => {
@@ -27,7 +32,8 @@ const ProjectContentSmall = ({project}) => {
       method: "post",
       url: `${process.env.GETFORM_KEY}`,
       data: data
-    })
+    });
+    handleShow();
   };
 
   let center = { 
@@ -262,6 +268,17 @@ const ProjectContentSmall = ({project}) => {
             />
           </GoogleMapReact>
         </div>
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton >
+          <Modal.Title bsPrefix={styles.modal}>!תודה רבה</Modal.Title>
+        </Modal.Header>
+        <Modal.Body bsPrefix={styles.modal_body}>פרטייך נשלחו בהצלחה, ניצור קשר בהקדם</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            סגור
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
 };
 

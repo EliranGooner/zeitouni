@@ -12,6 +12,9 @@ import Grid from '@material-ui/core/Grid';
 
 
 const ContactForm = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const { register, errors, handleSubmit } = useForm()
  
   const onSubmit = (data) => {
@@ -20,7 +23,8 @@ const ContactForm = () => {
       method: "post",
       url: `${process.env.GETFORM_KEY}`,
       data: data
-    })
+    });
+    handleShow();
   };
 
 
@@ -55,6 +59,17 @@ const ContactForm = () => {
         </Grid>
       </Grid>
     </form>
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton >
+          <Modal.Title bsPrefix={styles.modal}>!תודה רבה</Modal.Title>
+        </Modal.Header>
+        <Modal.Body bsPrefix={styles.modal_body}>פרטייך נשלחו בהצלחה, ניצור קשר בהקדם</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            סגור
+          </Button>
+        </Modal.Footer>
+      </Modal>
   </div>
 }
 
