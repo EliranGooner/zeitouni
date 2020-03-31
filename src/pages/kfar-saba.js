@@ -7,10 +7,8 @@ import ProjectGallerySmall from '../components/project-gallery-small'
 import ProjectContent from '../components/project-content'
 import ProjectContentSmall from '../components/project-content-small'
 import sizeMe from 'react-sizeme';
-
-
-
-import Layout from "../components/layout"
+import SEO from "../components/seo";
+import Layout from "../components/layout";
 
 
 const KfarSaba = (props) => {
@@ -29,6 +27,7 @@ const KfarSaba = (props) => {
 
 
   return <Layout>
+    <SEO title="Kfar-Saba" />
     <PageHero header='פרויקטים' />
     <ProjectHeader header='אקו השכונה הירוקה כפר סבא' />
     {CurrentProjectGallery}

@@ -25,12 +25,13 @@ const ProjectContentSmall = ({project}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { register, errors, handleSubmit } = useForm()
- 
+  let key;
+  project === 'gvash' ? key = process.env.GS_KEY : key = process.env.GETFORM_KEY;
   const onSubmit = (data) => {
     console.log(data)
     axios({
       method: "post",
-      url: `${process.env.GETFORM_KEY}`,
+      url: `${key}`,
       data: data
     });
     handleShow();
@@ -170,7 +171,7 @@ const ProjectContentSmall = ({project}) => {
 
 
     return <div className={styles.project}>
-        <ElementFade duration={3000}>
+        <ElementFade duration={2000}>
           <div className={styles.content}>
             <div className={styles.text}>
               <h1>על הפרויקט</h1>
@@ -242,11 +243,16 @@ const ProjectContentSmall = ({project}) => {
                      </div>
                   </form>
                   </div>
-                  {project === 'kfs' ? null 
-                  : 
+                  {project === 'gvash' ? 
                   <div className={styles.sales}>
-                  <p>:משרד מכירות</p>
+                  <p><strong>:משרד מכירות</strong></p>
+                  <p>יצחק שמיר 12, גבעת שמואל
+                  </p>
+                  <p>salesgs@eco-group.co.il</p>
+                  <p>*2321</p>
                   </div>
+                  : 
+                  null
                   }
                   
             </div>

@@ -11,6 +11,7 @@ import ContactDiv from '../components/contact-div'
 
 const Contact = () => (
   <Layout>
+    <SEO title="Contact" />
     <PageHero header='יצירת קשר' />
     <ContactDiv />
   </Layout>

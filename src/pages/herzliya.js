@@ -7,6 +7,8 @@ import ProjectGallerySmall from '../components/project-gallery-small'
 import ProjectContent from '../components/project-content'
 import ProjectContentSmall from '../components/project-content-small'
 import sizeMe from 'react-sizeme';
+import SEO from "../components/seo";
+
 
 
 
@@ -22,13 +24,14 @@ const Herlizya = (props) => {
     CurrentProjectGallery = <ProjectGallery image1='zeitouni-hero-1.jpg' image2='herzliya_2.jpg' image3='herzliya_3.jpg' logo='gvash-logo.jpg' />
     CurrentProjectContent = <ProjectContent project='herzliya' />
   } else {
-    CurrentProjectGallery = <ProjectGallerySmall image1='zeitouni-hero-1.jpg' image2='herzliya_2.jpg' image3='herzliya_3.jpg.jpg' logo='gvash-logo.jpg' />
+    CurrentProjectGallery = <ProjectGallerySmall image1='zeitouni-hero-2.jpg' image2='herzliya_2.jpg' image3='herzliya_3.jpg.jpg' logo='gvash-logo.jpg' />
     CurrentProjectContent = <ProjectContentSmall project='herzliya' />
 
   }
 
 
   return <Layout>
+    <SEO title="Herzliya" />
     <PageHero header='פרויקטים' />
     <ProjectHeader header='אקו הרצליה' />
     {CurrentProjectGallery}

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Zeitouni Group`,
+    description: ``,
+    author: `Avi Zeitouni`,
+    siteUrl: `https://www.zeitouni.co.il`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,14 +20,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Zeitouni Group`,
+        short_name: `Zeitouni`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        crossOrigin: `use-credentials`,
+        cache_busting_mode: 'none',
+        icon: `src/images/zeitouni_favicon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: [`/`, `/projects/`, `/givat-shmuel/`, `/herzliya/`],
+         workboxConfig: {
+            globPatterns: ['**/*']
+         }
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -45,9 +57,12 @@ module.exports = {
       options: {
         whitelist: ["GOOGLE_MAPS_KEY", "GETFORM_KEY"]
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000
+      }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
