@@ -246,7 +246,7 @@ const ProjectContent = ({project}) => {
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I'm the body</Card.Body>
+                    <Card.Body>{building}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card>
@@ -256,7 +256,7 @@ const ProjectContent = ({project}) => {
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
-                    <Card.Body>Hello! I'm another body</Card.Body>
+                    <Card.Body>{flat}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Accordion>}
