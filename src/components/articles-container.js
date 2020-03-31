@@ -6,7 +6,6 @@ import Fade from 'react-reveal/Fade';
 import sizeMe from 'react-sizeme';
 import Grid from '@material-ui/core/Grid';
 import ArticleCard from './article-card'
-import Articles from "../pages/articles";
 
 const ArticlesContainer = (props) => {
   const { width, height } = props.size;
