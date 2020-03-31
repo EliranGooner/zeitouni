@@ -16,19 +16,22 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import Modal from 'react-bootstrap/Modal'
 
 
 const ProjectContent = ({project}) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const { register, errors, handleSubmit } = useForm()
  
   const onSubmit = (data) => {
-    console.log(data)
     axios({
       method: "post",
       url: `${process.env.GETFORM_KEY}`,
       data: data
-    })
+    });
+    handleShow();
   };
 
   let center = { 
@@ -281,6 +284,17 @@ const ProjectContent = ({project}) => {
             />
           </GoogleMapReact>
         </div>
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton >
+          <Modal.Title bsPrefix={styles.modal}>!תודה רבה</Modal.Title>
+        </Modal.Header>
+        <Modal.Body bsPrefix={styles.modal_body}>פרטייך נשלחו בהצלחה, ניצור קשר בהקדם</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
 };
 
