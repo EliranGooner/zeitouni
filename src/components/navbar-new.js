@@ -53,7 +53,7 @@ const NavbarNew = (props) => {
       <Link to="/projects/" className={'item-projects' === path ? 'current-path' : null}>פרויקטים</Link>
       <Link to="/about/" className={'item-about' === path ? 'current-path' : null}>עלינו</Link>
       <Link to="/avi/" className={'item-avi' === path ? 'current-path' : null}>אבי זיתוני</Link>
-      <Link to="/articles/" className={'item-articles' === path ? 'current-path' : null}>כתבות</Link>
+      <Link to="/articles/" className={'item-articles' === path ? 'current-path' : null}>מהתקשורת</Link>
       <Link to="/contact/" className={'item-contact' === path ? 'current-path' : null}>צרו קשר</Link>
       <a onClick={ showSettings } className="menu-item--small" href=""></a>
     </Menu>

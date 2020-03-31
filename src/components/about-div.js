@@ -23,7 +23,7 @@ const AboutDiv = ({}) => {
               </div>
             </div>
             <div className={styles.button_div}>
-              <Link to='/about/'><AwesomeButton type="primary" className='aws-btn'>המשיכו לקרוא</AwesomeButton></Link>
+              <Link to='/about/'><AwesomeButton type="primary" className='aws-btn' size='large'>המשיכו לקרוא</AwesomeButton></Link>
             </div>
           </div>
         </Fade>

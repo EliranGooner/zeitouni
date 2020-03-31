@@ -48,7 +48,7 @@ const ContactForm = () => {
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4}>
         </Grid>
-        <Grid item className={styles.item} xs={12} sm={4}>
+        <Grid item className={styles.submit} xs={12} sm={4}>
           <button type="submit" ><AwesomeButton type="primary" className='aws-btn-contact' size='large'>שלח</AwesomeButton></button>
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4}>

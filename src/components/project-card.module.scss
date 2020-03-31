@@ -54,15 +54,19 @@
 
 .header_shadow {
   background: rgba(0, 0, 0, 0.5);
-  padding: 7px 0 7px;
+  padding: 7px;
   min-width: 2rem;
   max-width: 16rem;
   margin: 16px;
   min-height: 2rem;
+  border-radius: 3px;
   max-height: 10rem;
   float: left;
   clear: left;
   width: 14rem;
+  h1 {
+    color: white;
+  }
 }
 
 .header_shadow_small {
@@ -72,6 +76,7 @@
   padding-bottom: 5px;
   margin: 16px;
   h1 {
+    color: white;
     font-size: 2em;
   }
 }

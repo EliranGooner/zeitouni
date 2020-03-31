@@ -18,7 +18,7 @@ const PageHeader = ({header}) => {
     <div className={styles.inner_text}>
       <Fade duration={4500}>
         <h1>{header}</h1>
-        <img src={divider} height={30} width={800}/>
+        <img src={divider} height={30} width={350}/>
       </Fade>
     </div>
   </div>

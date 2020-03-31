@@ -154,6 +154,13 @@ const ProjectContent = ({project}) => {
     <p>הכנה למיזוג אוויר דירתי מיני מרכזי</p>
     <p>דוד חשמל לכל הדירות .</p>
     </div>
+  } else if (project === 'kfs') {
+    about = <div>
+    <p>אקו כפר סבא הינו מתחם מגורים יוקרתי בלב השכונה ירוקה, הראשונה מסוגה בישראל. הקונספט הוא יצירת סביבת מגורים נקייה המורכבת מרחובות ירוקים, ללא כבישים פנימיים, שיאפשרו לתושבים ולילדיהם להגיע בבטחה לגינות הציבוריות הרבות ולפארקים ויצמצמו פלאים את הרעשים הסביבתיים (הסדרת התנועה בשולי השכונה בלבד, עם מעברים ייחודים לחניות תת קרקעיות בבתים).</p>
+    <p>מתחם המגורים מבית זיתוני&גינדי כולל כ-500 יחידות דיוור בסטנדרט גבוה ובמפרט עשיר ויוקרתי, תוך השמת דגש רב על שימוש בחומרי בניה ידידותיים לסביבה, כאשר המתחם עצמו משתלב בצורה הומוגנית בשכונה הירוקה. </p>
+    <p>הפרויקט תוכנן ע"י כנען שנהב, משרד אדריכלים מוביל המתמחה בתכנון דירות יוקרה איכותיות, תוך הקפדה על מרפסות גדולות והקניית יעילות ושימושיות מרביים.</p>
+    </div>
+    location = <div><p>השכונה הירוקה בכפר סבא ממוקמת בלב השרון הירוק, בסמיכות לצומת רעננה צפון, מול אזור התעשייה ומתחם חברות ההיי-טק. מחלף שמינייה שהוקם במקום מאפשר התחברות ישירה מהשכונה לכביש 4. חווית המגורים מעניקה הרגשה של מושב ירוק באמצע העיר.</p></div>
   }
 
     return <div className={styles.project}>
@@ -186,14 +193,15 @@ const ProjectContent = ({project}) => {
                         </div>
                       </div>
                       <div className={styles.submit}>
-                        <button type="submit" ><AwesomeButton type="primary" className='aws-btn-contact' >שלח</AwesomeButton></button>
+                        <button type="submit" ><AwesomeButton type="primary" className='aws-btn-contact' size='large' >שלח</AwesomeButton></button>
                       </div>
                      </div>
                   </form>
                   </div>
-                  <div className={styles.sales}>
-                    <p>:משרד מכירות</p>
-                  </div>
+                  {project === 'kfs' ? null : <div className={styles.sales}>
+                  <p>:משרד מכירות</p>
+                </div>}
+                  
             </div>
             <SizeMe>{({ size }) => size.width > 610 ?
               <div className={styles.text}>
@@ -201,7 +209,7 @@ const ProjectContent = ({project}) => {
                 {about}
                 <h1>המיקום</h1>
                 {location}
-                <Accordion>
+                {project === 'kfs' ? null : <Accordion>
                 <Card>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -222,7 +230,7 @@ const ProjectContent = ({project}) => {
                     <Card.Body>{flat}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
-              </Accordion>
+              </Accordion>}
               </div>
               :    
               <div className={styles.text_medium}>
@@ -230,7 +238,7 @@ const ProjectContent = ({project}) => {
                 {about}
                 <h1>המיקום</h1>
                 {location}
-                <Accordion>
+                {project === 'kfs' ? null : <Accordion>
                 <Card>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -251,13 +259,13 @@ const ProjectContent = ({project}) => {
                     <Card.Body>Hello! I'm another body</Card.Body>
                   </Accordion.Collapse>
                 </Card>
-              </Accordion>
+              </Accordion>}
               </div>    
             }</SizeMe>
             
           </div>
           <div className={styles.all}>
-            <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
+            <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn' size='large'>לכל הפרויקטים</AwesomeButton></Link>
           </div>
         </ElementFade>
         <div className={styles.map}>

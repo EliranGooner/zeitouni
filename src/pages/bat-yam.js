@@ -1,4 +1,5 @@
 import React from "react"
+import styles from '../components/bat-yam.module.scss'
 import PageHero from '../components/page-hero'
 import ProjectHeader from '../components/project-header'
 import ProjectGallery from '../components/project-gallery'
@@ -6,6 +7,7 @@ import ProjectGallerySmall from '../components/project-gallery-small'
 import ProjectContent from '../components/project-content'
 import ProjectContentSmall from '../components/project-content-small'
 import sizeMe from 'react-sizeme';
+import Image from '../components/image'
 
 
 
@@ -28,9 +30,15 @@ const Herlizya = (props) => {
 
   return <Layout>
     <PageHero header='פרויקטים' />
-    <ProjectHeader header='אקו בת ים' />
-    {CurrentProjectGallery}
-    {CurrentProjectContent}
+    <ProjectHeader header='פארק ים בת-ים' />
+    <div className={styles.head}>
+      <div className={styles.logo}>
+        <Image imgName='bat-yam_logo.png' />
+      </div>
+    </div>
+    <div className={styles.soon}>
+      <h1>...פרטים נוספים בקרוב</h1>
+    </div>
   </Layout>
 }
 
