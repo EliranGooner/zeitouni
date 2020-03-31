@@ -291,7 +291,7 @@ const ProjectContent = ({project}) => {
         <Modal.Body bsPrefix={styles.modal_body}>פרטייך נשלחו בהצלחה, ניצור קשר בהקדם</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            סגור
           </Button>
         </Modal.Footer>
       </Modal>
