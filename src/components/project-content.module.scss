@@ -17,7 +17,6 @@
   h1 {
     margin-bottom: 1rem;
     direction: rtl;
-    float: right;
     color: black;
   }
 }
@@ -65,7 +64,7 @@
 
 .box {
   width: 21rem;
-  height: 23rem;
+  height: 25rem;
   background: gray;
   border: 3px solid black;
   h1 {
@@ -86,6 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
   h2 {
     color: white;
   }
@@ -97,6 +97,7 @@
     width: 12rem;
     text-align: right;
     border-radius: 5px;
+    border: 2px solid black;
   }
 }
 
@@ -133,11 +134,14 @@
 
 .sales {
   width: 21rem;
-  height: 5rem;
+  height: 6.5rem;
   margin-top: 1.5rem;
   background: lightgray;
-  text-align: right;
+  text-align: center;
   border: 3px solid black;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .list {

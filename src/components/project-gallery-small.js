@@ -16,7 +16,7 @@ const fadeProperties = {
 const ProjectGallerySmall = ({image1, image2, image3, logo}) => {
   
   return <div className={styles.gallery}>
-    <ElementFade right duration={3000}>
+    <ElementFade duration={3000}>
     <div className={styles.project_container}>
       <div className={styles.gallery_side}>
         <Image imgName={logo}   />

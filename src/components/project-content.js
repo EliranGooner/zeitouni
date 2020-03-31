@@ -24,11 +24,13 @@ const ProjectContent = ({project}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { register, errors, handleSubmit } = useForm()
- 
+  let key;
+  project === 'gvash' ? key = process.env.GS_KEY : key = process.env.GETFORM_KEY;
+  console.log(key);
   const onSubmit = (data) => {
     axios({
       method: "post",
-      url: `${process.env.GETFORM_KEY}`,
+      url: `${key}`,
       data: data
     });
     handleShow();
@@ -201,9 +203,13 @@ const ProjectContent = ({project}) => {
                      </div>
                   </form>
                   </div>
-                  {project === 'kfs' || 'herzliya' ? null : <div className={styles.sales}>
-                  <p>:משרד מכירות</p>
-                </div>}
+                  {project === 'gvash' ? <div className={styles.sales}>
+                  <p><strong>:משרד מכירות</strong></p>
+                  <p>יצחק שמיר 12, גבעת שמואל
+                  </p>
+                  <p>salesgs@eco-group.co.il</p>
+                  <p>*2321</p>
+                </div> : null }
                   
             </div>
             <SizeMe>{({ size }) => size.width > 610 ?

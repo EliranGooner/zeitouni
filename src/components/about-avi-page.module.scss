@@ -1,5 +1,5 @@
 .about {
-  height: 76rem;
+  height: 47rem;
   width: 100%;
   padding-top: 0.3rem;
   background: black;
@@ -16,10 +16,10 @@
   }
 }
 .about_small {
-  height: 111rem;
+  height: 67rem;
   width: 100%;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background: black;
   color: white;
   direction: rtl;
@@ -30,7 +30,7 @@
   justify-content: center;
   p {
     margin-top: 1rem;
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
@@ -49,16 +49,42 @@
   height: 67%;
 }
 
+.content_small {
+  width: 52rem;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+  h1 {
+    color: black;
+    margin-top: 16px;
+    font-size: 50px;
+  }
+}
+
 .content {
   width: 52rem;
-  border: 8px solid white;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  // padding-top: rem;
+  padding-bottom: 1rem;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
   h1 {
+    color: black;
     margin-top: 16px;
     font-size: 50px;
   }
 }
 
 .office {
-  width: 51.08rem;
+  width: 52rem;
   height: 20rem;
+  border-radius: 8px 8px 0 0;
 }

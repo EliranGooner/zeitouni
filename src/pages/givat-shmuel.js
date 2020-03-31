@@ -27,6 +27,7 @@ const Herlizya = (props) => {
 
 
   return <Layout>
+    <SEO title="Givat-Shmuel" />
     <PageHero header='פרויקטים' />
     <ProjectHeader header='אקו רמת הדר החדשה גבעת שמואל' />
     {CurrentProjectGallery}

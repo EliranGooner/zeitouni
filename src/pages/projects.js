@@ -4,9 +4,7 @@ import PageHero from '../components/page-hero'
 import ProjectsContainer from '../components/projects-container'
 import ProjectsContainerSmall from '../components/projects-container-small'
 import sizeMe from 'react-sizeme';
-
-
-
+import SEO from "../components/seo";
 import Layout from "../components/layout"
 
 
@@ -22,6 +20,7 @@ const Projects = (props) => {
 
 
   return <Layout>
+    <SEO title="Projects" />
     <PageHero header='פרויקטים' />
     <ToRenderChildNavbar />
   </Layout>
