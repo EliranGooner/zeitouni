@@ -19,10 +19,10 @@ const Herlizya = (props) => {
   let CurrentProjectGallery 
   let CurrentProjectContent 
   if (width > 420) {
-    CurrentProjectGallery = <ProjectGallery image1='zeitouni-hero-1.jpg' image2='zeitouni-hero-2.jpg' image3='zeitouni-hero-1.jpg' logo='gvash-logo.jpg' />
+    CurrentProjectGallery = <ProjectGallery image1='zeitouni-hero-1.jpg' image2='herzliya_2.jpg' image3='herzliya_3.jpg' logo='gvash-logo.jpg' />
     CurrentProjectContent = <ProjectContent project='herzliya' />
   } else {
-    CurrentProjectGallery = <ProjectGallerySmall image1='zeitouni-hero-1.jpg' image2='zeitouni-hero-2.jpg' image3='zeitouni-hero-1.jpg' logo='gvash-logo.jpg' />
+    CurrentProjectGallery = <ProjectGallerySmall image1='zeitouni-hero-1.jpg' image2='herzliya_2.jpg' image3='herzliya_3.jpg.jpg' logo='gvash-logo.jpg' />
     CurrentProjectContent = <ProjectContentSmall project='herzliya' />
 
   }
