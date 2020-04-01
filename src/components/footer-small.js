@@ -35,9 +35,9 @@ const FooterSmall = ({}) => {
         </Fade>
       </div>
       <div className={styles.footer}>
-        <Link to='/accessibility'>הצהרת נגישות</Link>
-        <Link to='/sitemap'>מפת אתר</Link>
-          <Link to='/'><img src={devLogo} height={50} width={150} /></Link>
+        <Link to='/accessibility/'>הצהרת נגישות</Link>
+        <Link to='/sitemap/'>מפת אתר</Link>
+          <a href='https://github.com/EliranGooner'><img src={devLogo} height={50} width={150} /></a>
       </div>
     </div>
 };
