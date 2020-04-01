@@ -37,12 +37,12 @@ const Footer = ({}) => {
         </Fade>
       </div>
       <div className={styles.footer}>
-      <Link to='/sitemap'>מפת אתר</Link>
+      <Link to='/sitemap/'>מפת אתר</Link>
         <div className={styles.dev}>
           <p>Designed & developed by</p>
-          <Link to='/'><Img fluid={data.placeholderImage.childImageSharp.fluid} style={imgStyle}/></Link>
+          <a href='https://github.com/EliranGooner'><Img fluid={data.placeholderImage.childImageSharp.fluid} style={imgStyle}/></a>
         </div>
-        <Link to='/accessibility'>הצהרת נגישות</Link>
+        <Link to='/accessibility/'>הצהרת נגישות</Link>
       </div>
     </div>
 };
