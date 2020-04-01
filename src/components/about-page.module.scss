@@ -16,7 +16,7 @@
   }
 }
 .about_small {
-  height: 111rem;
+  height: 120rem;
   width: 100%;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -52,6 +52,15 @@
 .content {
   width: 52rem;
   border: 8px solid white;
+  h1 {
+    margin-top: 16px;
+    font-size: 50px;
+  }
+}
+
+.content_small {
+  width: 52rem;
+  // border: 8px solid white;
   h1 {
     margin-top: 16px;
     font-size: 50px;
