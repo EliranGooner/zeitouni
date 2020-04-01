@@ -1,12 +1,10 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, {useState} from "react"
 import styles from './project-content-small.module.scss'
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css'
 import ElementFade from 'react-reveal/Fade';
-import divider from '../images/title-divider-white.png';
 import { useForm } from 'react-hook-form'
 import GoogleMapReact from "google-map-react";
 import MapMarker from './map-marker';
@@ -15,8 +13,9 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import sketch from '../downloads/sketch.pdf';
 
 
 
@@ -44,7 +43,6 @@ const ProjectContentSmall = ({project}) => {
 
   let about
   let location
-  let sale
   let building
   let flat
   if (project === 'herzliya') {
@@ -178,6 +176,7 @@ const ProjectContentSmall = ({project}) => {
               {about}
               <h1>המיקום</h1>
               {location}
+              {project === 'gvash' ? <a href={sketch} download><strong>לחץ להורדת תוכניות הפרויקט</strong></a> : null }
               {project === 'kfs' ? null 
               :
               <div>
@@ -249,7 +248,7 @@ const ProjectContentSmall = ({project}) => {
                   <p>יצחק שמיר 12, גבעת שמואל
                   </p>
                   <p>salesgs@eco-group.co.il</p>
-                  <p>*2321</p>
+                  <p>*2123</p>
                   </div>
                   : 
                   null

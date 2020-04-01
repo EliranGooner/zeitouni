@@ -1,11 +1,10 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, {useState, useEffect} from "react"
-import './navbar-new.scss'
-import { stack as Menu } from 'react-burger-menu'
-import Navbar from './navbar'
-import NavbarSmall from './navbar-small'
-import NavbarMedium from './navbar-medium'
+import { Link } from "gatsby";
+import React, {useState, useEffect} from "react";
+import './navbar-new.scss';
+import { stack as Menu } from 'react-burger-menu';
+import Navbar from './navbar';
+import NavbarSmall from './navbar-small';
+import NavbarMedium from './navbar-medium';
 import sizeMe from 'react-sizeme';
 
 
@@ -31,7 +30,7 @@ const NavbarNew = (props) => {
     };
     getCurrentPath();
   });
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   let ToRenderChildNavbar 
   if (width > 1100) {

@@ -1,13 +1,9 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, {useState} from "react"
-import styles from './contact.module.scss'
-import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
-import { isWidthUp } from "@material-ui/core";
+import React from "react";
+import styles from './contact-div.module.scss';
 import ContactForm from "./contact-form";
 
 
-const ContactDiv = ({}) => {
+const ContactDiv = () => {
     return <div className={styles.contact}>
         <ContactForm/>
     </div>

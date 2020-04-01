@@ -5,29 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Footer from './footer'
-import FooterSmall from './footer-small'
-import Navbar from './navbar'
-import NavbarNew from "./navbar-new"
-import "./layout.css"
-import { SizeMe } from 'react-sizeme'
+import React from "react";
+import PropTypes from "prop-types";
+import Footer from './footer';
+import FooterSmall from './footer-small';
+import NavbarNew from "./navbar-new";
+import "./layout.css";
+import { SizeMe } from 'react-sizeme';
 
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+  
   return (
     <>
       <NavbarNew />

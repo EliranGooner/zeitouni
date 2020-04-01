@@ -1,11 +1,8 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './project-gallery-small.module.scss';
 import ElementFade from 'react-reveal/Fade';
 import Image from "./image";
 import { Fade } from 'react-slideshow-image';
-import sizeMe from 'react-sizeme';
 
 
 const fadeProperties = {
@@ -19,23 +16,23 @@ const ProjectGallerySmall = ({image1, image2, image3, logo}) => {
     <ElementFade duration={3000}>
     <div className={styles.project_container}>
       <div className={styles.gallery_side}>
-        <Image imgName={logo}   />
+        <Image imgName={logo} alt='לוגו הפרויקט'  />
       </div>
         <div className={styles.slide_container}>
           <Fade {...fadeProperties}>
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
-                <Image imgName={image1}   />
+                <Image imgName={image1} alt='בנייני הפרויקט' />
               </div>
             </div>
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
-                <Image imgName={image2}   />
+                <Image imgName={image2} alt='דירה 1 מהפרויקט'  />
               </div>
             </div>
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
-                <Image imgName={image3}   />
+                <Image imgName={image3} alt='דירה 2 מהפרויקט'  />
               </div>
             </div>
           </Fade>

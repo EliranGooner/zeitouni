@@ -1,11 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import PageHero from '../components/page-hero'
-import ProjectHeader from '../components/project-header'
-import ProjectGallery from '../components/project-gallery'
-import ProjectGallerySmall from '../components/project-gallery-small'
-import ProjectContent from '../components/project-content'
-import ProjectContentSmall from '../components/project-content-small'
+import React from "react";
+import PageHero from '../components/page-hero';
+import ProjectHeader from '../components/project-header';
+import ProjectGallery from '../components/project-gallery';
+import ProjectGallerySmall from '../components/project-gallery-small';
+import ProjectContent from '../components/project-content';
+import ProjectContentSmall from '../components/project-content-small';
 import sizeMe from 'react-sizeme';
 import SEO from "../components/seo";
 
@@ -16,7 +15,7 @@ import Layout from "../components/layout"
 
 
 const Herlizya = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   let CurrentProjectGallery 
   let CurrentProjectContent 
@@ -31,7 +30,9 @@ const Herlizya = (props) => {
 
 
   return <Layout>
-    <SEO title="Herzliya" />
+    <SEO title="אקו הרצלייה" 
+    description='אתם מוזמנים לחוויית מגורים מושלמת ב – ECO הרצליה, קומפלקס מגורים ההולך ומוקם בימים אלה במתחם אלתרמן היוקרתי המתפתח במערב הרצליה הירוקה.'
+    />
     <PageHero header='פרויקטים' />
     <ProjectHeader header='אקו הרצליה' />
     {CurrentProjectGallery}

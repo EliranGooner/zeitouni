@@ -1,15 +1,12 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styles from './about-avi-page.module.scss'
+import React from "react";
+import styles from './about-avi-page.module.scss';
 import Fade from 'react-reveal/Fade';
-import divider from '../images/title-divider-white.png';
-import Image from './image'
+import Image from './image';
 import sizeMe from 'react-sizeme';
 
 
 const AboutAviPage = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   let deviceSmall = false
   if (500 > width) {
@@ -19,7 +16,7 @@ const AboutAviPage = (props) => {
     return <div className={deviceSmall ? styles.about_small : styles.about}>
         <Fade duration={3000}>
           <div className={deviceSmall ? styles.content_small : styles.content}>
-            {deviceSmall ? null : <Image imgName='avi_z_3.jpg' className={styles.office} />}
+            {deviceSmall ? null : <Image imgName='avi_z_3.jpg' alt='אבי זיתוני' className={styles.office} />}
             <div className={styles.text_container}>
               <div className={styles.text}>
                 <h1>חזון</h1>

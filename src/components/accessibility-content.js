@@ -1,9 +1,8 @@
-import { Link } from "gatsby"
-import React from "react"
-import styles from './accessibility-content.module.scss'
+import React from "react";
+import styles from './accessibility-content.module.scss';
 
 
-const AccessibilityContent = ({}) => {
+const AccessibilityContent = () => {
   return <div className={styles.accessibility}>
       <h1>הצהרת נגישות</h1>
       <p>

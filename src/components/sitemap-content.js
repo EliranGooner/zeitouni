@@ -1,9 +1,9 @@
-import { Link } from "gatsby"
-import React from "react"
-import styles from './sitemap-content.module.scss'
+import { Link } from "gatsby";
+import React from "react";
+import styles from './sitemap-content.module.scss';
 
 
-const SitemapContent = ({}) => {
+const SitemapContent = () => {
   return <div className={styles.sitemap}>
       <h1>מפת האתר</h1>
       <ul>

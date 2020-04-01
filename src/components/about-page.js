@@ -1,15 +1,12 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styles from './about-page.module.scss'
+import React from "react";
+import styles from './about-page.module.scss';
 import Fade from 'react-reveal/Fade';
-import divider from '../images/title-divider-white.png';
-import Image from './image'
+import Image from './image';
 import sizeMe from 'react-sizeme';
 
 
 const AboutPage = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   let deviceSmall = false
   if (500 > width) {
@@ -19,11 +16,11 @@ const AboutPage = (props) => {
     return <div className={deviceSmall ? styles.about_small : styles.about}>
         <Fade left duration={3000}>
           <div className={deviceSmall ? styles.content_small : styles.content}>
-            {deviceSmall ? null : <Image imgName='office.jpg' className={styles.office} />}
+            {deviceSmall ? null : <Image imgName='office.jpg' alt='משרד זיתוני' className={styles.office} />}
             <div className={styles.text_container}>
               <div className={styles.text}>
                 <h1>קבוצת זיתוני</h1>
-                <p>קבוצת זיתוני הינה קבוצת חברות בנייה המתמחה בייזום, בתכנון, בבנייה ובשיווק למגורים באזור השרון ובגוש דן. הקבוצה נוסדה בשנת 1997, ופועלת בשיתוף פעולה עם חברת משה ויגאל גינדי. הקבוצה מנוהלות על ידי אבי זיתוני, חבר הנהלת ארגון הקבלנים והבונים בתל-אביב יפו, דור שני למשפחת קבלנים ובעל ניסיון רב בתחום הבנייה למגורים.</p>
+                <p>קבוצת זיתוני הינה קבוצת חברות בנייה המתמחה בייזום, בתכנון, בבנייה ובשיווק למגורים באזור השרון ובגוש דן. הקבוצה נוסדה בשנת 1987, ופועלת בשיתוף פעולה עם חברת משה ויגאל גינדי. הקבוצה מנוהלות על ידי אבי זיתוני, חבר הנהלת ארגון הקבלנים והבונים בתל-אביב יפו, דור שני למשפחת קבלנים ובעל ניסיון רב בתחום הבנייה למגורים.</p>
                 <p>החזון מאחורי פעילות הקבוצה הוא להגשים חלומות עבור זוגות צעירים ומשפרי דיור שחולמים על בית חדש, מודרני ומעוצב באזור יפה ומבוקש. קבוצת זיתוני מתמקדת בבנייה למגורים לקהל ברמה סוציו-אקונומית בינונית עד גבוהה. לשם כך, הקבוצה יוזמת איתור ורכישה של קרקעות באזורים חדשים ומתפתחים, ומטביעה בהם את חותמה בעזרת תכנון מיוחד, מודרני וחדשני ובנייה ענפה ומתקדמת. רמת הבנייה ורמת המפרט הטכני של הדירות הינן גבוהות ביותר, ובכל פרויקט חדש, הרמה וטיב הבנייה עולים ומשודרגים. החזון הזה מודגם היטב בפרויקטים שבונה הקבוצה בהרצליה, בפתח תקווה, בגבעת שמואל, בכפר סבא ובהוד השרון, הנחשבות לאזור מבוקש בקרב קהל רוכשי הדירות.
                 </p>
                 <p>אנו, בקבוצת זיתוני, הצבנו לעצמנו מטרה להעניק ללקוחותינו שירות ברמה המקצועית הגבוהה ביותר, לצד יחס אישי חם ואדיב. כחלק מתפיסת העולם של החברה, כל פרויקט מלווה באופן אישי על ידי עובדי החברה, מתחילת תהליך הרכישה ועד לרגע הכניסה לדירה החדשה. 

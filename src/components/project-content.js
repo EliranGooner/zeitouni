@@ -1,22 +1,20 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, {useState} from "react"
-import styles from './project-content.module.scss'
+import { Link } from "gatsby";
+import React, {useState} from "react";
+import styles from './project-content.module.scss';
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
-import './awesome-button.css'
+import './awesome-button.css';
 import ElementFade from 'react-reveal/Fade';
-import divider from '../images/title-divider-white.png';
 import { useForm } from 'react-hook-form'
 import GoogleMapReact from "google-map-react";
 import MapMarker from './map-marker';
 import axios from 'axios';
 import { SizeMe } from 'react-sizeme';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal';
+import sketch from '../downloads/sketch.pdf';
 
 
 const ProjectContent = ({project}) => {
@@ -43,7 +41,6 @@ const ProjectContent = ({project}) => {
 
   let about
   let location
-  let sale
   let building
   let flat
   if (project === 'herzliya') {
@@ -208,7 +205,7 @@ const ProjectContent = ({project}) => {
                   <p>יצחק שמיר 12, גבעת שמואל
                   </p>
                   <p>salesgs@eco-group.co.il</p>
-                  <p>*2321</p>
+                  <p>*2123</p>
                 </div> : null }
                   
             </div>
@@ -247,6 +244,7 @@ const ProjectContent = ({project}) => {
                 {about}
                 <h1>המיקום</h1>
                 {location}
+                {project === 'gvash' ? <a href={sketch} download><strong>להורדת תוכניות הפרויקט</strong></a> : null }
                 {project === 'kfs' ? null : <Accordion>
                 <Card>
                   <Card.Header>
@@ -273,6 +271,7 @@ const ProjectContent = ({project}) => {
             }</SizeMe>
             
           </div>
+          {project === 'gvash' ? <div className={styles.download}><a href={sketch} download><strong>לחץ להורדת תוכניות הפרויקט</strong></a></div> : null }
           <div className={styles.all}>
             <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn' size='large'>לכל הפרויקטים</AwesomeButton></Link>
           </div>

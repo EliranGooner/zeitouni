@@ -1,15 +1,14 @@
-import React, {useState} from 'react'
-import styles from './contact-form.module.scss'
+import React, {useState} from 'react';
+import styles from './contact-form.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form, Col, Row } from 'react-bootstrap';
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
-import './awesome-button.css'
-import { useForm } from 'react-hook-form'
+import './awesome-button.css';
+import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 
 

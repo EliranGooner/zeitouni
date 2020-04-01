@@ -1,21 +1,19 @@
-import React , {useMemo} from 'react';
-import styles from './project-card.module.scss'
-import { Link } from "gatsby"
+import React from 'react';
+import styles from './project-card.module.scss';
+import { Link } from "gatsby";
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
-import './awesome-button.css'
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import Image from './image'
+import './awesome-button.css';
+import Image from './image';
 import Fade from 'react-reveal/Fade';
-import { SizeMe } from 'react-sizeme'
+import { SizeMe } from 'react-sizeme';
 
 const ProjectCard = ({header, src, path}) => {
 
   return (
     <SizeMe>{({ size }) => size.width > 200 ?
     <div className={styles.card}>
-    <Image imgName={src} className={styles.img} />
+    <Image imgName={src} className={styles.img} alt='בנייני הפרויקט' />
       <div className={styles.text_container}>
         <div className={styles.inner}>
           <div className={styles.header_shadow}>
@@ -29,7 +27,7 @@ const ProjectCard = ({header, src, path}) => {
     </div> 
       :
       <div className={styles.card_small}>
-      <Image imgName={src} className={styles.img} />
+      <Image imgName={src} className={styles.img} alt='בנייני הפרויקט' />
         <div className={styles.text_container}>
           <div className={styles.inner_small}>
         <div className={styles.header_shadow_small}>

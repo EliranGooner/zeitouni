@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
 import Layout from "../components/layout";
-import Image from "../components/image";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Carousel from "../components/carousel";
@@ -13,7 +11,7 @@ import sizeMe from 'react-sizeme';
 
 
 const IndexPage = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   const ToRenderChildAboutDiv = width > 900
     ? AboutDiv
@@ -24,7 +22,9 @@ const IndexPage = (props) => {
     : AboutAviDivSmall;
 
   return ( <Layout>
-    <SEO title="Home" />
+    <SEO title="בית - קבוצת זיתוני"
+    description='קבוצת זיתוני הינה קבוצת חברות בנייה המתמחה בייזום, בתכנון, בבנייה ובשיווק למגורים באזור השרון ובגוש דן.' 
+    />
     <Hero />
     <ToRenderChildAboutDiv />
     <Carousel />
