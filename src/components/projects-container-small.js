@@ -57,7 +57,7 @@ const ProjectsContainerSmall = () => {
           <ProjectCard src='zeitouni-home-2.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/givat-shmuel' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-home-1.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/herzliya' />
+          <ProjectCard src='zeitouni-home-1.jpg' header='אקו הרצלייה' path='/herzliya' />
         </Grid>
       </Grid>
     </ExpansionPanelDetails>

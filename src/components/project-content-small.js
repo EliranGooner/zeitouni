@@ -176,7 +176,6 @@ const ProjectContentSmall = ({project}) => {
               {about}
               <h1>המיקום</h1>
               {location}
-              {project === 'gvash' ? <a href={sketch} download><strong>לחץ להורדת תוכניות הפרויקט</strong></a> : null }
               {project === 'kfs' ? null 
               :
               <div>
@@ -207,8 +206,11 @@ const ProjectContentSmall = ({project}) => {
               </ExpansionPanelDetails>
               </ExpansionPanel>
               </div>
+
             }
-             
+            <div className={styles.download}>
+              {project === 'gvash' ? <a href={sketch} download><strong>לחץ להורדת תוכניות הפרויקט</strong></a> : null }
+            </div>
             </div>
             <div className={styles.contact}>
               <div className={styles.box}>
