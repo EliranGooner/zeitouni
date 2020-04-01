@@ -12,7 +12,7 @@ import divider from '../images/title-divider-white.png';
 const AboutDiv = ({}) => {
     return <div className={styles.about}>
         <Fade left duration={3000}>
-          <div className={styles.content}>
+          <div className={styles.content}>a
             <h1>קצת עלינו</h1>
             <img src={divider}></img>
             <div className={styles.text_container}>
