@@ -6,6 +6,8 @@ import ProjectGallerySmall from '../components/project-gallery-small'
 import ProjectContent from '../components/project-content'
 import ProjectContentSmall from '../components/project-content-small'
 import sizeMe from 'react-sizeme';
+import SEO from "../components/seo";
+
 
 
 

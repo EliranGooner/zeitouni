@@ -18,7 +18,7 @@ const AboutPage = (props) => {
 
     return <div className={deviceSmall ? styles.about_small : styles.about}>
         <Fade left duration={3000}>
-          <div className={styles.content}>
+          <div className={deviceSmall ? styles.content_small : styles.content}>
             {deviceSmall ? null : <Image imgName='office.jpg' className={styles.office} />}
             <div className={styles.text_container}>
               <div className={styles.text}>
