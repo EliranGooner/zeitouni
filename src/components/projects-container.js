@@ -1,18 +1,13 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './projects-container.module.scss';
-import Fade from 'react-reveal/Fade';
-import Image from "./image";
 import sizeMe from 'react-sizeme';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './react-tabs.css';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ProjectCard from './project-card'
 
 const ProjectsContainer = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   let mediumDevice = false
   if (1100 > width) {

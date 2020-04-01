@@ -1,15 +1,12 @@
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './footer.module.scss';
-import {AwesomeButtonSocial} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
 import './awesome-button.css';
-import zeitouniLogo from '../images/zeitouni_slogan.png'
+import zeitouniLogo from '../images/zeitouni_slogan.png';
 import Fade from 'react-reveal/Fade';
-import Image from './image';
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
  
 
 const Footer = ({}) => {
@@ -33,14 +30,14 @@ const Footer = ({}) => {
     return <div>
       <div className={styles.slogan}>
         <Fade duration={2500}>
-          <img src={zeitouniLogo} height={300} width={800}></img>
+          <img src={zeitouniLogo} height={300} width={800} alt='לוגו זיתוני'></img>
         </Fade>
       </div>
       <div className={styles.footer}>
       <Link to='/sitemap/'>מפת אתר</Link>
         <div className={styles.dev}>
           <p>Designed & developed by</p>
-          <a href='https://github.com/EliranGooner'><Img fluid={data.placeholderImage.childImageSharp.fluid} style={imgStyle}/></a>
+          <a href='https://github.com/EliranGooner'><Img fluid={data.placeholderImage.childImageSharp.fluid} style={imgStyle} alt='לוגו פיתוח'/></a>
         </div>
         <Link to='/accessibility/'>הצהרת נגישות</Link>
       </div>

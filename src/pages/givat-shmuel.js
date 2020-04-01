@@ -1,10 +1,10 @@
-import React from "react"
-import PageHero from '../components/page-hero'
-import ProjectHeader from '../components/project-header'
-import ProjectGallery from '../components/project-gallery'
-import ProjectGallerySmall from '../components/project-gallery-small'
-import ProjectContent from '../components/project-content'
-import ProjectContentSmall from '../components/project-content-small'
+import React from "react";
+import PageHero from '../components/page-hero';
+import ProjectHeader from '../components/project-header';
+import ProjectGallery from '../components/project-gallery';
+import ProjectGallerySmall from '../components/project-gallery-small';
+import ProjectContent from '../components/project-content';
+import ProjectContentSmall from '../components/project-content-small';
 import sizeMe from 'react-sizeme';
 import SEO from "../components/seo";
 
@@ -15,7 +15,7 @@ import Layout from "../components/layout"
 
 
 const Herlizya = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
 
   let CurrentProjectGallery 
   let CurrentProjectContent 
@@ -29,7 +29,9 @@ const Herlizya = (props) => {
 
 
   return <Layout>
-    <SEO title="Givat-Shmuel" />
+    <SEO title="אקו רמת הדר החדשה גבעת שמואל" 
+    description='"אקו רמת הדר החדשה" בגבעת שמואל, מזמין אתכם להגשים את החלום ולהתחיל ליהנות מכל הטוב ממגורים בפרוייקט פרימיום, הנבנה בסטנדרט הגבוה ביותר, באיכות בלתי מתפשרת ועם תכנון מדוקדק עד לפרט האחרון.'
+    />
     <PageHero header='פרויקטים' />
     <ProjectHeader header='אקו רמת הדר החדשה גבעת שמואל' />
     {CurrentProjectGallery}

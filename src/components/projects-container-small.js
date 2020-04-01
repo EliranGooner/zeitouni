@@ -1,11 +1,5 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './projects-container-small.module.scss';
-import Fade from 'react-reveal/Fade';
-import Image from "./image";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -14,8 +8,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ProjectCard from './project-card';
 
 const ProjectsContainerSmall = () => {
-  
-
   
   return <div className={styles.panel}>
     <ExpansionPanel>

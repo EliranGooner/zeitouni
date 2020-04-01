@@ -1,22 +1,10 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './articles-container.module.scss';
-import Fade from 'react-reveal/Fade';
-import sizeMe from 'react-sizeme';
 import Grid from '@material-ui/core/Grid';
-import ArticleCard from './article-card'
-import './slideshow.css'
+import ArticleCard from './article-card';
 
-const ArticlesContainer = (props) => {
-  const { width, height } = props.size;
+const ArticlesContainer = () => {
 
-  let mediumDevice = false
-  if (1100 > width) {
-    mediumDevice = true
-  } 
-
-  
   return <div dir="rtl">
     <Grid container className={styles.container} spacing={1} >
       <Grid item  xs={12} lg={3} md={6}>
@@ -68,4 +56,4 @@ const ArticlesContainer = (props) => {
 </div>
 };
 
-export default sizeMe({ monitorWidth: true })(ArticlesContainer)
+export default ArticlesContainer

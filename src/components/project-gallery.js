@@ -1,9 +1,6 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './project-gallery.module.scss';
 import ElementFade from 'react-reveal/Fade';
-import zeitouniLogo from '../images/logo zeituni_w.png';
 import Image from "./image";
 import { Fade } from 'react-slideshow-image';
 import { SizeMe } from 'react-sizeme';
@@ -23,23 +20,23 @@ const ProjectGallery = ({image1, image2, image3, logo}) => {
             <Fade {...fadeProperties}>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                  <Image imgName={image1}   />
+                  <Image imgName={image1} alt='בנייני הפרויקט'  />
                 </div>
               </div>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                  <Image imgName={image2}   />
+                  <Image imgName={image2} alt='דירה 1 מהפרויקט'  />
                 </div>
               </div>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                  <Image imgName={image3}   />
+                  <Image imgName={image3} alt='דירה 2 מהפרויקט'  />
                 </div>
               </div>
             </Fade>
           </div>
           <div className={styles.gallery_side}>
-            <Image imgName={logo}   />
+            <Image imgName={logo} alt='לוגו הפרויקט'  />
           </div>
         </div>
       </ElementFade>
@@ -52,23 +49,23 @@ const ProjectGallery = ({image1, image2, image3, logo}) => {
             <Fade {...fadeProperties}>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                  <Image imgName={image1}   />
+                  <Image imgName={image1}  alt='בנייני הפרויקט' />
                 </div>
               </div>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                  <Image imgName={image2}   />
+                  <Image imgName={image2}  alt='דירה 1 מהפרויקט' />
                 </div>
               </div>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                  <Image imgName={image3}   />
+                  <Image imgName={image3}  alt='דירה 2 מהפרויקט' />
                 </div>
               </div>
             </Fade>
           </div>
           <div className={styles.gallery_side_medium}>
-            <Image imgName={logo}   />
+            <Image imgName={logo} alt='לוגו הפרויקט'  />
           </div>
         </div>
       </ElementFade>

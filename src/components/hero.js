@@ -1,6 +1,4 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import styles from './hero.module.scss';
 import { Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import ElementFade from 'react-reveal/Fade';
@@ -15,7 +13,7 @@ const fadeProperties = {
 }
 
 const Hero = (props) => {
-  const { width, height } = props.size;
+  const { width } = props.size;
   let heroImageFirst
   let heroImageSecond
   420 > width ? heroImageFirst = 'zeitouni-home-1.jpg' : heroImageFirst = 'zeitouni-hero-1.jpg'
@@ -42,19 +40,19 @@ const Hero = (props) => {
       <Fade {...fadeProperties}>
         <div className={styles.each_fade}>
           <div className={styles.image_container}>
-            <Image imgName={heroImageFirst} className={widthCheckImage(width)}  />
+            <Image imgName={heroImageFirst} className={widthCheckImage(width)} alt='בנייני פרויקט גבעת שמואל'  />
           </div>
         </div>
         <div className={styles.each_fade}>
           <div className={styles.image_container}>
-            <Image imgName={heroImageSecond}  className={widthCheckImage(width)} />
+            <Image imgName={heroImageSecond}  className={widthCheckImage(width)} alt='בנייני פרויקט הרצלייה' />
           </div>
         </div>
       </Fade>
     </div>
       <div className={styles.text_container}>
         <ElementFade duration={5000}>
-          <img src={zeitouniLogo} height={1200} width={600} className={widthCheckLogo(width)}></img>
+          <img src={zeitouniLogo} height={1200} width={600} className={widthCheckLogo(width)} alt='לוגו זיתוני'></img>
         </ElementFade>
       </div>
     <div className={width < 1100 && width > 400 ? styles.scroll_medium : styles.scroll} onClick={() => scroll.scrollMore(716.4)}>

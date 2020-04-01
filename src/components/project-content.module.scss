@@ -54,6 +54,10 @@
     direction: rtl;
     color: black;
   }
+  a {
+    color: black;
+    margin: 1rem;
+  }
 }
 
 .contact {
@@ -161,4 +165,12 @@
   flex: 1 1 auto;
   padding: 1rem;
   text-align: center;
+}
+
+.download {
+  text-align: right;
+  margin-right: 3rem;
+  a {
+    color: black;
+  }
 }

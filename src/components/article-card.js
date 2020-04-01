@@ -1,15 +1,6 @@
-import React , {useMemo} from 'react';
-import styles from './article-card.module.scss'
-import { Link } from "gatsby"
-import {AwesomeButton} from 'react-awesome-button';
-import 'react-awesome-button/dist/themes/theme-red.css';
-import './awesome-button.css'
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import Image from './image'
-import Fade from 'react-reveal/Fade';
-import { SizeMe } from 'react-sizeme';
-import Card from 'react-bootstrap/Card'
+import React from 'react';
+import styles from './article-card.module.scss';
+import Card from 'react-bootstrap/Card';
 
 const ProjectCard = ({header, preview, src, path, idx}) => {
 

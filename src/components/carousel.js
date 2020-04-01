@@ -1,12 +1,12 @@
 import React from 'react';
-import Flickity from 'react-flickity-component'
+import Flickity from 'react-flickity-component';
 import "./flickity.css";
 import CarouselSlide from './carousel-slide';
-import styles from './carousel.module.scss'
+import styles from './carousel.module.scss';
 import {AwesomeButton} from 'react-awesome-button';
 import 'react-awesome-button/dist/themes/theme-red.css';
-import './awesome-button.css'
-import { Link } from 'gatsby'
+import './awesome-button.css';
+import { Link } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import divider from '../images/title-divider.png';
 
@@ -28,16 +28,16 @@ const Carousel = () => {
       <div className={styles.header}>
         <Fade>
           <h1>פרויקטים</h1>
-          <img src={divider}></img>
+          <img src={divider} alt='חוצץ'></img>
         </Fade>
       </div>
       <Flickity
-        className={styles.carousel} // default ''
-        elementType={'div'} // default 'div'
-        options={flickityOptions} // takes flickity options 
-        disableImagesLoaded={false} // default false
-        reloadOnUpdate // default false
-        static // default false
+        className={styles.carousel}
+        elementType={'div'}
+        options={flickityOptions} 
+        disableImagesLoaded={false} 
+        reloadOnUpdate
+        static
       >
         <CarouselSlide header="אקו השכונה הירוקה כפר סבא" src="eco_ks_2.jpg" path='/kfar-saba/'  />
         <CarouselSlide header="אקו רמת הדר חדשה גבעת שמואל" src="zeitouni-hero-2.jpg" path='/givat-shmuel/'  />
