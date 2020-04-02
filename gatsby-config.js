@@ -31,15 +31,7 @@ module.exports = {
         icon: `src/images/zeitouni_favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: [`/`, `/projects/`, `/givat-shmuel/`, `/herzliya/`],
-         workboxConfig: {
-            globPatterns: ['**/*']
-         }
-      }
-    },
+   
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
