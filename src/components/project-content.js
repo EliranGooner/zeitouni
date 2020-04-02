@@ -24,7 +24,6 @@ const ProjectContent = ({project}) => {
   const { register, errors, handleSubmit } = useForm()
   let key;
   project === 'gvash' ? key = process.env.GS_KEY : key = process.env.GETFORM_KEY;
-  console.log(key);
   const onSubmit = (data) => {
     axios({
       method: "post",
@@ -34,10 +33,26 @@ const ProjectContent = ({project}) => {
     handleShow();
   };
 
-  let center = { 
-    lat: 32.177185,
-    lng: 34.832118
+  let center
+  if (project === 'herzliya') { 
+    center = {
+      lat: 32.177185,
+      lng: 34.832118
+    }
+  } else if ( project === 'gvash') {
+    center = {
+      lat: 32.072720,
+      lng: 34.851539
+    }
+  } else {
+    center = {
+      lat: 32.194132,
+      lng: 34.892480
+    }
   }
+  
+  let renderDownload
+  project === 'gvash' ? renderDownload = <div className={styles.download}><a href={sketch} download><strong>לחץ להורדת תוכניות הפרויקט</strong></a></div> : renderDownload = null
 
   let about
   let location
@@ -237,6 +252,7 @@ const ProjectContent = ({project}) => {
                   </Accordion.Collapse>
                 </Card>
               </Accordion>}
+              { renderDownload }
               </div>
               :    
               <div className={styles.text_medium}>
@@ -271,7 +287,6 @@ const ProjectContent = ({project}) => {
             }</SizeMe>
             
           </div>
-          {project === 'gvash' ? <div className={styles.download}><a href={sketch} download><strong>לחץ להורדת תוכניות הפרויקט</strong></a></div> : null }
           <div className={styles.all}>
             <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn' size='large'>לכל הפרויקטים</AwesomeButton></Link>
           </div>
