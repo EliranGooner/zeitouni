@@ -25,7 +25,6 @@ const Navbar = (props) => {
 
     let deviceLarge
     width > 1800 ? deviceLarge = true : deviceLarge = false; 
-    console.log(deviceLarge)
     
 
     return <div>{ scroll ?
