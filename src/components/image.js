@@ -21,7 +21,7 @@ const Image = ({ imgName, ...props }) => (
           edges {
             node {
               fluid(maxWidth: 1200, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
                 originalName
                 presentationWidth
               }
