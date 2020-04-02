@@ -5,10 +5,14 @@ import zeitouniLogo from '../images/logo zeituni_b.png';
 import { Icon } from '@iconify/react';
 import instagramIcon from '@iconify/icons-cib/instagram';
 import facebookIcon from '@iconify/icons-cib/facebook';
+import sizeMe from 'react-sizeme';
 
 
-const Navbar = ({}) => {
+
+const Navbar = (props) => {
     const [scroll, setScroll] = useState(false);
+    const { width, height } = props.size;
+
     useEffect(() => {
       window.addEventListener("scroll", () => {
         if (window.scrollY >= window.innerHeight - 370) {
@@ -18,11 +22,15 @@ const Navbar = ({}) => {
         }
       })
     });
+
+    let deviceLarge
+    width > 10 ? deviceLarge = true : deviceLarge = false; 
+    console.log(deviceLarge)
     
 
     return <div>{ scroll ?
       <div className={`${styles.navbar} navbar-black`}>
-        <div className={styles.logos}>
+        <div className={deviceLarge ? styles.logos_large : styles.logos}>
             <div>
               <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social}/></a>
               <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social}/></a>
@@ -38,10 +46,10 @@ const Navbar = ({}) => {
             <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social_white}/></a>
           </div>
         </div>
-        <div className={styles.menu_white}></div>
+        <div className={deviceLarge ? styles.menu_white_large : styles.menu_white}></div>
       </div>
       } 
     </div>
 };
 
-export default Navbar
+export default sizeMe({ monitorWidth: true })(Navbar)
