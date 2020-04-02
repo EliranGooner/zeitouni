@@ -37,6 +37,20 @@
   color: white;
   font-size: 1.5em;
 }
+.react-tabs__tab_large {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  margin: 0;
+  left: 28rem;
+  color: white;
+  font-size: 1.5em;
+}
 
 .react-tabs__tab--selected {
   background: #fff;

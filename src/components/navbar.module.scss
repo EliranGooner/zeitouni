@@ -32,6 +32,13 @@
   align-items: center;
   justify-content: space-between;
 }
+.logos_large {
+  width: 58%;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .social {
   font-family: 'Heebo';
@@ -54,4 +61,9 @@
   background: white;
   height: 4.5rem;
   width: 8%;
+}
+.menu_white_large {
+  background: white;
+  height: 4.5rem;
+  width: 7%;
 }
