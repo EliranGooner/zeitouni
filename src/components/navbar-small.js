@@ -23,7 +23,7 @@ const NavbarSmall = ({}) => {
     return <div>{ scroll ?
       <div className={`${styles.navbar} navbar-black`}>
         <div className={styles.logos}>
-            <div>
+            <div class={styles.social_div}>
               <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social}/></a>
               <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social}/></a>
             </div>
