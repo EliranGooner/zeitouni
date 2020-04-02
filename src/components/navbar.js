@@ -15,7 +15,7 @@ const Navbar = (props) => {
 
     useEffect(() => {
       window.addEventListener("scroll", () => {
-        if (window.scrollY >= window.innerHeight - 370) {
+        if (window.scrollY >= window.innerHeight - 390) {
           setScroll(true)
         } else {
           setScroll(false)
@@ -24,7 +24,7 @@ const Navbar = (props) => {
     });
 
     let deviceLarge
-    width > 10 ? deviceLarge = true : deviceLarge = false; 
+    width > 1800 ? deviceLarge = true : deviceLarge = false; 
     console.log(deviceLarge)
     
 

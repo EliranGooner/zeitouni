@@ -9,18 +9,22 @@ import ProjectCard from './project-card'
 const ProjectsContainer = (props) => {
   const { width } = props.size;
 
-  let mediumDevice = false
+  let tabClass = null
   if (1100 > width) {
-    mediumDevice = true
-  } 
+    tabClass = 'react-tabs__tab_medium'
+  } else if (1800 > width && width > 1100) {
+    tabClass = 'react-tabs__tab'
+  } else {
+    tabClass = 'react-tabs__tab_large'
+  }
 
   
   return <div dir="rtl">
   <Tabs defaultIndex={1} >
     <TabList >
-      <Tab className={ mediumDevice ? 'react-tabs__tab_medium' : 'react-tabs__tab'}>פרויקטים מאוכלסים</Tab>
-      <Tab className={ mediumDevice ? 'react-tabs__tab_medium' : 'react-tabs__tab'}>פרויקטים בשיווק</Tab>
-      <Tab className={ mediumDevice ? 'react-tabs__tab_medium' : 'react-tabs__tab'}>פרויקטים עתידיים</Tab>
+      <Tab className={tabClass}>פרויקטים מאוכלסים</Tab>
+      <Tab className={tabClass}>פרויקטים בשיווק</Tab>
+      <Tab className={tabClass}>פרויקטים עתידיים</Tab>
     </TabList>
     <TabPanel>
       <Grid container className={styles.bottom} >
