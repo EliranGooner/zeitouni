@@ -13,12 +13,12 @@ const AboutAviPage = (props) => {
     deviceSmall = true
   } 
 
-    return <div className={deviceSmall ? styles.about_small : styles.about}>
+    return <div className={deviceSmall ? styles.about_small : styles.about} itemScope itemType="http://schema.org/Person">
         <Fade duration={3000}>
           <div className={deviceSmall ? styles.content_small : styles.content}>
-            {deviceSmall ? null : <Image imgName='avi_z_3.jpg' alt='אבי זיתוני' className={styles.office} />}
+            {deviceSmall ? null : <Image imgName='avi_z_3.jpg' alt='אבי זיתוני' className={styles.office} itemProp='image'/>}
             <div className={styles.text_container}>
-              <div className={styles.text}>
+              <div className={styles.text} itemProp='description' >
                 <h1>חזון</h1>
                 <p>אבי זיתוני, שנולד בבת ים וגדל בכפר סבא, הוא דור שני למשפחת קבלנים. בתחילת שנות ה-80, לאחר שהשתחרר מהצבא, החל אבי זיתוני לעבוד כשכיר אצל היזמים משה ויגאל גינדי. אביו אמנם עבד גם הוא בנדל"ן, אך אבי בחר לצמוח מלמטה וללמוד את יסודות הענף, השיווק והביצוע דרך היזמים הכי וותיקים והמנוסים באותה תקופה. אחרי 5 שנים אצל האחים גינדי הוא פרש לדרך עצמאית ועד היום הוא בנה מעל 2,500 יחידות דיור. 
                 </p>

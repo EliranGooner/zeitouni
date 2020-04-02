@@ -2,8 +2,6 @@ import React from "react";
 import PageHero from '../components/page-hero';
 import AboutAviPage from '../components/about-avi-page';
 import SEO from "../components/seo";
-
-
 import Layout from "../components/layout"
 
 
