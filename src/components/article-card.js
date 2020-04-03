@@ -32,7 +32,7 @@ const ProjectCard = ({header, preview, src, path, idx}) => {
 
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} itemScope itemType='https://schema.org/AnalysisNewsArticle'>
     {download ? 
       <a href={currentFile} download alt='article' >
         <Card
@@ -41,11 +41,12 @@ const ProjectCard = ({header, preview, src, path, idx}) => {
           text={'white'}
           style={{ width: '18rem', height: '18rem' }}
         >
-          <Card.Header>{src}</Card.Header>
+          <Card.Header itemProp='publisher'>{src}</Card.Header>
           <Card.Body>
-            <Card.Title>{header}</Card.Title>
+            <Card.Title itemProp='name'><strong>{header}</strong></Card.Title>
             <Card.Text>
-              {preview}
+              <span itemProp='dateline'>{preview}</span>
+              <p><strong>להורדת הכתבה</strong></p>
             </Card.Text>
           </Card.Body>
         </Card>
@@ -58,10 +59,10 @@ const ProjectCard = ({header, preview, src, path, idx}) => {
         text={'white'}
         style={{ width: '18rem', height: '18rem' }}
       >
-        <Card.Header>{src}</Card.Header>
+        <Card.Header itemProp='publisher'>{src}</Card.Header>
         <Card.Body>
-          <Card.Title>{header}</Card.Title>
-          <Card.Text>
+          <Card.Title itemProp='name'><strong>{header}</strong></Card.Title>
+          <Card.Text itemProp='dateline'>
             {preview}
           </Card.Text>
         </Card.Body>

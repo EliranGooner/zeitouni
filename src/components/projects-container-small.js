@@ -9,7 +9,7 @@ import ProjectCard from './project-card';
 
 const ProjectsContainerSmall = () => {
   
-  return <div className={styles.panel}>
+  return <div className={styles.panel} itemScope itemType='https://schema.org/CollectionPage'>
     <ExpansionPanel>
     <ExpansionPanelSummary
       expandIcon={<ExpandMoreIcon />}

@@ -20,18 +20,18 @@ const ProjectGalleryKfs = ({image1, image3, logo}) => {
             <Fade {...fadeProperties}>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                <Image imgName={image1} alt='בניין 1 פרויקט כפר סבא' />
+                <Image imgName={image1} alt='בניין 1 פרויקט כפר סבא' itemProp='image'/>
                 </div>
               </div>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
-                <Image imgName={image3} alt='בניין 2 פרויקט כפר סבא'  />
+                <Image imgName={image3} alt='בניין 2 פרויקט כפר סבא' itemProp='image'  />
                 </div>
               </div>
             </Fade>
           </div>
           <div className={styles.gallery_side}>
-            <Image imgName={logo} alt='לוגו פרויקט כפר סבא' />
+            <Image imgName={logo} alt='לוגו פרויקט כפר סבא' itemProp='logo' />
           </div>
         </div>
       </ElementFade>

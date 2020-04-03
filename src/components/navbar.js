@@ -29,12 +29,12 @@ const Navbar = (props) => {
 
     return <div>{ scroll ?
       <div className={`${styles.navbar} navbar-black`}>
-        <div className={deviceLarge ? styles.logos_large : styles.logos}>
+        <div itemScope itemType='https://schema.org/Brand' className={deviceLarge ? styles.logos_large : styles.logos}>
             <div>
               <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social}/></a>
               <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social}/></a>
             </div>
-            <Link to="/"><img src={zeitouniLogo} className={styles.logo} alt='לוגו זיתוני'></img></Link>
+            <Link to="/"><img src={zeitouniLogo} className={styles.logo} alt='לוגו זיתוני' itemProp='logo'></img></Link>
         </div>
       </div> 
       : 

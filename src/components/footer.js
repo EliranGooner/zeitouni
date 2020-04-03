@@ -28,9 +28,9 @@ const Footer = ({}) => {
     objectFit: 'cover'
   }
     return <div>
-      <div className={styles.slogan}>
+      <div className={styles.slogan} itemScope itemType='https://schema.org/Brand'>
         <Fade duration={2500}>
-          <img src={zeitouniLogo} height={300} width={800} alt='לוגו זיתוני'></img>
+          <img src={zeitouniLogo} itemProp='logo' height={300} width={800} alt='לוגו זיתוני'></img>
         </Fade>
       </div>
       <div className={styles.footer}>

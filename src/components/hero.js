@@ -35,24 +35,24 @@ const Hero = (props) => {
       return styles.logo_image_small
     }
   }
-  return <div className={styles.hero}>
+  return <div className={styles.hero} itemProp itemType='https://schema.org/Brand'>
     <div className={styles.slide_container}>
       <Fade {...fadeProperties}>
         <div className={styles.each_fade}>
           <div className={styles.image_container}>
-            <Image imgName={heroImageFirst} className={widthCheckImage(width)} alt='בנייני פרויקט גבעת שמואל'  />
+            <Image imgName={heroImageFirst} className={widthCheckImage(width)} alt='בנייני פרויקט גבעת שמואל' itemProp='image' />
           </div>
         </div>
         <div className={styles.each_fade}>
           <div className={styles.image_container}>
-            <Image imgName={heroImageSecond}  className={widthCheckImage(width)} alt='בנייני פרויקט הרצלייה' />
+            <Image imgName={heroImageSecond}  className={widthCheckImage(width)} alt='בנייני פרויקט הרצלייה' itemProp='image' />
           </div>
         </div>
       </Fade>
     </div>
       <div className={styles.text_container}>
         <ElementFade duration={5000}>
-          <img src={zeitouniLogo} height={1200} width={600} className={widthCheckLogo(width)} alt='לוגו זיתוני'></img>
+          <img src={zeitouniLogo} height={1200} width={600} className={widthCheckLogo(width)} alt='לוגו זיתוני' itemProp='logo'></img>
         </ElementFade>
       </div>
     <div className={width < 1100 && width > 400 ? styles.scroll_medium : styles.scroll} onClick={() => scroll.scrollMore(716.4)}>

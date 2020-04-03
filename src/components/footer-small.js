@@ -10,9 +10,9 @@ import Fade from 'react-reveal/Fade';
 
 const FooterSmall = () => {
     return <div>
-      <div className={styles.slogan}>
+      <div className={styles.slogan} itemScope itemType='https://schema.org/Brand'>
         <Fade duration={2500}>
-          <img src={zeitouniLogo} alt='לוגו זיתוני' height={400} width={800}></img>
+          <img src={zeitouniLogo} itemProp='logo' alt='לוגו זיתוני' height={400} width={800}></img>
         </Fade>
       </div>
       <div className={styles.footer}>
