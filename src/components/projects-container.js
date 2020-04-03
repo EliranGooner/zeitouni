@@ -19,7 +19,7 @@ const ProjectsContainer = (props) => {
   }
 
   
-  return <div dir="rtl">
+  return <div dir="rtl" itemScope itemType='https://schema.org/CollectionPage'>
   <Tabs defaultIndex={1} >
     <TabList >
       <Tab className={tabClass}>פרויקטים מאוכלסים</Tab>

@@ -16,23 +16,23 @@ const ProjectGallerySmall = ({image1, image2, image3, logo}) => {
     <ElementFade duration={3000}>
     <div className={styles.project_container}>
       <div className={styles.gallery_side}>
-        <Image imgName={logo} alt='לוגו הפרויקט'  />
+        <Image imgName={logo} alt='לוגו הפרויקט' itemProp='logo' />
       </div>
         <div className={styles.slide_container}>
           <Fade {...fadeProperties}>
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
-                <Image imgName={image1} alt='בנייני הפרויקט' />
+                <Image imgName={image1} alt='בנייני הפרויקט' itemProp='image' />
               </div>
             </div>
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
-                <Image imgName={image2} alt='דירה 1 מהפרויקט'  />
+                <Image imgName={image2} alt='דירה 1 מהפרויקט' itemProp='image' />
               </div>
             </div>
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
-                <Image imgName={image3} alt='דירה 2 מהפרויקט'  />
+                <Image imgName={image3} alt='דירה 2 מהפרויקט' itemProp='image' />
               </div>
             </div>
           </Fade>

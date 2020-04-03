@@ -11,20 +11,20 @@ import { SizeMe } from 'react-sizeme';
 const CarouselSlide = ({header, src, path}) => {
 
   return (
-    <div className={styles.CarouselSlide}>
-    <Image imgName={src} className={styles.img} alt='בנייני הפרויקט' />
+    <div className={styles.CarouselSlide} itemScope itemType='https://schema.org/ApartmentComplex'>
+    <Image imgName={src} className={styles.img} alt='בנייני הפרויקט' itemProp='image' />
       <div className={styles.text_container}>
         <div className={styles.inner}>
         <SizeMe>{({ size }) => size.width > 100 ?
           <div className={styles.header_shadow}>
           <Fade duration={3000}>
-            <h1>{header}</h1>
+            <h1 itemProp='name'>{header}</h1>
           </Fade>
         </div>
         :
         <div className={styles.header_shadow_small}>
             <Fade duration={3000}>
-              <h1>{header}</h1>
+              <h1 itemProp='name'>{header}</h1>
             </Fade>
           </div>
       }</SizeMe>

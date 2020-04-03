@@ -225,11 +225,11 @@ const ProjectContent = ({project}) => {
                   
             </div>
             <SizeMe>{({ size }) => size.width > 610 ?
-              <div className={styles.text}>
+              <div className={styles.text} itemScope itemType='https://schema.org/ApartmentComplex'>
                 <h1>על הפרויקט</h1>
-                {about}
+                <span itemProp='description'>{about}</span>
                 <h1>המיקום</h1>
-                {location}
+                <span itemProp='place'>{location}</span>
                 {project === 'kfs' ? null : <Accordion>
                 <Card>
                   <Card.Header>
@@ -291,7 +291,7 @@ const ProjectContent = ({project}) => {
             <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn' size='large'>לכל הפרויקטים</AwesomeButton></Link>
           </div>
         </ElementFade>
-        <div className={styles.map}>
+        <div className={styles.map} itemScope itemType='https://schema.org/Map'>
           <GoogleMapReact
           bootstrapURLKeys={{ key: `${process.env.GOOGLE_MAPS_KEY}` }}
           defaultCenter={center}

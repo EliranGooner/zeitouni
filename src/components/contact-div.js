@@ -4,7 +4,7 @@ import ContactForm from "./contact-form";
 
 
 const ContactDiv = () => {
-    return <div className={styles.contact}>
+    return <div className={styles.contact} itemScope itemType='https://schema.org/ContactPage'>
         <ContactForm/>
     </div>
 };
