@@ -9,6 +9,7 @@ import AboutDivSmall from "../components/about-div-small";
 import AboutAviDiv from "../components/about-avi-div";
 import AboutAviDivSmall from '../components/about-avi-div-small';
 import sizeMe from 'react-sizeme';
+import { Helmet } from "react-helmet"
 
 
 const IndexPage = (props) => {
@@ -29,9 +30,10 @@ const IndexPage = (props) => {
   return ( <Layout>
     <SEO title="בית - קבוצת זיתוני"
     description='קבוצת זיתוני הינה קבוצת חברות בנייה המתמחה בייזום, בתכנון, בבנייה ובשיווק למגורים בהרצלייה, גבעת שמואל, בת ים וברחבי השרון וגוש דן.  בואו להנות מחווית המגורים המושלמת.' 
-    name="google-site-verification" 
-    content="nNxHHGf6iKF31lnzDKue5h00vCt38CqZJ4RPzqDK_1U"
     />
+    <Helmet>
+      <meta name="google-site-verification" content="nNxHHGf6iKF31lnzDKue5h00vCt38CqZJ4RPzqDK_1U" />
+    </Helmet>
     <ToRenderChildHero />
     <ToRenderChildAboutDiv />
     <Carousel />
