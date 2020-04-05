@@ -3,6 +3,7 @@ import styles from './hero.module.scss';
 import { Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import ElementFade from 'react-reveal/Fade';
 import zeitouniLogo from '../images/logo zeituni_w.png';
+import Image from "./image";
 import { Fade } from 'react-slideshow-image';
 import sizeMe from 'react-sizeme';
 import { useStaticQuery, graphql } from "gatsby";
@@ -26,6 +27,16 @@ const Hero = (props) => {
     } else if (1100 > deviceWidth && deviceWidth > 450) {
       return styles.logo_image_medium
     } 
+  }
+
+  const checkScroll = (deviceWidth) => {
+    if ( 1100 > deviceWidth ) {
+      return styles.scroll_medium
+    } else if (1800 > deviceWidth && deviceWidth > 1100 ) {
+      return styles.scroll
+    } else {
+      return styles.scroll_large
+    }
   }
 
   const data = useStaticQuery(graphql`
@@ -64,7 +75,7 @@ const Hero = (props) => {
           <img src={zeitouniLogo} height={1200} width={600} className={widthCheckLogo(width)} alt='לוגו זיתוני' itemProp='logo'></img>
         </ElementFade>
       </div>
-    <div className={width < 1100 && width > 400 ? styles.scroll_medium : styles.scroll} onClick={() => scroll.scrollMore(716.4)}>
+    <div className={checkScroll(width)} onClick={() => scroll.scrollMore(716.4)}>
       <a href="#" ><span></span><span></span><span></span></a>
     </div>
   </div>
