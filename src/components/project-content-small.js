@@ -168,14 +168,14 @@ const ProjectContentSmall = ({project}) => {
   }
 
 
-    return <div className={styles.project}>
+    return <div className={styles.project} itemScope itemType='https://schema.org/ApartmentComplex'>
         <ElementFade duration={2000}>
           <div className={styles.content}>
             <div className={styles.text}>
               <h1>על הפרויקט</h1>
-              {about}
+              <span itemProp='description'>{about}</span>
               <h1>המיקום</h1>
-              {location}
+              <span itemProp='place'>{location}</span>
               {project === 'kfs' ? null 
               :
               <div>
@@ -247,7 +247,7 @@ const ProjectContentSmall = ({project}) => {
                   {project === 'gvash' ? 
                   <div className={styles.sales}>
                   <p><strong>:משרד מכירות</strong></p>
-                  <p>יצחק שמיר 12, גבעת שמואל
+                  <p itemProp='address'>יצחק שמיר 12, גבעת שמואל
                   </p>
                   <p>salesgs@eco-group.co.il</p>
                   <p>*2123</p>
@@ -262,7 +262,7 @@ const ProjectContentSmall = ({project}) => {
             <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
           </div>
         </ElementFade>
-        <div className={styles.map}>
+        <div className={styles.map} itemScope itemType='https://schema.org/Map'>
           <GoogleMapReact
           bootstrapURLKeys={{ key: `${process.env.GOOGLE_MAPS_KEY}` }}
           defaultCenter={center}

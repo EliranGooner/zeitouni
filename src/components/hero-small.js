@@ -4,7 +4,6 @@ import { Element , Events, animateScroll as scroll, scrollSpy, scroller } from '
 import ElementFade from 'react-reveal/Fade';
 import zeitouniLogo from '../images/logo zeituni_w.png';
 import { Fade } from 'react-slideshow-image';
-import sizeMe from 'react-sizeme';
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
@@ -13,24 +12,11 @@ const fadeProperties = {
   arrows: false
 }
 
-const Hero = (props) => {
-  const { width } = props.size;
-  const widthCheckImage = (deviceWidth) => {
-    if (1100 > deviceWidth && deviceWidth > 450) {
-      return styles.image_medium
-    }
-  }
-  const widthCheckLogo = (deviceWidth) => {
-    if (deviceWidth > 1100) {
-      return styles.logo_image
-    } else if (1100 > deviceWidth && deviceWidth > 450) {
-      return styles.logo_image_medium
-    } 
-  }
+const HeroSmall = () => {  
 
   const data = useStaticQuery(graphql`
-      query heroQuery {
-    allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "hero"}}) {
+      query imageQuery {
+    allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "home"}}) {
       edges {
         node {
           base
@@ -52,7 +38,7 @@ const Hero = (props) => {
           <div className={styles.each_fade}>
             <div className={styles.image_container}>
               <Img 
-              fluid={node.childImageSharp.fluid} className={widthCheckImage(width)} alt='בנייני פרויקט גבעת שמואל' itemProp='image' 
+              fluid={node.childImageSharp.fluid} className={styles.image_small} alt='בנייני פרויקט' itemProp='image' 
               />
             </div>
           </div>
@@ -61,13 +47,13 @@ const Hero = (props) => {
     </div>
       <div className={styles.text_container}>
         <ElementFade duration={5000}>
-          <img src={zeitouniLogo} height={1200} width={600} className={widthCheckLogo(width)} alt='לוגו זיתוני' itemProp='logo'></img>
+          <img src={zeitouniLogo} height={1200} width={600} className={styles.logo_image_small} alt='לוגו זיתוני' itemProp='logo'></img>
         </ElementFade>
       </div>
-    <div className={width < 1100 && width > 400 ? styles.scroll_medium : styles.scroll} onClick={() => scroll.scrollMore(716.4)}>
+    <div className={styles.scroll} onClick={() => scroll.scrollMore(716.4)}>
       <a href="#" ><span></span><span></span><span></span></a>
     </div>
   </div>
 };
 
-export default sizeMe({ monitorWidth: true })(Hero)
+export default HeroSmall
