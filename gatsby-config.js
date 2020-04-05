@@ -62,6 +62,14 @@ module.exports = {
           trackingId: "G-SBPKETQ935",
           head: true
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.zeitouni.co.il',
+        sitemap: 'https://www.zeitouni.co.il/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
   ],
 }
