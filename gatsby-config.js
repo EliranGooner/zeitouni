@@ -55,6 +55,13 @@ module.exports = {
       options: {
         sitemapSize: 5000
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+          trackingId: "G-SBPKETQ935",
+          head: true
+      }
     }
   ],
 }
