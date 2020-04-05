@@ -31,6 +31,8 @@ const ContactForm = () => {
 
   return <div className={styles.form}>
     <form onSubmit={handleSubmit(onSubmit)}>
+      <p>כתובת: ויצמן 64, כפר סבא</p>
+      <p>טלפון: 09-7418777</p>
       <p>.אנא השאירו פרטים ונחזור אליכם בהקדם</p>
       <Grid container spacing={3} >
         <Grid item className={styles.item} xs={12} sm={4}>

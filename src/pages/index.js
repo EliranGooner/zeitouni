@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
+import HeroSmall from "../components/hero-small";
 import Carousel from "../components/carousel";
 import AboutDiv from "../components/about-div";
 import AboutDivSmall from "../components/about-div-small";
@@ -21,11 +22,15 @@ const IndexPage = (props) => {
     ? AboutAviDiv
     : AboutAviDivSmall;
 
+  const ToRenderChildHero = width > 900
+    ? Hero
+    : HeroSmall;
+
   return ( <Layout>
     <SEO title="בית - קבוצת זיתוני"
     description='קבוצת זיתוני הינה קבוצת חברות בנייה המתמחה בייזום, בתכנון, בבנייה ובשיווק למגורים בהרצלייה, גבעת שמואל, בת ים וברחבי השרון וגוש דן.  בואו להנות מחווית המגורים המושלמת.' 
     />
-    <Hero />
+    <ToRenderChildHero />
     <ToRenderChildAboutDiv />
     <Carousel />
     <ToRenderChildAviDiv />

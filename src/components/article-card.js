@@ -10,11 +10,11 @@ import where from '../downloads/where.pdf'
 const ProjectCard = ({header, preview, src, path, idx}) => {
 
   const articles = {
-    "8": where,
-    "9": frontman,
-    "10": last_resort,
-    "11": the_city,
-    "12": difference
+    "9": where,
+    "10": frontman,
+    "11": last_resort,
+    "12": the_city,
+    "13": difference
   }
 
   const indexes = Object.keys(articles);
@@ -27,8 +27,6 @@ const ProjectCard = ({header, preview, src, path, idx}) => {
   } else {
     download = false;
   };
-
-  console.log(download);
 
 
   return (
