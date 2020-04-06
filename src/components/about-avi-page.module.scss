@@ -16,7 +16,7 @@
   }
 }
 .about_small {
-  height: 73rem;
+  height: 89rem;
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -64,6 +64,10 @@
     margin-top: 16px;
     font-size: 50px;
   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .content {
@@ -83,8 +87,19 @@
   }
 }
 
-.office {
+.avi {
   width: 52rem;
-  height: 20rem;
+  height: 21rem;
   border-radius: 8px 8px 0 0;
+  img {
+    object-fit: cover;
+  }
+}
+.avi_small {
+  width: 20rem;
+  height: 15rem;
+  border-radius: 8px;
+  img {
+    object-fit: cover;
+  }
 }

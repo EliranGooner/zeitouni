@@ -18,7 +18,7 @@ const AboutAviDiv = ({ breakpoint }) => {
     return <div className={styles.about}>
       <Fade duration={2500} right>
         <div className={styles.avi}>
-          <Image imgName="avi_z_3.jpg" alt='אבי זיתוני' style={imgStyle}/>
+          <Image imgName="avi.jpg" alt='אבי זיתוני' style={imgStyle}/>
           <div className={styles.avi_text} itemScope itemType="http://schema.org/Person" >
             <h1 itemProp="name">אבי זיתוני</h1>
             <img src={divider} alt='חוצץ'></img>

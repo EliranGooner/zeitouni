@@ -3,6 +3,8 @@ import styles from './project-gallery-small.module.scss';
 import ElementFade from 'react-reveal/Fade';
 import Image from "./image";
 import { Fade } from 'react-slideshow-image';
+import logoHerzliya from '../images/herzliya_logo.png';
+import logoGvash from '../images/gvash_logo.png';
 
 
 const fadeProperties = {
@@ -16,7 +18,7 @@ const ProjectGallerySmall = ({image1, image2, image3, logo}) => {
     <ElementFade duration={3000}>
     <div className={styles.project_container}>
       <div className={styles.gallery_side}>
-        <Image imgName={logo} alt='לוגו הפרויקט' itemProp='logo' />
+        <img src={logo === 'gvash' ? logoGvash : logoHerzliya} alt='לוגו הפרויקט' itemProp='logo' className={styles.logo} />
       </div>
         <div className={styles.slide_container}>
           <Fade {...fadeProperties}>

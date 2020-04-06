@@ -16,7 +16,9 @@ const AboutAviPage = (props) => {
     return <div className={deviceSmall ? styles.about_small : styles.about} itemScope itemType="http://schema.org/Person">
         <Fade duration={3000}>
           <div className={deviceSmall ? styles.content_small : styles.content}>
-            {deviceSmall ? null : <Image imgName='avi_z_3.jpg' alt='אבי זיתוני' className={styles.office} itemProp='image'/>}
+            {deviceSmall ? <Image imgName='avi_cropped.jpg' alt='אבי זיתוני' className={styles.avi_small} itemProp='image'/>
+              : 
+              <Image imgName='avi_cropped.jpg' alt='אבי זיתוני' className={styles.avi} itemProp='image'/>}
             <div className={styles.text_container}>
               <div className={styles.text} itemProp='description' >
                 <h1>חזון</h1>

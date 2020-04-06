@@ -36,18 +36,18 @@ const ProjectContent = ({project}) => {
   let center
   if (project === 'herzliya') { 
     center = {
-      lat: 32.177185,
-      lng: 34.832118
+      lat: 32.176925,
+      lng: 34.831954
     }
   } else if ( project === 'gvash') {
     center = {
-      lat: 32.072720,
-      lng: 34.851539
+      lat: 32.071784,
+      lng: 34.850992,
     }
   } else {
     center = {
       lat: 32.194132,
-      lng: 34.892480
+      lng: 34.892480,
     }
   }
   
@@ -295,12 +295,12 @@ const ProjectContent = ({project}) => {
           <GoogleMapReact
           bootstrapURLKeys={{ key: `${process.env.GOOGLE_MAPS_KEY}` }}
           defaultCenter={center}
-          defaultZoom={17}
+          defaultZoom={18}
           >
             <MapMarker 
             lat={center.lat}
             lng={center.lng}
-            src={'logo zeituni_b.png'}
+            src={project}
             />
           </GoogleMapReact>
         </div>
