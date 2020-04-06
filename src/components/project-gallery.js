@@ -4,6 +4,8 @@ import ElementFade from 'react-reveal/Fade';
 import Image from "./image";
 import { Fade } from 'react-slideshow-image';
 import { SizeMe } from 'react-sizeme';
+import logoHerzliya from '../images/herzliya_logo.png';
+import logoGvash from '../images/gvash_logo.png';
 
 
 const fadeProperties = {
@@ -36,7 +38,7 @@ const ProjectGallery = ({image1, image2, image3, logo}) => {
             </Fade>
           </div>
           <div className={styles.gallery_side}>
-            <Image imgName={logo} alt='לוגו הפרויקט' itemProp='logo'  />
+            <img src={logo === 'gvash' ? logoGvash : logoHerzliya} alt='לוגו הפרויקט' itemProp='logo'  />
           </div>
         </div>
       </ElementFade>
@@ -65,7 +67,7 @@ const ProjectGallery = ({image1, image2, image3, logo}) => {
             </Fade>
           </div>
           <div className={styles.gallery_side_medium}>
-            <Image imgName={logo} alt='לוגו הפרויקט'  />
+            <img src={logo === 'gvash' ? logoGvash : logoHerzliya} alt='לוגו הפרויקט' className={styles.logo_medium} itemProp='logo' />
           </div>
         </div>
       </ElementFade>

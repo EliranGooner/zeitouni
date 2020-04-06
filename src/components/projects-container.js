@@ -38,7 +38,7 @@ const ProjectsContainer = (props) => {
           <ProjectCard src='hod_hasharon.jpg' header='אקו הוד השרון' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
-          <ProjectCard src='zeitouni-herzliya.jpg' header='אקו כפר גנים פתח תקווה' />
+          <ProjectCard src='kfar_ganim.jpg' header='אקו כפר גנים פתח תקווה' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4} ml={6}>
           <ProjectCard src='pt_city_park.jpg' header='סיטי פארק נווה גן פתח תקווה' />

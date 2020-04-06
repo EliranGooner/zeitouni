@@ -36,11 +36,23 @@ const ProjectContentSmall = ({project}) => {
     handleShow();
   };
 
-  let center = { 
-    lat: 32.177185,
-    lng: 34.832118
+  let center
+  if (project === 'herzliya') { 
+    center = {
+      lat: 32.176925,
+      lng: 34.831954
+    }
+  } else if ( project === 'gvash') {
+    center = {
+      lat: 32.071784,
+      lng: 34.850992,
+    }
+  } else {
+    center = {
+      lat: 32.194132,
+      lng: 34.892480,
+    }
   }
-
   let about
   let location
   let building
@@ -271,7 +283,7 @@ const ProjectContentSmall = ({project}) => {
             <MapMarker 
             lat={center.lat}
             lng={center.lng}
-            src={'logo zeituni_b.png'}
+            src={project}
             />
           </GoogleMapReact>
         </div>

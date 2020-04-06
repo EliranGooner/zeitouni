@@ -31,7 +31,7 @@ const ProjectsContainerSmall = () => {
         <ProjectCard src='hod_hasharon.jpg' header='אקו הוד השרון' />
       </Grid>
       <Grid item xs={12} sm={4}>
-        <ProjectCard src='zeitouni-herzliya.jpg' header='אקו כפר גנים פתח תקווה' />
+        <ProjectCard src='kfar_ganim.jpg' header='אקו כפר גנים פתח תקווה' />
       </Grid>
       <Grid item xs={12} sm={4}>
         <ProjectCard src='pt_city_park.jpg' header='סיטי פארק נווה גן פתח תקווה' />
@@ -57,7 +57,7 @@ const ProjectsContainerSmall = () => {
           <ProjectCard src='zeitouni-home-2.jpg' header=' גבעת שמואל רמת הדר החדשה' path='/givat-shmuel' />
         </Grid>
         <Grid item className={styles.item} xs={12} sm={4}>
-          <ProjectCard src='zeitouni-home-1.jpg' header='אקו הרצלייה' path='/herzliya' />
+          <ProjectCard src='zeitouni-home-1.jpg' header='אקו הרצליה' path='/herzliya' />
         </Grid>
       </Grid>
     </ExpansionPanelDetails>
