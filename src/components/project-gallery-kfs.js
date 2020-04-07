@@ -4,6 +4,7 @@ import ElementFade from 'react-reveal/Fade';
 import Image from "./image";
 import { Fade } from 'react-slideshow-image';
 import { SizeMe } from 'react-sizeme';
+import logoKfs from '../images/eco_kfarsaba 2.jpg';
 
 
 const fadeProperties = {
@@ -31,7 +32,7 @@ const ProjectGalleryKfs = ({image1, image3, logo}) => {
             </Fade>
           </div>
           <div className={styles.gallery_side}>
-            <Image imgName={logo} alt='לוגו פרויקט כפר סבא' itemProp='logo' />
+            <img src={logoKfs} alt='לוגו פרויקט כפר סבא' itemProp='logo' />
           </div>
         </div>
       </ElementFade>
@@ -55,7 +56,7 @@ const ProjectGalleryKfs = ({image1, image3, logo}) => {
             </Fade>
           </div>
           <div className={styles.gallery_side_medium}>
-            <Image imgName={logo} alt='לוגו פרויקט כפר סבא'  />
+            <img src={logoKfs} alt='לוגו פרויקט כפר סבא' itemProp='logo' />
           </div>
         </div>
       </ElementFade>

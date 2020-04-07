@@ -1,4 +1,9 @@
 .img {
   height: 5rem;
   width: 5rem;
+ }
+
+.img_div {
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
