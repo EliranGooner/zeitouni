@@ -14,8 +14,8 @@ const MapMarker = ({src}) => {
     logo = logoKfs
   }
 
-  return <div className={styles.img_div} itemScope itemType='https://schema.org/Product'>
-    <img src={logo} className={styles.img}  alt='לוגו הפרויקט' itemProp='logo'/>
+  return <div className={styles.img_div}>
+    <img src={logo} className={styles.img}  alt='לוגו הפרויקט'/>
   </div> 
 }
 
