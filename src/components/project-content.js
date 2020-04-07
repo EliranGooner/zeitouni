@@ -46,8 +46,8 @@ const ProjectContent = ({project}) => {
     }
   } else {
     center = {
-      lat: 32.194132,
-      lng: 34.892480,
+      lat: 32.188574,
+      lng: 34.893496
     }
   }
   

@@ -5,6 +5,7 @@ import Image from "./image";
 import { Fade } from 'react-slideshow-image';
 import logoHerzliya from '../images/herzliya_logo.png';
 import logoGvash from '../images/gvash_logo.png';
+import logoKfs from '../images/eco_kfarsaba 2.jpg';
 
 
 const fadeProperties = {
@@ -13,12 +14,21 @@ const fadeProperties = {
 }
 
 const ProjectGallerySmall = ({image1, image2, image3, logo}) => {
+
+  let logoImage;
+  if (logo === 'gvash') {
+    logoImage = logoGvash
+  } else if (logo === 'herzliya') {
+    logoImage = logoHerzliya
+  } else {
+    logoImage = logoKfs
+  }
   
   return <div className={styles.gallery}>
     <ElementFade duration={3000}>
     <div className={styles.project_container}>
       <div className={styles.gallery_side}>
-        <img src={logo === 'gvash' ? logoGvash : logoHerzliya} alt='לוגו הפרויקט' itemProp='logo' className={styles.logo} />
+        <img src={logoImage} alt='לוגו הפרויקט' itemProp='logo' className={styles.logo} />
       </div>
         <div className={styles.slide_container}>
           <Fade {...fadeProperties}>
