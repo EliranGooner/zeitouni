@@ -41,8 +41,9 @@ const ProjectContent = ({project}) => {
     }
   } else if ( project === 'gvash') {
     center = {
-      lat: 32.071784,
-      lng: 34.850992,
+      lat: 32.071965,
+      lng: 34.851299
+     
     }
   } else {
     center = {

@@ -7,7 +7,17 @@
   filter: drop-shadow(0px 0px 5px #dcc6b9);
   background: black;
   overflow: hidden;
+  transition: ease 500ms;
+  opacity: 0.9;
 }
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
 .card_small {
   position: relative;
   width: 85%;
