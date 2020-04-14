@@ -31,8 +31,8 @@ const Navbar = (props) => {
       <div className={`${styles.navbar} navbar-black`}>
         <div itemScope itemType='https://schema.org/Brand' className={deviceLarge ? styles.logos_large : styles.logos}>
             <div>
-              <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social}/></a>
-              <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social}/></a>
+              <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social_instagram}/></a>
+              <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social_facebook}/></a>
             </div>
             <Link to="/"><img src={zeitouniLogo} className={styles.logo} alt='לוגו זיתוני' itemProp='logo'></img></Link>
         </div>
@@ -41,8 +41,8 @@ const Navbar = (props) => {
       <div className={styles.navbar}>
         <div className={styles.logos}>
           <div>
-            <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social_white}/></a>
-            <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social_white}/></a>
+            <a href="https://www.instagram.com/zeitounigroupltd/" alt='instagram'><Icon icon={instagramIcon} className={styles.social_instagram_white}/></a>
+            <a href="https://www.facebook.com/Zeitouni.Group.ltd.IL/" alt='facebook'><Icon icon={facebookIcon} className={styles.social_facebook_white}/></a>
           </div>
         </div>
         <div className={deviceLarge ? styles.menu_white_large : styles.menu_white}></div>

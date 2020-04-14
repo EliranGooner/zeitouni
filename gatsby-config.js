@@ -53,7 +53,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        sitemapSize: 5000
+        sitemapSize: 5000,
+        serialize: ({ site, allSitePage }) =>
+        allSitePage.nodes.map(node => {
+          return {
+            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
+            changefreq: `yearly`,
+            priority: 0.7,
+          }
+        })
       }
     },
     {

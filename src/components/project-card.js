@@ -18,7 +18,7 @@ const ProjectCard = ({header, src, path}) => {
         <div className={styles.inner}>
           <div className={styles.header_shadow}>
           <Fade duration={3000}>
-            <h1 itemProp='name'>{header}</h1>
+            <h1 className={styles.underline} itemProp='name'>{header}</h1>
           </Fade>
         </div>
         {path ? <Link to={path}><AwesomeButton type="primary" className='aws-btn' size='large'>לצפייה בפרויקט</AwesomeButton></Link> : null}

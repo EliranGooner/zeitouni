@@ -40,21 +40,59 @@
   justify-content: space-between;
 }
 
-.social {
+.social_instagram {
   font-family: 'Heebo';
   color: black;
   height: 2rem;
   width: 2rem;
   margin: 0 0.1rem 0.2rem 0.2rem;
+  border-radius: 10px;
+  transition: ease 0.4s;
 }
 
-.social_white {
+.social_instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.social_facebook {
   font-family: 'Heebo';
   color: black;
   height: 2rem;
   width: 2rem;
   margin: 0 0.1rem 0.2rem 0.2rem;
-  color: white !important;
+  border-radius: 10px;
+  transition: ease 0.4s;
+}
+
+.social_facebook:hover {
+  color: #4267B2;
+}
+
+.social_instagram_white {
+  font-family: 'Heebo';
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.1rem 0.2rem 0.2rem;
+  color: white;
+  border-radius: 11px;
+  transition: ease 0.4s;
+}
+
+.social_instagram_white:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+
+.social_facebook_white {
+  font-family: 'Heebo';
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.1rem 0.2rem 0.2rem;
+  color: white;
+  transition: ease 0.4s;
+}
+.social_facebook_white:hover {
+  color: #4267B2;
 }
 
 .menu_white {
