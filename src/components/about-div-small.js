@@ -11,7 +11,7 @@ import divider from '../images/title-divider-white.png';
 
 const AboutDivSmall = ({}) => {
     return <div className={styles.about}>
-        <Fade left duration={3000}>
+        <Fade left duration={2000}>
           <div className={styles.content}>
             <h1>קצת עלינו</h1>
             <img src={divider} alt='חוצץ'></img>
