@@ -181,7 +181,6 @@ const ProjectContentSmall = ({project}) => {
 
 
     return <div className={styles.project} itemScope itemType='https://schema.org/ApartmentComplex'>
-        <ElementFade duration={2000}>
           <div className={styles.content}>
             <div className={styles.text}>
               <h1>על הפרויקט</h1>
@@ -229,7 +228,7 @@ const ProjectContentSmall = ({project}) => {
                 <div className={styles.header}>
                   <h1>יצירת קשר</h1>
                   </div>
-                  <p>למען קבלת פרטים נוספים וקביעת פגישה נא השאירו פרטים</p>
+                  <p><strong>למען קבלת פרטים נוספים וקביעת פגישה נא השאירו פרטים</strong></p>
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={styles.form}>
                       <div className={styles.form_field}>
@@ -273,7 +272,6 @@ const ProjectContentSmall = ({project}) => {
           <div className={styles.all}>
             <Link to='/projects/'><AwesomeButton type="primary" className='aws-btn'>לכל הפרויקטים</AwesomeButton></Link>
           </div>
-        </ElementFade>
         <div className={styles.map} itemScope itemType='https://schema.org/Map'>
           <GoogleMapReact
           bootstrapURLKeys={{ key: `${process.env.GOOGLE_MAPS_KEY}` }}

@@ -10,7 +10,7 @@ import logoKfs from '../images/eco_kfarsaba 2.jpg';
 
 const fadeProperties = {
   indicators: true,
-  arrows: false
+  arrows: true
 }
 
 const ProjectGallerySmall = ({image1, image2, image3, logo}) => {
