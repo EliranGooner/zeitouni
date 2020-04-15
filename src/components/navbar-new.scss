@@ -6,45 +6,44 @@
   right: 1.5rem;
   top: 1.2rem;
   -webkit-tap-highlight-color: transparent;
-
+  button {
+    outline: none !important;
+  }
 }
-
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: black;
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
-
 }
-
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   -webkit-tap-highlight-color: transparent;
 }
 
-
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 28px;
+  width: 28px;
   -webkit-tap-highlight-color: transparent;
-
+  button {
+    outline: none !important;
+  }
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
   width: 6px !important;
   height: 28px !important;
-  background: #DCC6B9;
+  background: #dcc6b9;
   -webkit-tap-highlight-color: transparent;
-
 }
 
 /*
