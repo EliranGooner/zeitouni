@@ -3,7 +3,7 @@ module.exports = {
     title: `Zeitouni Group`,
     description: ``,
     author: `Avi Zeitouni`,
-    siteUrl: `https://www.zeitouni.co.il`
+    siteUrl: `https://www.zeitouni.co.il`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,11 +27,11 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         crossOrigin: `use-credentials`,
-        cache_busting_mode: 'none',
+        cache_busting_mode: "none",
         icon: `src/images/zeitouni_favicon.png`, // This path is relative to the root of the site.
       },
     },
-   
+
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -39,37 +39,38 @@ module.exports = {
           {
             family: `Heebo`,
             variants: [`400`, `700`, `800`, `900`],
-            subsets: [`latin`, `hebrew`]
-          }
+            subsets: [`latin`, `hebrew`],
+          },
         ],
       },
     },
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        whitelist: ["GOOGLE_MAPS_KEY", "GETFORM_KEY"]
+        whitelist: ["GOOGLE_MAPS_KEY", "GETFORM_KEY"],
       },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        sitemapSize: 5000
-      }
+        sitemapSize: 5000,
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-          trackingId: "G-SBPKETQ935",
-          head: true
-      }
+        trackingId: "G-SBPKETQ935",
+        head: true,
+      },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.zeitouni.co.il',
-        sitemap: 'https://www.zeitouni.co.il/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    }
+        host: "https://www.zeitouni.co.il",
+        sitemap: "https://www.zeitouni.co.il/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    `gatsby-plugin-transition-link`,
   ],
 }

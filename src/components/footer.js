@@ -1,13 +1,12 @@
-import { Link } from "gatsby";
-import React from "react";
-import styles from './footer.module.scss';
-import 'react-awesome-button/dist/themes/theme-red.css';
-import './awesome-button.css';
-import zeitouniLogo from '../images/zeitouni_slogan.png';
-import Fade from 'react-reveal/Fade';
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
- 
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from "react"
+import styles from "./footer.module.scss"
+import "react-awesome-button/dist/themes/theme-red.css"
+import "./awesome-button.css"
+import zeitouniLogo from "../images/zeitouni_slogan.png"
+import Fade from "react-reveal/Fade"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 const Footer = ({}) => {
   const data = useStaticQuery(graphql`
@@ -22,26 +21,48 @@ const Footer = ({}) => {
     }
   `)
   const imgStyle = {
-    height: '90px',
-    width: '580%',
-    margin: '0 18px 1px 0',
-    objectFit: 'cover'
+    height: "90px",
+    width: "580%",
+    margin: "0 18px 1px 0",
+    objectFit: "cover",
   }
-    return <div>
-      <div className={styles.slogan} itemScope itemType='https://schema.org/Brand'>
+  return (
+    <div>
+      <div
+        className={styles.slogan}
+        itemScope
+        itemType="https://schema.org/Brand"
+      >
         <Fade duration={2500}>
-          <img src={zeitouniLogo} itemProp='logo' height={300} width={800} alt='לוגו זיתוני'></img>
+          <img
+            src={zeitouniLogo}
+            itemProp="logo"
+            height={300}
+            width={800}
+            alt="לוגו זיתוני"
+          ></img>
         </Fade>
       </div>
       <div className={styles.footer}>
-      <Link to='/sitemap/'>מפת אתר</Link>
+        <AniLink cover direction="right" bg="#808080" to="/sitemap/">
+          מפת אתר
+        </AniLink>
         <div className={styles.dev}>
           <p>Designed & developed by</p>
-          <a href='https://github.com/EliranGooner'><Img fluid={data.placeholderImage.childImageSharp.fluid} style={imgStyle} alt='לוגו פיתוח'/></a>
+          <a href="https://github.com/EliranGooner">
+            <Img
+              fluid={data.placeholderImage.childImageSharp.fluid}
+              style={imgStyle}
+              alt="לוגו פיתוח"
+            />
+          </a>
         </div>
-        <Link to='/accessibility/'>הצהרת נגישות</Link>
+        <AniLink cover direction="right" bg="#808080" to="/accessibility/">
+          הצהרת נגישות
+        </AniLink>
       </div>
     </div>
-};
+  )
+}
 
 export default Footer
