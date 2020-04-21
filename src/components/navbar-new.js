@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React, { useState, useEffect } from "react"
 import "./navbar-new.scss"
 import { stack as Menu } from "react-burger-menu"
@@ -52,39 +52,60 @@ const NavbarNew = props => {
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
       >
-        <Link to="/" className={"item-home" === path ? "current-path" : null}>
+        <AniLink
+          cover
+          direction="right"
+          bg="#808080"
+          to="/"
+          className={"item-home" === path ? "current-path" : null}
+        >
           בית
-        </Link>
-        <Link
+        </AniLink>
+        <AniLink
+          cover
+          direction="right"
+          bg="#808080"
           to="/projects/"
           className={"item-projects" === path ? "current-path" : null}
         >
           פרויקטים
-        </Link>
-        <Link
+        </AniLink>
+        <AniLink
+          cover
+          direction="right"
+          bg="#808080"
           to="/about/"
           className={"item-about" === path ? "current-path" : null}
         >
           עלינו
-        </Link>
-        <Link
+        </AniLink>
+        <AniLink
+          cover
+          direction="right"
+          bg="#808080"
           to="/avi/"
           className={"item-avi" === path ? "current-path" : null}
         >
           אבי זיתוני
-        </Link>
-        <Link
+        </AniLink>
+        <AniLink
+          cover
+          direction="right"
+          bg="#808080"
           to="/articles/"
           className={"item-articles" === path ? "current-path" : null}
         >
           מהתקשורת
-        </Link>
-        <Link
+        </AniLink>
+        <AniLink
+          cover
+          direction="right"
+          bg="#808080"
           to="/contact/"
           className={"item-contact" === path ? "current-path" : null}
         >
           צרו קשר
-        </Link>
+        </AniLink>
         <a onClick={showSettings} className="menu-item--small" href=""></a>
       </Menu>
       <main id="page-wrap"></main>
