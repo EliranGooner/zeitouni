@@ -40,6 +40,16 @@ const NavbarNew = props => {
     ToRenderChildNavbar = NavbarSmall
   }
 
+  const addMenuHighlight = item => {
+    if (path === item) {
+      setTimeout(() => {
+        return "current-path"
+      }, 1500)
+    } else {
+      return null
+    }
+  }
+
   const showSettings = event => {
     event.preventDefault()
   }
