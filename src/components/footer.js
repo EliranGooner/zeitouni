@@ -48,7 +48,6 @@ const Footer = ({}) => {
           מפת אתר
         </AniLink>
         <div className={styles.dev}>
-          <p>Designed & developed by</p>
           <a href="https://github.com/EliranGooner">
             <Img
               fluid={data.placeholderImage.childImageSharp.fluid}

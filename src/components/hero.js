@@ -10,7 +10,6 @@ import {
 import ElementFade from "react-reveal/Fade"
 import zeitouniLogo from "../images/logo zeituni_w.png"
 import { Fade } from "react-slideshow-image"
-import sizeMe from "react-sizeme"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -18,37 +17,30 @@ const fadeProperties = {
   arrows: false,
 }
 
-const Hero = props => {
-  const { width } = props.size
-  const widthCheckImage = deviceWidth => {
-    if (1100 > deviceWidth && deviceWidth > 450) {
-      return styles.image_medium
-    }
-  }
-  const widthCheckLogo = deviceWidth => {
-    if (deviceWidth > 1100) {
-      return styles.logo_image
-    } else if (1100 > deviceWidth && deviceWidth > 450) {
-      return styles.logo_image_medium
-    }
-  }
-
-  const checkScroll = deviceWidth => {
-    if (1100 > deviceWidth) {
-      return styles.scroll_medium
-    } else if (1800 > deviceWidth && deviceWidth > 1100) {
-      return styles.scroll
-    } else {
-      return styles.scroll_large
-    }
-  }
-
+const Hero = () => {
   const data = useStaticQuery(graphql`
     query heroQuery {
-      allFile(
+      desktop: allFile(
         filter: {
           extension: { regex: "/(jpg)/" }
           relativeDirectory: { eq: "hero" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
+        }
+      }
+      mobile: allFile(
+        filter: {
+          extension: { regex: "/(jpg)/" }
+          relativeDirectory: { eq: "home" }
         }
       ) {
         edges {
@@ -69,12 +61,12 @@ const Hero = props => {
     <div className={styles.hero} itemProp itemType="https://schema.org/Brand">
       <div className={styles.slide_container}>
         <Fade {...fadeProperties}>
-          {data.allFile.edges.map(({ node }) => (
+          {data.desktop.edges.map(({ node }) => (
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
                 <Img
                   fluid={node.childImageSharp.fluid}
-                  className={widthCheckImage(width)}
+                  className={styles.image}
                   alt="בנייני פרויקט גבעת שמואל"
                   itemProp="image"
                 />
@@ -89,16 +81,13 @@ const Hero = props => {
             src={zeitouniLogo}
             height={1200}
             width={600}
-            className={widthCheckLogo(width)}
+            className={styles.logo_image}
             alt="לוגו זיתוני"
             itemProp="logo"
           ></img>
         </ElementFade>
       </div>
-      <div
-        className={checkScroll(width)}
-        onClick={() => scroll.scrollMore(716.4)}
-      >
+      <div className={styles.scroll} onClick={() => scroll.scrollMore(716.4)}>
         <a href="#">
           <span></span>
           <span></span>
@@ -109,4 +98,4 @@ const Hero = props => {
   )
 }
 
-export default sizeMe({ monitorWidth: true })(Hero)
+export default Hero
