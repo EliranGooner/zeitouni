@@ -200,7 +200,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Heebo' !important;
+  font-family: "Heebo" !important;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -628,4 +628,18 @@ pre tt:after {
 button {
   padding: 0;
   border-style: none;
+}
+
+.home-overlay {
+  opacity: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+}
+.home-overlay.show {
+  opacity: 1;
+  z-index: 900;
+  position: absolute;
+  background-color: gray;
 }
