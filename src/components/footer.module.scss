@@ -10,23 +10,14 @@
     margin: 2px 4px 0 4px;
   }
   a:hover {
-    color: black
+    color: black;
   }
 }
 
 .dev {
   display: flex;
   align-items: center;
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  a:hover {
-    color: black
-  }
-  p {
-    margin: 0 2.5px 0 0;
-  }
+  margin-right: 3rem;
 }
 
 .slogan {
@@ -42,5 +33,56 @@
   }
   img {
     object-fit: cover;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .footer {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: gray;
+    a {
+      color: black;
+      text-decoration: underline;
+      margin: 2px 4px 0 4px;
+    }
+    a:hover {
+      color: black;
+    }
+    img {
+      margin: 0;
+      object-fit: cover;
+    }
+  }
+
+  .dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    margin-right: 4.5rem;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      color: black;
+    }
+  }
+
+  .slogan {
+    height: 19rem;
+    width: 100%;
+    background: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      object-fit: cover;
+    }
   }
 }

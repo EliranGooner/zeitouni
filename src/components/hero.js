@@ -17,13 +17,30 @@ const fadeProperties = {
   arrows: false,
 }
 
-const Hero = props => {
+const Hero = () => {
   const data = useStaticQuery(graphql`
     query heroQuery {
-      allFile(
+      desktop: allFile(
         filter: {
           extension: { regex: "/(jpg)/" }
           relativeDirectory: { eq: "hero" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
+        }
+      }
+      mobile: allFile(
+        filter: {
+          extension: { regex: "/(jpg)/" }
+          relativeDirectory: { eq: "home" }
         }
       ) {
         edges {
@@ -44,7 +61,7 @@ const Hero = props => {
     <div className={styles.hero} itemProp itemType="https://schema.org/Brand">
       <div className={styles.slide_container}>
         <Fade {...fadeProperties}>
-          {data.allFile.edges.map(({ node }) => (
+          {data.desktop.edges.map(({ node }) => (
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
                 <Img

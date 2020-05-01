@@ -4,19 +4,10 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Carousel from "../components/carousel"
 import AboutDiv from "../components/about-div"
-import AboutDivSmall from "../components/about-div-small"
 import AboutAviDiv from "../components/about-avi-div"
-import AboutAviDivSmall from "../components/about-avi-div-small"
-import sizeMe from "react-sizeme"
 import { Helmet } from "react-helmet"
 
-const IndexPage = props => {
-  const { width } = props.size
-
-  const ToRenderChildAboutDiv = width > 900 ? AboutDiv : AboutDivSmall
-
-  const ToRenderChildAviDiv = width > 900 ? AboutAviDiv : AboutAviDivSmall
-
+const IndexPage = () => {
   return (
     <Layout>
       <SEO
@@ -30,11 +21,11 @@ const IndexPage = props => {
         />
       </Helmet>
       <Hero />
-      <ToRenderChildAboutDiv />
+      <AboutDiv />
       <Carousel />
-      <ToRenderChildAviDiv />
+      <AboutAviDiv />
     </Layout>
   )
 }
 
-export default sizeMe({ monitorWidth: true })(IndexPage)
+export default IndexPage

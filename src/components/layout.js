@@ -11,16 +11,13 @@ import Footer from "./footer"
 import FooterSmall from "./footer-small"
 import NavbarNew from "./navbar-new"
 import "./layout.css"
-import { SizeMe } from "react-sizeme"
 
 const Layout = ({ children }) => {
   return (
     <>
       <NavbarNew />
       <main>{children}</main>
-      <SizeMe>
-        {({ size }) => (size.width > 420 ? <Footer /> : <FooterSmall />)}
-      </SizeMe>
+      <Footer />
     </>
   )
 }
