@@ -11,10 +11,17 @@ import Footer from "./footer"
 import FooterSmall from "./footer-small"
 import NavbarNew from "./navbar-new"
 import "./layout.css"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <NavbarNew />
       <main>{children}</main>
       <Footer />

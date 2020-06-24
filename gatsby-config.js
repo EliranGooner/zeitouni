@@ -33,18 +33,6 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Heebo`,
-            variants: [`400`, `700`, `800`, `900`],
-            subsets: [`latin`, `hebrew`],
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-env-variables`,
       options: {
         whitelist: ["GOOGLE_MAPS_KEY", "GETFORM_KEY"],
