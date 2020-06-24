@@ -15,6 +15,7 @@ import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
 import sketch from "../downloads/sketch.pdf"
+import ReactPlayer from "react-player"
 
 const ProjectContent = ({ project }) => {
   const [show, setShow] = useState(false)
@@ -32,6 +33,19 @@ const ProjectContent = ({ project }) => {
       data: data,
     })
     handleShow()
+  }
+
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  }
+  const _onReady = event => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo()
   }
 
   let center
@@ -352,7 +366,7 @@ const ProjectContent = ({ project }) => {
           </div>
           <SizeMe>
             {({ size }) =>
-              size.width > 610 ? (
+              size.width > 650 ? (
                 <div
                   className={styles.text}
                   itemScope
@@ -395,6 +409,12 @@ const ProjectContent = ({ project }) => {
                     </Accordion>
                   )}
                   {renderDownload}
+                  <div className={styles.video}>
+                    <ReactPlayer
+                      url="https://www.youtube.com/watch?v=moUtZrj0qAM&t"
+                      controls
+                    />
+                  </div>
                 </div>
               ) : (
                 <div className={styles.text_medium}>
@@ -439,6 +459,15 @@ const ProjectContent = ({ project }) => {
                       </Card>
                     </Accordion>
                   )}
+                  {project === "gvash" ? (
+                    <div className={styles.video_medium}>
+                      <ReactPlayer
+                        url="https://www.youtube.com/watch?v=moUtZrj0qAM&t"
+                        controls
+                        width="485px"
+                      />
+                    </div>
+                  ) : null}
                 </div>
               )
             }
