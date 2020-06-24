@@ -16,6 +16,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import Modal from "react-bootstrap/Modal"
 import Button from "react-bootstrap/Button"
 import sketch from "../downloads/sketch.pdf"
+import ReactPlayer from "react-player"
 
 const ProjectContentSmall = ({ project }) => {
   const [show, setShow] = useState(false)
@@ -304,9 +305,18 @@ const ProjectContentSmall = ({ project }) => {
           )}
           <div className={styles.download}>
             {project === "gvash" ? (
-              <a href={sketch} download>
-                <strong>לחץ להורדת תוכניות הפרויקט</strong>
-              </a>
+              <div>
+                <a href={sketch} download>
+                  <strong>לחץ להורדת תוכניות הפרויקט</strong>
+                </a>
+                <div className={styles.video}>
+                  <ReactPlayer
+                    url="https://www.youtube.com/watch?v=moUtZrj0qAM&t"
+                    controls
+                    width="300px"
+                  />
+                </div>
+              </div>
             ) : null}
           </div>
         </div>

@@ -47,12 +47,14 @@
     "react-flickity-component": "^3.5.0",
     "react-helmet": "^5.2.1",
     "react-hook-form": "^5.1.3",
+    "react-player": "^2.3.1",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.16",
     "react-sizeme": "^2.6.12",
     "react-slideshow-image": "^1.4.0",
     "react-spring": "^8.0.27",
-    "react-tabs": "^3.1.0"
+    "react-tabs": "^3.1.0",
+    "react-youtube": "^7.11.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

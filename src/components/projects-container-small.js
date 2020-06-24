@@ -27,8 +27,9 @@ const ProjectsContainerSmall = () => {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={4}>
               <ProjectCard
-                src="neve_oz_1.jpg"
-                header="אקו נווה עוז פתח תקווה"
+                src="zeitouni-home-1.jpg"
+                header="אקו הרצליה"
+                path="/herzliya"
               />
             </Grid>
             <Grid item xs={12} sm={4}>
@@ -36,6 +37,12 @@ const ProjectsContainerSmall = () => {
                 src="eco_ks_2.jpg"
                 header="אקו השכונה הירוקה כפר סבא"
                 path="/kfar-saba/"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <ProjectCard
+                src="neve_oz_1.jpg"
+                header="אקו נווה עוז פתח תקווה"
               />
             </Grid>
             <Grid item xs={12} sm={4}>
@@ -78,13 +85,6 @@ const ProjectsContainerSmall = () => {
                 src="zeitouni-home-2.jpg"
                 header=" גבעת שמואל רמת הדר החדשה"
                 path="/givat-shmuel"
-              />
-            </Grid>
-            <Grid item className={styles.item} xs={12} sm={4}>
-              <ProjectCard
-                src="zeitouni-home-1.jpg"
-                header="אקו הרצליה"
-                path="/herzliya"
               />
             </Grid>
           </Grid>

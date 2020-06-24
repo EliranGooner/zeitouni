@@ -30,8 +30,9 @@ const ProjectsContainer = props => {
           <Grid container className={styles.bottom}>
             <Grid item className={styles.item} xs={12} sm={4} ml={6}>
               <ProjectCard
-                src="neve_oz_1.jpg"
-                header="אקו נווה עוז פתח תקווה"
+                src="zeitouni-hero-1.jpg"
+                header="אקו הרצליה"
+                path="/herzliya/"
               />
             </Grid>
             <Grid item className={styles.item} xs={12} sm={4} ml={6}>
@@ -39,6 +40,12 @@ const ProjectsContainer = props => {
                 src="eco_ks_2.jpg"
                 header="אקו השכונה הירוקה כפר סבא"
                 path="/kfar-saba/"
+              />
+            </Grid>
+            <Grid item className={styles.item} xs={12} sm={4} ml={6}>
+              <ProjectCard
+                src="neve_oz_1.jpg"
+                header="אקו נווה עוז פתח תקווה"
               />
             </Grid>
             <Grid item className={styles.item} xs={12} sm={4} ml={6}>
@@ -66,6 +73,7 @@ const ProjectsContainer = props => {
         </TabPanel>
         <TabPanel>
           <Grid container>
+            <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
             <Grid item className={styles.item} xs={12} sm={6} ml={6}>
               <ProjectCard
                 src="zeitouni-hero-2.jpg"
@@ -73,13 +81,7 @@ const ProjectsContainer = props => {
                 path="/givat-shmuel/"
               />
             </Grid>
-            <Grid item className={styles.item} xs={12} sm={6} ml={6}>
-              <ProjectCard
-                src="zeitouni-hero-1.jpg"
-                header="אקו הרצליה"
-                path="/herzliya/"
-              />
-            </Grid>
+            <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
           </Grid>
         </TabPanel>
         <TabPanel>
