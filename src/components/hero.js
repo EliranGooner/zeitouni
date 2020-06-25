@@ -9,7 +9,7 @@ import {
 } from "react-scroll"
 import ElementFade from "react-reveal/Fade"
 import zeitouniLogo from "../images/logo zeituni_w.png"
-import { Fade } from "react-slideshow-image"
+import { SSRFriendlyFade } from "./SSRFriendlyFade"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -60,7 +60,7 @@ const Hero = () => {
   return (
     <div className={styles.hero} itemProp itemType="https://schema.org/Brand">
       <div className={styles.slide_container}>
-        <Fade {...fadeProperties}>
+        <SSRFriendlyFade {...fadeProperties}>
           {data.desktop.edges.map(({ node }) => (
             <div className={styles.each_fade}>
               <div className={styles.image_container}>
@@ -73,7 +73,7 @@ const Hero = () => {
               </div>
             </div>
           ))}
-        </Fade>
+        </SSRFriendlyFade>
       </div>
       <div className={styles.text_container}>
         <ElementFade duration={5000}>
