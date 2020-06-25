@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./project-gallery.module.scss"
 import ElementFade from "react-reveal/Fade"
 import Image from "./image"
-import { Fade } from "react-slideshow-image"
+import { SSRFriendlyFade } from "./SSRFriendlyFade"
 import { SizeMe } from "react-sizeme"
 import logoHerzliya from "../images/herzliya_logo.png"
 import logoGvash from "../images/gvash_logo.png"
@@ -20,7 +20,7 @@ const ProjectGallery = ({ image1, image2, image3, logo }) => {
             <ElementFade right duration={3000}>
               <div className={styles.project_container}>
                 <div className={styles.slide_container}>
-                  <Fade {...fadeProperties}>
+                  <SSRFriendlyFade {...fadeProperties}>
                     <div className={styles.each_fade}>
                       <div className={styles.image_container}>
                         <Image
@@ -48,7 +48,7 @@ const ProjectGallery = ({ image1, image2, image3, logo }) => {
                         />
                       </div>
                     </div>
-                  </Fade>
+                  </SSRFriendlyFade>
                 </div>
                 <div className={styles.gallery_side}>
                   <img
@@ -65,7 +65,7 @@ const ProjectGallery = ({ image1, image2, image3, logo }) => {
             <ElementFade right duration={3000}>
               <div className={styles.project_container}>
                 <div className={styles.slide_container_medium}>
-                  <Fade {...fadeProperties}>
+                  <SSRFriendlyFade {...fadeProperties}>
                     <div className={styles.each_fade}>
                       <div className={styles.image_container}>
                         <Image imgName={image1} alt="בנייני הפרויקט" />
@@ -81,7 +81,7 @@ const ProjectGallery = ({ image1, image2, image3, logo }) => {
                         <Image imgName={image3} alt="דירה 2 מהפרויקט" />
                       </div>
                     </div>
-                  </Fade>
+                  </SSRFriendlyFade>
                 </div>
                 <div className={styles.gallery_side_medium}>
                   <img

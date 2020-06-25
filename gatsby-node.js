@@ -7,3 +7,17 @@
 // You can delete this file if you're not using it
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-slideshow-image/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}

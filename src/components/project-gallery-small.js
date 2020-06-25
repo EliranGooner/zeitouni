@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./project-gallery-small.module.scss"
 import ElementFade from "react-reveal/Fade"
 import Image from "./image"
-import { Fade } from "react-slideshow-image"
+import { SSRFriendlyFade } from "./SSRFriendlyFade"
 import logoHerzliya from "../images/herzliya_logo.png"
 import logoGvash from "../images/gvash_logo.png"
 import logoKfs from "../images/eco_kfarsaba 2.jpg"
@@ -35,7 +35,7 @@ const ProjectGallerySmall = ({ image1, image2, image3, logo }) => {
             />
           </div>
           <div className={styles.slide_container}>
-            <Fade {...fadeProperties}>
+            <SSRFriendlyFade {...fadeProperties}>
               <div className={styles.each_fade}>
                 <div className={styles.image_container}>
                   <Image
@@ -63,7 +63,7 @@ const ProjectGallerySmall = ({ image1, image2, image3, logo }) => {
                   />
                 </div>
               </div>
-            </Fade>
+            </SSRFriendlyFade>
           </div>
         </div>
       </ElementFade>

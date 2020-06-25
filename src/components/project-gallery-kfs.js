@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./project-gallery-kfs.module.scss"
 import ElementFade from "react-reveal/Fade"
 import Image from "./image"
-import { Fade } from "react-slideshow-image"
+import { SSRFriendlyFade } from "./SSRFriendlyFade"
 import { SizeMe } from "react-sizeme"
 import logoKfs from "../images/eco_kfarsaba 2.jpg"
 
@@ -19,7 +19,7 @@ const ProjectGalleryKfs = ({ image1, image3, logo }) => {
             <ElementFade right duration={3000}>
               <div className={styles.project_container}>
                 <div className={styles.slide_container}>
-                  <Fade {...fadeProperties}>
+                  <SSRFriendlyFade {...fadeProperties}>
                     <div className={styles.each_fade}>
                       <div className={styles.image_container}>
                         <Image
@@ -38,7 +38,7 @@ const ProjectGalleryKfs = ({ image1, image3, logo }) => {
                         />
                       </div>
                     </div>
-                  </Fade>
+                  </SSRFriendlyFade>
                 </div>
                 <div className={styles.gallery_side}>
                   <img
@@ -55,7 +55,7 @@ const ProjectGalleryKfs = ({ image1, image3, logo }) => {
             <ElementFade right duration={3000}>
               <div className={styles.project_container}>
                 <div className={styles.slide_container_medium}>
-                  <Fade {...fadeProperties}>
+                  <SSRFriendlyFade {...fadeProperties}>
                     <div className={styles.each_fade}>
                       <div className={styles.image_container}>
                         <Image imgName={image1} alt="בניין 1 פרויקט כפר סבא" />
@@ -66,7 +66,7 @@ const ProjectGalleryKfs = ({ image1, image3, logo }) => {
                         <Image imgName={image3} alt="בניין 2 פרויקט כפר סבא" />
                       </div>
                     </div>
-                  </Fade>
+                  </SSRFriendlyFade>
                 </div>
                 <div className={styles.gallery_side_medium}>
                   <img
