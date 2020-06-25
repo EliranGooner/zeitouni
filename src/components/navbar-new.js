@@ -10,24 +10,26 @@ import sizeMe from "react-sizeme"
 const NavbarNew = props => {
   const [path, setPath] = useState(null)
   useEffect(() => {
-    const getCurrentPath = () => {
-      const url = typeof window !== "undefined" && window.location.href
-      const parts = url.split("/")
-      const finalSegment = parts.pop() || parts.pop()
-      const pathArr = ["projects", "about", "avi", "articles", "contact"]
-      let urlPath
-      pathArr.forEach(pathElement => {
-        if (finalSegment.indexOf(pathElement) >= 0) {
-          urlPath = pathElement
+    if (typeof window !== "undefined") {
+      const getCurrentPath = () => {
+        const url = typeof window !== "undefined" ? window.location.href : ""
+        const parts = url.split("/")
+        const finalSegment = parts.pop() || parts.pop()
+        const pathArr = ["projects", "about", "avi", "articles", "contact"]
+        let urlPath
+        pathArr.forEach(pathElement => {
+          if (finalSegment.indexOf(pathElement) >= 0) {
+            urlPath = pathElement
+          }
+        })
+        if (urlPath === "#" || !pathArr.includes(urlPath)) {
+          setPath("item-home")
+        } else {
+          setPath(`item-${urlPath}`)
         }
-      })
-      if (urlPath === "#" || !pathArr.includes(urlPath)) {
-        setPath("item-home")
-      } else {
-        setPath(`item-${urlPath}`)
       }
+      getCurrentPath()
     }
-    getCurrentPath()
   })
   const { width } = props.size
 

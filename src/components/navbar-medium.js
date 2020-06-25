@@ -9,13 +9,15 @@ import facebookIcon from "@iconify/icons-cib/facebook"
 const NavbarMedium = ({}) => {
   const [scroll, setScroll] = useState(false)
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= window.innerHeight - 10) {
-        setScroll(true)
-      } else {
-        setScroll(false)
-      }
-    })
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= window.innerHeight - 10) {
+          setScroll(true)
+        } else {
+          setScroll(false)
+        }
+      })
+    }
   })
 
   return (
