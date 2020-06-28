@@ -396,12 +396,14 @@ const ProjectContent = ({ project }) => {
                     </Accordion>
                   )}
                   {renderDownload}
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      url="https://www.youtube.com/watch?v=moUtZrj0qAM&t"
-                      controls
-                    />
-                  </div>
+                  {project === "gvash" ? (
+                    <div className={styles.video}>
+                      <ReactPlayer
+                        url="https://www.youtube.com/watch?v=moUtZrj0qAM&t"
+                        controls
+                      />
+                    </div>
+                  ) : null}
                 </div>
               ) : (
                 <div className={styles.text_medium}>
