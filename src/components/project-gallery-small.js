@@ -12,7 +12,15 @@ const fadeProperties = {
   arrows: true,
 }
 
-const ProjectGallerySmall = ({ image1, image2, image3, logo }) => {
+const ProjectGallerySmall = ({
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  logo,
+}) => {
   let logoImage
   if (logo === "gvash") {
     logoImage = logoGvash
@@ -35,35 +43,94 @@ const ProjectGallerySmall = ({ image1, image2, image3, logo }) => {
             />
           </div>
           <div className={styles.slide_container}>
-            <SSRFriendlyFade {...fadeProperties}>
-              <div className={styles.each_fade}>
-                <div className={styles.image_container}>
-                  <Image
-                    imgName={image1}
-                    alt="בנייני הפרויקט"
-                    itemProp="image"
-                  />
+            {image4 ? (
+              <SSRFriendlyFade {...fadeProperties}>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image1}
+                      alt="בנייני הפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className={styles.each_fade}>
-                <div className={styles.image_container}>
-                  <Image
-                    imgName={image2}
-                    alt="דירה 1 מהפרויקט"
-                    itemProp="image"
-                  />
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image2}
+                      alt="דירה 1 מהפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className={styles.each_fade}>
-                <div className={styles.image_container}>
-                  <Image
-                    imgName={image3}
-                    alt="דירה 2 מהפרויקט"
-                    itemProp="image"
-                  />
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image3}
+                      alt="דירה 2 מהפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
                 </div>
-              </div>
-            </SSRFriendlyFade>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image4}
+                      alt="בנייני הפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
+                </div>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image5}
+                      alt="בנייני הפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
+                </div>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image6}
+                      alt="בנייני הפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
+                </div>
+              </SSRFriendlyFade>
+            ) : (
+              <SSRFriendlyFade {...fadeProperties}>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image1}
+                      alt="בנייני הפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
+                </div>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image2}
+                      alt="דירה 1 מהפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
+                </div>
+                <div className={styles.each_fade}>
+                  <div className={styles.image_container}>
+                    <Image
+                      imgName={image3}
+                      alt="דירה 2 מהפרויקט"
+                      itemProp="image"
+                    />
+                  </div>
+                </div>
+              </SSRFriendlyFade>
+            )}
           </div>
         </div>
       </ElementFade>
