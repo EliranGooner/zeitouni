@@ -12,4 +12,4 @@ function SSRFade({ children }) {
 }
 
 // this will export `Fade` if defined and fallback to SSRFade if not
-export const SSRFriendlyFade = Fade || SSRFade
+export const SSRFriendlyFade = Fade
