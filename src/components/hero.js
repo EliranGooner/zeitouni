@@ -20,45 +20,6 @@ const fadeProperties = {
 }
 
 const Hero = () => {
-  const data = useStaticQuery(graphql`
-    query heroQuery {
-      desktop: allFile(
-        filter: {
-          extension: { regex: "/(jpg)/" }
-          relativeDirectory: { eq: "hero" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(maxWidth: 1200, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-              }
-            }
-          }
-        }
-      }
-      mobile: allFile(
-        filter: {
-          extension: { regex: "/(jpg)/" }
-          relativeDirectory: { eq: "home" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(maxWidth: 1200, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className={styles.hero} itemProp itemType="https://schema.org/Brand">
       <div className={styles.slide_container}>
