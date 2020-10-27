@@ -103,9 +103,9 @@ const ProjectsContainerSmall = () => {
           <Grid container spacing={3}>
             <Grid item className={styles.item} xs={12} sm={4}>
               <ProjectCard
-                src="bat-yam_logo.png"
+                src="bat_yam.jpg"
                 header="פארק ים בת-ים"
-                path="bat-yam/"
+                path="/bat-yam"
               />
             </Grid>
           </Grid>

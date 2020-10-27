@@ -29,7 +29,14 @@ const ProjectCard = ({ header, src, path }) => {
                   </Fade>
                 </div>
                 {path ? (
-                  <AniLink cover direction="right" bg="#808080" to={path}>
+                  <AniLink
+                    cover
+                    direction="right"
+                    bg="#808080"
+                    to={
+                      path == "/bat-yam" ? "https://lp.zeitouni.co.il/" : path
+                    }
+                  >
                     <AwesomeButton
                       type="primary"
                       className="aws-btn"
