@@ -89,7 +89,7 @@ const ProjectsContainer = props => {
             <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
             <Grid item className={styles.item} xs={12} sm={6} ml={6}>
               <ProjectCard
-                src="bat-yam_logo.png"
+                src="bat_yam.jpg"
                 header="פארק ים בת-ים"
                 path="/bat-yam"
               />
