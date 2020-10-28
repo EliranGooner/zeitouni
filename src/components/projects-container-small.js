@@ -89,16 +89,6 @@ const ProjectsContainerSmall = () => {
             </Grid>
           </Grid>
         </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-          className={styles.summary}
-        >
-          <h1>פרויקטים עתידיים</h1>
-        </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Grid container spacing={3}>
             <Grid item className={styles.item} xs={12} sm={4}>
