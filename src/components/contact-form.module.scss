@@ -1,5 +1,3 @@
-
-
 .submit {
   background: white;
   border: none;
@@ -20,7 +18,11 @@
 }
 
 .input {
-  width: 100%;
+  width: 35%;
+  border: 3px solid black;
+}
+.input_small {
+  width: 75%;
   border: 3px solid black;
 }
 
@@ -36,9 +38,9 @@
   margin-top: 3rem;
   color: black;
   text-align: center;
-  font-family: 'Heebo';
+  font-family: "Heebo";
   font-weight: 900;
-  -webkit-box-shadow: 6px 6px 16px 5px rgba(189,189,189,0.32);
-  -moz-box-shadow: 6px 6px 16px 5px rgba(189,189,189,0.32);
-  box-shadow: 6px 6px 16px 5px rgba(189,189,189,0.32);
+  -webkit-box-shadow: 6px 6px 16px 5px rgba(189, 189, 189, 0.32);
+  -moz-box-shadow: 6px 6px 16px 5px rgba(189, 189, 189, 0.32);
+  box-shadow: 6px 6px 16px 5px rgba(189, 189, 189, 0.32);
 }

@@ -24,7 +24,6 @@ const ProjectsContainer = props => {
         <TabList>
           <Tab className={tabClass}>פרויקטים מאוכלסים</Tab>
           <Tab className={tabClass}>פרויקטים בשיווק</Tab>
-          <Tab className={tabClass}>פרויקטים עתידיים</Tab>
         </TabList>
         <TabPanel>
           <Grid container className={styles.bottom}>
@@ -73,7 +72,6 @@ const ProjectsContainer = props => {
         </TabPanel>
         <TabPanel>
           <Grid container>
-            <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
             <Grid item className={styles.item} xs={12} sm={6} ml={6}>
               <ProjectCard
                 src="zeitouni-hero-2.jpg"
@@ -81,12 +79,6 @@ const ProjectsContainer = props => {
                 path="/givat-shmuel/"
               />
             </Grid>
-            <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
-          </Grid>
-        </TabPanel>
-        <TabPanel>
-          <Grid container>
-            <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
             <Grid item className={styles.item} xs={12} sm={6} ml={6}>
               <ProjectCard
                 src="bat_yam.jpg"
@@ -94,7 +86,6 @@ const ProjectsContainer = props => {
                 path="/bat-yam"
               />
             </Grid>
-            <Grid item className={styles.item} xs={12} sm={3} ml={6}></Grid>
           </Grid>
         </TabPanel>
       </Tabs>
