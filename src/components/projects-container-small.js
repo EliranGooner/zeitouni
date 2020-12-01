@@ -17,6 +17,38 @@ const ProjectsContainerSmall = () => {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+          className={styles.summary}
+        >
+          <h1>פרויקטים בשיווק</h1>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Grid container spacing={3}>
+            <Grid item className={styles.item} xs={12} sm={4}>
+              <ProjectCard
+                src="zeitouni-home-2.jpg"
+                header=" גבעת שמואל רמת הדר החדשה"
+                path="/givat-shmuel"
+              />
+            </Grid>
+          </Grid>
+        </ExpansionPanelDetails>
+        <ExpansionPanelDetails>
+          <Grid container spacing={3}>
+            <Grid item className={styles.item} xs={12} sm={4}>
+              <ProjectCard
+                src="bat_yam.jpg"
+                header="פארק ים בת-ים"
+                path="/bat-yam"
+              />
+            </Grid>
+          </Grid>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
           className={styles.summary}
@@ -64,38 +96,6 @@ const ProjectsContainerSmall = () => {
               <ProjectCard
                 src="hod_al_hapark.jpg"
                 header="הוד על הפארק הוד השרון"
-              />
-            </Grid>
-          </Grid>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-          className={styles.summary}
-        >
-          <h1>פרויקטים בשיווק</h1>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Grid container spacing={3}>
-            <Grid item className={styles.item} xs={12} sm={4}>
-              <ProjectCard
-                src="zeitouni-home-2.jpg"
-                header=" גבעת שמואל רמת הדר החדשה"
-                path="/givat-shmuel"
-              />
-            </Grid>
-          </Grid>
-        </ExpansionPanelDetails>
-        <ExpansionPanelDetails>
-          <Grid container spacing={3}>
-            <Grid item className={styles.item} xs={12} sm={4}>
-              <ProjectCard
-                src="bat_yam.jpg"
-                header="פארק ים בת-ים"
-                path="/bat-yam"
               />
             </Grid>
           </Grid>
