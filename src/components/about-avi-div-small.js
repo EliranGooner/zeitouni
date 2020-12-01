@@ -21,7 +21,7 @@ const AboutAviDivSmall = () => {
             <h1 itemProp="name">אבי זיתוני</h1>
             <img src={divider} alt="חוצץ"></img>
             <Image
-              imgName="avi_cropped.jpg"
+              imgName="avi_new_cropped_side.jpg"
               alt="אבי זיתוני"
               className={styles.avi_small}
               itemProp="image"

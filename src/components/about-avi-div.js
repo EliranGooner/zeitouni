@@ -30,7 +30,7 @@ const AboutAviDiv = props => {
               <h1 itemProp="name">אבי זיתוני</h1>
               <img src={divider} alt="חוצץ"></img>
               <Image
-                imgName="avi_cropped.jpg"
+                imgName="avi_new_cropped.jpg"
                 alt="אבי זיתוני"
                 className={styles.avi_small}
                 itemProp="image"
@@ -55,7 +55,11 @@ const AboutAviDiv = props => {
           </div>
         ) : (
           <div className={styles.avi}>
-            <Image imgName="avi.jpg" alt="אבי זיתוני" style={imgStyle} />
+            <Image
+              imgName="avi_new_cropped_side.jpg"
+              alt="אבי זיתוני"
+              style={imgStyle}
+            />
             <div
               className={styles.avi_text}
               itemScope
