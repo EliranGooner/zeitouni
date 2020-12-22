@@ -11,8 +11,9 @@ import Image from "./image"
 const AboutAviDivSmall = () => {
   return (
     <div className={styles.about}>
-      <Fade duration={2500} right>
+      <Fade duration={2000} right>
         <div className={styles.avi}>
+          <Image imgName="avi_new_cropped.jpg" alt="אבי זיתוני" />
           <div
             className={styles.avi_text}
             itemScope
@@ -20,12 +21,6 @@ const AboutAviDivSmall = () => {
           >
             <h1 itemProp="name">אבי זיתוני</h1>
             <img src={divider} alt="חוצץ"></img>
-            <Image
-              imgName="avi_new_cropped_side.jpg"
-              alt="אבי זיתוני"
-              className={styles.avi_small}
-              itemProp="image"
-            />
             <p itemProp="description">
               אבי זיתוני, שנולד בבת ים וגדל בכפר סבא, הוא דור שני למשפחת קבלנים.
               בתחילת שנות ה-80, לאחר שהשתחרר מהצבא, החל אבי זיתוני לעבוד כשכיר
@@ -36,7 +31,7 @@ const AboutAviDivSmall = () => {
             </p>
             <div className={styles.button_div}>
               <AniLink cover direction="right" bg="#808080" to="/avi/">
-                <AwesomeButton type="primary" className="aws-btn">
+                <AwesomeButton type="primary" className="aws-btn" size="large">
                   המשיכו לקרוא
                 </AwesomeButton>
               </AniLink>
