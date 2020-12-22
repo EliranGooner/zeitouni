@@ -46,10 +46,60 @@
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1600px) {
   .about {
     background: black;
-    height: 51rem;
+    height: 38rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avi {
+    height: 75%;
+    width: 85%;
+    background: white;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 6px 6px 16px 5px rgba(82, 82, 82, 0.79);
+    -moz-box-shadow: 6px 6px 16px 5px rgba(82, 82, 82, 0.79);
+    box-shadow: 6px 6px 16px 5px rgba(82, 82, 82, 0.79);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 500rem;
+      object-fit: cover;
+      margin: 0 5rem 0 0;
+    }
+  }
+
+  .avi_text {
+    text-align: center;
+    p {
+      color: black;
+      font-size: 1.2em;
+      padding: 0 2rem 0 2rem;
+      margin: 1rem 0 1rem 0;
+    }
+    h1 {
+      color: black;
+      font-size: 3.2em;
+    }
+    img {
+      object-fit: contain;
+      height: 2rem;
+      width: 20rem;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 100px) and (max-device-width: 480px) {
+  .about {
+    background: black;
+    height: 65rem;
     display: flex;
     align-items: center;
     justify-content: center;

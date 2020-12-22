@@ -17,6 +17,7 @@ const AboutAviDiv = props => {
     objectFit: "cover",
     margin: "0 10px 0 0",
   }
+
   return (
     <div className={styles.about}>
       <Fade duration={2000} right>
@@ -30,9 +31,8 @@ const AboutAviDiv = props => {
               <h1 itemProp="name">אבי זיתוני</h1>
               <img src={divider} alt="חוצץ"></img>
               <Image
-                imgName="avi_new_cropped.jpg"
+                imgName="avi_new_cropped_side.jpg"
                 alt="אבי זיתוני"
-                className={styles.avi_small}
                 itemProp="image"
               />
               <p itemProp="description">
@@ -56,7 +56,11 @@ const AboutAviDiv = props => {
         ) : (
           <div className={styles.avi}>
             <Image
-              imgName="avi_new_cropped_side.jpg"
+              imgName={
+                width > 1600
+                  ? "avi_new_cropped.jpg"
+                  : "avi_new_cropped_side.jpg"
+              }
               alt="אבי זיתוני"
               style={imgStyle}
             />

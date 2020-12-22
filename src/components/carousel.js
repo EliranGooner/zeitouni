@@ -55,7 +55,7 @@ const Carousel = () => {
         <CarouselSlide
           header="פארק הים בת-ים"
           src="bat-yam_logo.png"
-          path="/projects/"
+          path="https://lp.zeitouni.co.il/"
         />
       </Flickity>
 
